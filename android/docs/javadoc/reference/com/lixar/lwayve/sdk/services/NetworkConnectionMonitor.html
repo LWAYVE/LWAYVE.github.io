@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  PushNotificationMessagingService
+  NetworkConnectionMonitor
 
 
 </title>
@@ -159,7 +159,7 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/services/PushNotificationMessagingService.html">PushNotificationMessagingService</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/services/NetworkConnectionMonitor.html">NetworkConnectionMonitor</a></li>
       </ul>
     </li>
               
@@ -202,11 +202,6 @@
 <div id="api-info-block">
 
 
-
-  
-  
-  
-  
 
   
    
@@ -263,16 +258,12 @@ Summary:
      
     
     class
-<h1>PushNotificationMessagingService</h1>
+<h1>NetworkConnectionMonitor</h1>
 
 
 
   
-  
-  
-
-  
-    extends FirebaseMessagingService<br/>
+    extends Object<br/>
   
   
   
@@ -292,7 +283,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Object</td>
+        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
@@ -300,17 +291,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="2" class="jd-inheritance-class-cell">FirebaseMessagingService</td>
-    </tr>
-    
-
-    <tr>
-        
-            <td class="jd-inheritance-space">&nbsp;</td>
-        
-            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
-         	
-        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.services.PushNotificationMessagingService</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.services.NetworkConnectionMonitor</td>
     </tr>
     
 
@@ -389,7 +370,7 @@ Summary:
             
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/services/PushNotificationMessagingService.html#PushNotificationMessagingService()">PushNotificationMessagingService</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/services/NetworkConnectionMonitor.html#NetworkConnectionMonitor(Context)">NetworkConnectionMonitor</a></span>(Context context)
         
   </td></tr>
 
@@ -418,7 +399,7 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/services/PushNotificationMessagingService.html#onCreate()">onCreate</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/services/NetworkConnectionMonitor.html#checkNetworkConnectionAvailable()">checkNetworkConnectionAvailable</a></span>()
         
   </td></tr>
 
@@ -434,7 +415,39 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/services/PushNotificationMessagingService.html#onMessageReceived(RemoteMessage)">onMessageReceived</a></span>(RemoteMessage remoteMessage)
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/services/NetworkConnectionMonitor.html#deinit()">deinit</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/services/NetworkConnectionMonitor.html#isNetworkConnectionAvailable()">isNetworkConnectionAvailable</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/services/NetworkConnectionMonitor.html#isOnWifiNetwork()">isOnWifiNetwork</a></span>()
         
   </td></tr>
 
@@ -452,8 +465,6 @@ Summary:
 <table id="inhmethods" class="jd-sumtable"><tr><th>
   <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
   <div style="clear:left;">Inherited Methods</div></th></tr>
-
-
 
 
 <tr class="api apilevel-" >
@@ -483,42 +494,10 @@ From class
             
             
             
-            Object
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">clone</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
             boolean
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad">equals</span>(Object arg0)
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
-            void
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">finalize</span>()
         
   </td></tr>
 
@@ -691,7 +670,7 @@ From class
 
 
 
-<a id="PushNotificationMessagingService()"></a>
+<a id="NetworkConnectionMonitor(Context)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -703,8 +682,8 @@ From class
          
         
       </span>
-      <span class="sympad">PushNotificationMessagingService</span>
-      <span class="normal">()</span>
+      <span class="sympad">NetworkConnectionMonitor</span>
+      <span class="normal">(Context context)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -737,7 +716,7 @@ From class
 
 
 
-<a id="onCreate()"></a>
+<a id="checkNetworkConnectionAvailable()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -749,7 +728,7 @@ From class
          
         void
       </span>
-      <span class="sympad">onCreate</span>
+      <span class="sympad">checkNetworkConnectionAvailable</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -768,7 +747,7 @@ From class
 </div>
 
 
-<a id="onMessageReceived(RemoteMessage)"></a>
+<a id="deinit()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -780,8 +759,70 @@ From class
          
         void
       </span>
-      <span class="sympad">onMessageReceived</span>
-      <span class="normal">(RemoteMessage remoteMessage)</span>
+      <span class="sympad">deinit</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="isNetworkConnectionAvailable()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        boolean
+      </span>
+      <span class="sympad">isNetworkConnectionAvailable</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="isOnWifiNetwork()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        boolean
+      </span>
+      <span class="sympad">isOnWifiNetwork</span>
+      <span class="normal">()</span>
     </h4>
       <div class="api-level">
         <div>

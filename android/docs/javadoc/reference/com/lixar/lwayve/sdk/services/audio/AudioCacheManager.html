@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
 <title>
 
-  MediaNotificationManager
+  AudioCacheManager
 
 
 </title>
@@ -159,8 +159,7 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/LwayveAudioPlayerService.html">LwayveAudioPlayerService</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/MediaNotificationManager.html">MediaNotificationManager</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/AudioCacheManager.html">AudioCacheManager</a></li>
       </ul>
     </li>
               
@@ -210,11 +209,6 @@
 
 
   
-  
-  
-  
-
-  
    
   
   
@@ -231,10 +225,10 @@ Summary:
 
 
 
-  <a href="#constants">Constants</a>
+
+
+  <a href="#lfields">Fields</a>
   
-
-
 
 
 
@@ -272,16 +266,12 @@ Summary:
      
     
     class
-<h1>MediaNotificationManager</h1>
+<h1>AudioCacheManager</h1>
 
 
 
   
-  
-  
-
-  
-    extends BroadcastReceiver<br/>
+    extends Object<br/>
   
   
   
@@ -301,7 +291,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Object</td>
+        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
@@ -309,17 +299,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="2" class="jd-inheritance-class-cell">BroadcastReceiver</td>
-    </tr>
-    
-
-    <tr>
-        
-            <td class="jd-inheritance-space">&nbsp;</td>
-        
-            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
-         	
-        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.services.audio.MediaNotificationManager</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.services.audio.AudioCacheManager</td>
     </tr>
     
 
@@ -372,46 +352,29 @@ Summary:
 
 
 
-<!-- =========== ENUM CONSTANT SUMMARY =========== -->
-<table id="constants" class="jd-sumtable"><tr><th colspan="12">Constants</th></tr>
+
+
+
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="lfields" class="jd-sumtable"><tr><th colspan="12">Fields</th></tr>
 
 
     
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">String</td>
-        <td class="jd-linkcol"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/MediaNotificationManager.html#ACTION_NEXT">ACTION_NEXT</a></td>
-        <td class="jd-descrcol" width="100%"></td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">String</td>
-        <td class="jd-linkcol"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/MediaNotificationManager.html#ACTION_PAUSE">ACTION_PAUSE</a></td>
-        <td class="jd-descrcol" width="100%"></td>
-    </tr>
-    
-    
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">String</td>
-        <td class="jd-linkcol"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/MediaNotificationManager.html#ACTION_PLAY">ACTION_PLAY</a></td>
-        <td class="jd-descrcol" width="100%"></td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">String</td>
-        <td class="jd-linkcol"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/MediaNotificationManager.html#ACTION_PREV">ACTION_PREV</a></td>
-        <td class="jd-descrcol" width="100%"></td>
-    </tr>
-    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol">
+          public
+          static
+          final
+          String</td>
+          <td class="jd-linkcol"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/AudioCacheManager.html#TAG">TAG</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
     
 
 </table>
-
-
-
-
-
 
 
 
@@ -435,7 +398,7 @@ Summary:
             
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/MediaNotificationManager.html#MediaNotificationManager(com.lixar.lwayve.sdk.services.audio.LwayveAudioPlayerService, int, java.lang.Integer)">MediaNotificationManager</a></span>(<a href="../../../../../../com/lixar/lwayve/sdk/services/audio/LwayveAudioPlayerService.html">LwayveAudioPlayerService</a> service, int smallIconRes, Integer largeIconRes)
+        <span class="sympad"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/AudioCacheManager.html#AudioCacheManager(Context, com.lixar.lwayve.sdk.core.LwayveSdkConfiguration)">AudioCacheManager</a></span>(Context context, <a href="../../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html">LwayveSdkConfiguration</a> configuration)
         
   </td></tr>
 
@@ -464,7 +427,7 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/MediaNotificationManager.html#onReceive(Context, Intent)">onReceive</a></span>(Context context, Intent intent)
+        <span class="sympad"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/AudioCacheManager.html#cacheAudioClips(java.lang.String[], boolean)">cacheAudioClips</a></span>(String[] urls, boolean removeOldCachedClips)
         
   </td></tr>
 
@@ -477,26 +440,10 @@ Summary:
             
             
             
-            void
+            boolean
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/MediaNotificationManager.html#startNotification()">startNotification</a></span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
-            void
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/MediaNotificationManager.html#stopNotification()">stopNotification</a></span>()
+        <span class="sympad"><a href="../../../../../../com/lixar/lwayve/sdk/services/audio/AudioCacheManager.html#isDownloading()">isDownloading</a></span>()
         
   </td></tr>
 
@@ -514,8 +461,6 @@ Summary:
 <table id="inhmethods" class="jd-sumtable"><tr><th>
   <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
   <div style="clear:left;">Inherited Methods</div></th></tr>
-
-
 
 
 <tr class="api apilevel-" >
@@ -545,42 +490,10 @@ From class
             
             
             
-            Object
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">clone</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
             boolean
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad">equals</span>(Object arg0)
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
-            void
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">finalize</span>()
         
   </td></tr>
 
@@ -742,170 +655,44 @@ From class
 <!-- Constants -->
 
 
-<!-- ========= ENUM CONSTANTS DETAIL ======== -->
-<h2>Constants</h2>
-
-
-
-
-<a id="ACTION_NEXT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        String
-      </span>
-        ACTION_NEXT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-        <div class="jd-tagdata">
-        <span class="jd-tagtitle">Constant Value: </span>
-        <span>
-            
-                "com.example.android.mediabrowserservice.next"
-            
-        </span>
-        </div>
-    
-    </div>
-</div>
-
-
-
-<a id="ACTION_PAUSE"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        String
-      </span>
-        ACTION_PAUSE
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-        <div class="jd-tagdata">
-        <span class="jd-tagtitle">Constant Value: </span>
-        <span>
-            
-                "com.example.android.mediabrowserservice.pause"
-            
-        </span>
-        </div>
-    
-    </div>
-</div>
-
-
-
-<a id="ACTION_PLAY"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        String
-      </span>
-        ACTION_PLAY
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-        <div class="jd-tagdata">
-        <span class="jd-tagtitle">Constant Value: </span>
-        <span>
-            
-                "com.example.android.mediabrowserservice.play"
-            
-        </span>
-        </div>
-    
-    </div>
-</div>
-
-
-
-<a id="ACTION_PREV"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        String
-      </span>
-        ACTION_PREV
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-        <div class="jd-tagdata">
-        <span class="jd-tagtitle">Constant Value: </span>
-        <span>
-            
-                "com.example.android.mediabrowserservice.prev"
-            
-        </span>
-        </div>
-    
-    </div>
-</div>
-
-
-
-
 <!-- Fields -->
+
+
+<!-- ========= FIELD DETAIL ======== -->
+<h2>Fields</h2>
+
+
+
+
+<a id="TAG"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        String
+      </span>
+        TAG
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
 
 
 <!-- Public ctors -->
@@ -916,7 +703,7 @@ From class
 
 
 
-<a id="MediaNotificationManager(com.lixar.lwayve.sdk.services.audio.LwayveAudioPlayerService, int, java.lang.Integer)"></a>
+<a id="AudioCacheManager(Context, com.lixar.lwayve.sdk.core.LwayveSdkConfiguration)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -928,8 +715,8 @@ From class
          
         
       </span>
-      <span class="sympad">MediaNotificationManager</span>
-      <span class="normal">(<a href="../../../../../../com/lixar/lwayve/sdk/services/audio/LwayveAudioPlayerService.html">LwayveAudioPlayerService</a> service, int smallIconRes, Integer largeIconRes)</span>
+      <span class="sympad">AudioCacheManager</span>
+      <span class="normal">(Context context, <a href="../../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html">LwayveSdkConfiguration</a> configuration)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -962,7 +749,7 @@ From class
 
 
 
-<a id="onReceive(Context, Intent)"></a>
+<a id="cacheAudioClips(java.lang.String[], boolean)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -974,8 +761,8 @@ From class
          
         void
       </span>
-      <span class="sympad">onReceive</span>
-      <span class="normal">(Context context, Intent intent)</span>
+      <span class="sympad">cacheAudioClips</span>
+      <span class="normal">(String[] urls, boolean removeOldCachedClips)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -993,7 +780,7 @@ From class
 </div>
 
 
-<a id="startNotification()"></a>
+<a id="isDownloading()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1003,40 +790,9 @@ From class
          
          
          
-        void
+        boolean
       </span>
-      <span class="sympad">startNotification</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<a id="stopNotification()"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">stopNotification</span>
+      <span class="sympad">isDownloading</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
