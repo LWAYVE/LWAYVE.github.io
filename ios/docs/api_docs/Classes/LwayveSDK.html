@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LwayveSDK Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/LwayveSDK" class="dashAnchor"></a>
+
+    <a title="LwayveSDK Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          LwayveSDK Docs
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/LWAYVE/ios-sdk">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">LwayveSDK Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      LwayveSDK Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Location.html">Location</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LwayvePlaybackControlView.html">LwayvePlaybackControlView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LwayveSDK.html">LwayveSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LwayveSDKConfiguration.html">LwayveSDKConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Playlist.html">Playlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Tag.html">Tag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/UserContext.html">UserContext</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9LwayveSDK01kA35AudioPlaybackControlRewindThresholdSdv">kLwayveAudioPlaybackControlRewindThreshold</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9LwayveSDK01kA28AudioTrackDurationIndefiniteSdv">kLwayveAudioTrackDurationIndefinite</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ContentUpdateType.html">ContentUpdateType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LwayveLanguage.html">LwayveLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LwayveSDKConfigurationType.html">LwayveSDKConfigurationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnalyticsControlProtocol.html">AnalyticsControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ApplicationRemoteNotificationsHandler.html">ApplicationRemoteNotificationsHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AudioCacheControlProtocol.html">AudioCacheControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AudioControlDelegate.html">AudioControlDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AudioPlaybackControlProtocol.html">AudioPlaybackControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AudioTrack.html">AudioTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ContextControlProtocol.html">ContextControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ExperienceControlProtocol.html">ExperienceControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ExperienceSupplementaryInfo.html">ExperienceSupplementaryInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LwayveNowPlayingInfoProtocol.html">LwayveNowPlayingInfoProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LwayvePlaybackControlAppearenceProtocol.html">LwayvePlaybackControlAppearenceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LwayveSDKDelegate.html">LwayveSDKDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PlayListEventsListener.html">PlayListEventsListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PlaylistControlProtocol.html">PlaylistControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PlaylistItem.html">PlaylistItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LwayveSDKLogComponent.html">LwayveSDKLogComponent</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>LwayveSDK</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LwayveSDK</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Use singleton instance of <code>LwayveSDK</code> available by <code><a href="../Classes/LwayveSDK.html#/c:@M@LwayveSDK@objc(cs)LwayveSDK(cpy)sharedSDK">LwayveSDK.sharedSDK</a></code> to communicate with the SDK.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)initializeWithConfiguration:error:"></a>
+                    <a name="//apple_ref/swift/Method/initialize(configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)initializeWithConfiguration:error:">initialize(configuration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method must be called before the SDK can be used.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKWithDidInit:">LwayveSDKDelegate.lwayveSDK(didInit:)</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/LwayveSDKConfiguration.html">LwayveSDKConfiguration</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)deinitialize"></a>
+                    <a name="//apple_ref/swift/Method/deinitialize()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)deinitialize">deinitialize()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SDK will be deinitialized after calling this method. </p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Deinitialization may be asynchronious. Wait for <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKWithDidDeinit:">LwayveSDKDelegate.lwayveSDK(didDeinit:)</a></code> to be called before initializing the SDK again.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deinitialize</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(cpy)sharedSDK"></a>
+                    <a name="//apple_ref/swift/Variable/sharedSDK" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(cpy)sharedSDK">sharedSDK</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The singleton object of <code>LwayveSDK</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedSDK</span> <span class="o">=</span> <span class="kt">LwayveSDK</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithPlaylistEventsListener:"></a>
+                    <a name="//apple_ref/swift/Method/add(playlistEventsListener:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithPlaylistEventsListener:">add(playlistEventsListener:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds the listener for the playlist events</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">playlistEventsListener</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PlayListEventsListener.html">PlayListEventsListener</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithPlaylistEventsListener:"></a>
+                    <a name="//apple_ref/swift/Method/remove(playlistEventsListener:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithPlaylistEventsListener:">remove(playlistEventsListener:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the listener for the playlist events</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">playlistEventsListener</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PlayListEventsListener.html">PlayListEventsListener</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithDelegate:"></a>
+                    <a name="//apple_ref/swift/Method/add(delegate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithDelegate:">add(delegate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add delegate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LwayveSDKDelegate.html">LwayveSDKDelegate</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithDelegate:"></a>
+                    <a name="//apple_ref/swift/Method/remove(delegate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithDelegate:">remove(delegate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove delegate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LwayveSDKDelegate.html">LwayveSDKDelegate</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LwayveSDKAAC11setLogLevelySC0a6SDKLogE0O_SayAA0aF9ComponentVG10componentstF"></a>
+                    <a name="//apple_ref/swift/Method/setLogLevel(_:components:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LwayveSDKAAC11setLogLevelySC0a6SDKLogE0O_SayAA0aF9ComponentVG10componentstF">setLogLevel(_:components:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set logger for specific level and component.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLogLevel</span><span class="p">(</span><span class="n">_</span> <span class="nv">level</span><span class="p">:</span> <span class="kt">LwayveSDKLogLevel</span><span class="p">,</span> <span class="nv">components</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/LwayveSDKLogComponent.html">LwayveSDKLogComponent</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(py)language"></a>
+                    <a name="//apple_ref/swift/Property/language" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(py)language">language</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Using this property you can get or update the SDK preferred language. 
+Update is an asynchronous operation. The default value is the current device language, if the LWAYVE SDK supports it. 
+If a language is not set on the current device, the default is LwayveLanguage.english.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">language</span><span class="p">:</span> <span class="kt"><a href="../Enums/LwayveLanguage.html">LwayveLanguage</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithAudioControlDelegate:"></a>
+                    <a name="//apple_ref/swift/Method/add(audioControlDelegate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithAudioControlDelegate:">add(audioControlDelegate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a listener for audio playback events.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">audioControlDelegate</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioControlDelegate.html">AudioControlDelegate</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithAudioControlDelegate:"></a>
+                    <a name="//apple_ref/swift/Method/remove(audioControlDelegate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithAudioControlDelegate:">remove(audioControlDelegate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes a listener for audio playback events.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">audioControlDelegate</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioControlDelegate.html">AudioControlDelegate</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LwayveSDK25AudioCacheControlProtocolP24audioBufferMaxTrackCountSiv"></a>
+                    <a name="//apple_ref/swift/Property/audioBufferMaxTrackCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LwayveSDK25AudioCacheControlProtocolP24audioBufferMaxTrackCountSiv">audioBufferMaxTrackCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioBufferMaxTrackCount</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioBufferMaxSize"></a>
+                    <a name="//apple_ref/swift/Property/audioBufferMaxSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioBufferMaxSize">audioBufferMaxSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LwayveSDK</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioCacheMaxSize"></a>
+                    <a name="//apple_ref/swift/Property/audioCacheMaxSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioCacheMaxSize">audioCacheMaxSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LwayveSDK</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LwayveSDK25AudioCacheControlProtocolP05clearcD0yyF"></a>
+                    <a name="//apple_ref/swift/Method/clearAudioCache()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LwayveSDK25AudioCacheControlProtocolP05clearcD0yyF">clearAudioCache()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearAudioCache</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceTags"></a>
+                    <a name="//apple_ref/swift/Property/allExperienceTags" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceTags">allExperienceTags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ExperienceSupplementaryInfo.html#/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)allExperienceTags">ExperienceSupplementaryInfo.allExperienceTags</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allExperienceTags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceLocations"></a>
+                    <a name="//apple_ref/swift/Property/allExperienceLocations" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceLocations">allExperienceLocations</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ExperienceSupplementaryInfo.html#/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)allExperienceLocations">ExperienceSupplementaryInfo.allExperienceLocations</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allExperienceLocations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)rawExperience"></a>
+                    <a name="//apple_ref/swift/Property/rawExperience" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)rawExperience">rawExperience</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rawExperience</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)isReadyToPlay"></a>
+                    <a name="//apple_ref/swift/Property/isReadyToPlay" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)isReadyToPlay">isReadyToPlay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/AudioPlaybackControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(py)isReadyToPlay">AudioPlaybackControlProtocol.isReadyToPlay</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isReadyToPlay</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)canSkip"></a>
+                    <a name="//apple_ref/swift/Property/canSkip" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)canSkip">canSkip</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/AudioPlaybackControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(py)canSkip">AudioPlaybackControlProtocol.canSkip</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canSkip</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)canRewind"></a>
+                    <a name="//apple_ref/swift/Property/canRewind" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)canRewind">canRewind</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/AudioPlaybackControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(py)canRewind">AudioPlaybackControlProtocol.canRewind</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canRewind</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)isPlaying"></a>
+                    <a name="//apple_ref/swift/Property/isPlaying" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)isPlaying">isPlaying</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/AudioPlaybackControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(py)isPlaying">AudioPlaybackControlProtocol.isPlaying</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isPlaying</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(py)isWaitingForCurrentTrackToBeLoaded"></a>
+                    <a name="//apple_ref/swift/Property/isWaitingForCurrentTrackToBeLoaded" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(py)isWaitingForCurrentTrackToBeLoaded">isWaitingForCurrentTrackToBeLoaded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isWaitingForCurrentTrackToBeLoaded</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)play"></a>
+                    <a name="//apple_ref/swift/Method/play()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)play">play()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/AudioPlaybackControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(im)play">AudioPlaybackControlProtocol.play()</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">play</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)pause"></a>
+                    <a name="//apple_ref/swift/Method/pause()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)pause">pause()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/AudioPlaybackControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(im)pause">AudioPlaybackControlProtocol.pause()</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pause</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)stop"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)stop">stop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/AudioPlaybackControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(im)stop">AudioPlaybackControlProtocol.stop()</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)skip"></a>
+                    <a name="//apple_ref/swift/Method/skip()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)skip">skip()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/AudioPlaybackControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(im)skip">AudioPlaybackControlProtocol.skip()</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">skip</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)rewind"></a>
+                    <a name="//apple_ref/swift/Method/rewind()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)rewind">rewind()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/AudioPlaybackControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveAudioPlaybackControlProtocol(im)rewind">AudioPlaybackControlProtocol.rewind()</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rewind</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)playlist"></a>
+                    <a name="//apple_ref/swift/Property/playlist" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)playlist">playlist</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>PlayListEventsListener.playlist</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playlist</span><span class="p">:</span> <span class="kt"><a href="../Classes/Playlist.html">Playlist</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)refreshPlaylist"></a>
+                    <a name="//apple_ref/swift/Method/refreshPlaylist()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)refreshPlaylist">refreshPlaylist()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(im)refreshPlaylist">PlaylistControlProtocol.refreshPlaylist()</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">refreshPlaylist</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)forceReloadExperience"></a>
+                    <a name="//apple_ref/swift/Method/forceReloadExperience()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)forceReloadExperience">forceReloadExperience()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(im)forceReloadExperience">PlaylistControlProtocol.forceReloadExperience()</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">forceReloadExperience</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)generatedPlaylist"></a>
+                    <a name="//apple_ref/swift/Property/generatedPlaylist" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)generatedPlaylist">generatedPlaylist</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(py)generatedPlaylist">PlaylistControlProtocol.generatedPlaylist</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">generatedPlaylist</span><span class="p">:</span> <span class="kt"><a href="../Classes/Playlist.html">Playlist</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioQueue"></a>
+                    <a name="//apple_ref/swift/Property/audioQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioQueue">audioQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(py)audioQueue">PlaylistControlProtocol.audioQueue</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioQueue</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)unplayedTracksQueue"></a>
+                    <a name="//apple_ref/swift/Property/unplayedTracksQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)unplayedTracksQueue">unplayedTracksQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(py)unplayedTracksQueue">PlaylistControlProtocol.unplayedTracksQueue</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">unplayedTracksQueue</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)playedTracksHistory"></a>
+                    <a name="//apple_ref/swift/Property/playedTracksHistory" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)playedTracksHistory">playedTracksHistory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(py)playedTracksHistory">PlaylistControlProtocol.playedTracksHistory</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playedTracksHistory</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)playedTracksIds"></a>
+                    <a name="//apple_ref/swift/Property/playedTracksIds" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)playedTracksIds">playedTracksIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(py)playedTracksIds">PlaylistControlProtocol.playedTracksIds</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playedTracksIds</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)clearPlayedItems"></a>
+                    <a name="//apple_ref/swift/Method/clearPlayedItems()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)clearPlayedItems">clearPlayedItems()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(im)clearPlayedItems">PlaylistControlProtocol.clearPlayedItems()</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearPlayedItems</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)newContentAvailabilityType"></a>
+                    <a name="//apple_ref/swift/Property/newContentAvailabilityType" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)newContentAvailabilityType">newContentAvailabilityType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>PlaylistControlProtocol.var newContentAvailabilityType: ContentUpdateType</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">newContentAvailabilityType</span><span class="p">:</span> <span class="kt"><a href="../Enums/ContentUpdateType.html">ContentUpdateType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)notificationsActive"></a>
+                    <a name="//apple_ref/swift/Property/notificationsActive" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)notificationsActive">notificationsActive</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ApplicationRemoteNotificationsHandler.html#/c:@M@LwayveSDK@objc(pl)LwayveApplicationRemoteNotificationsHandler(py)notificationsActive">ApplicationRemoteNotificationsHandler.notificationsActive</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">notificationsActive</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)handleApplication:didFinishLaunchingWithOptions:"></a>
+                    <a name="//apple_ref/swift/Method/handleApplication(_:didFinishLaunchingWithOptions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)handleApplication:didFinishLaunchingWithOptions:">handleApplication(_:didFinishLaunchingWithOptions:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ApplicationRemoteNotificationsHandler.html#/c:@M@LwayveSDK@objc(pl)LwayveApplicationRemoteNotificationsHandler(im)handleApplication:didFinishLaunchingWithOptions:">ApplicationRemoteNotificationsHandler.handleApplication(_:didFinishLaunchingWithOptions:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">handleApplication</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)handleApplication:didReceiveRemoteNotification:fetchCompletionHandler:"></a>
+                    <a name="//apple_ref/swift/Method/handleApplication(_:didReceiveRemoteNotification:fetchCompletionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)handleApplication:didReceiveRemoteNotification:fetchCompletionHandler:">handleApplication(_:didReceiveRemoteNotification:fetchCompletionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ApplicationRemoteNotificationsHandler.html#/c:@M@LwayveSDK@objc(pl)LwayveApplicationRemoteNotificationsHandler(im)handleApplication:didReceiveRemoteNotification:fetchCompletionHandler:">ApplicationRemoteNotificationsHandler.handleApplication(_:didReceiveRemoteNotification:fetchCompletionHandler:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">handleApplication</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">fetchCompletionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)handleApplication:didRegisterForRemoteNotificationsWithDeviceToken:"></a>
+                    <a name="//apple_ref/swift/Method/handleApplication(_:didRegisterForRemoteNotificationsWithDeviceToken:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)handleApplication:didRegisterForRemoteNotificationsWithDeviceToken:">handleApplication(_:didRegisterForRemoteNotificationsWithDeviceToken:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LwayveSDK</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)defaultAlbumArtworkImage"></a>
+                    <a name="//apple_ref/swift/Property/defaultAlbumArtworkImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)defaultAlbumArtworkImage">defaultAlbumArtworkImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/LwayveNowPlayingInfoProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveNowPlayingInfoProtocol(py)defaultAlbumArtworkImage">LwayveNowPlayingInfoProtocol.defaultAlbumArtworkImage</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">defaultAlbumArtworkImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAnalyticsControlProtocol(py)analyticsEventTrackHandler"></a>
+                    <a name="//apple_ref/swift/Property/analyticsEventTrackHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAnalyticsControlProtocol(py)analyticsEventTrackHandler">analyticsEventTrackHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">analyticsEventTrackHandler</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AnalyticsControlProtocol.html">AnalyticsControlProtocol</a></span><span class="o">.</span><span class="kt">AnalyticsEventTrackHandler</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAnalyticsControlProtocol(im)sendAnalyticEvents"></a>
+                    <a name="//apple_ref/swift/Method/sendAnalyticEvents()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAnalyticsControlProtocol(im)sendAnalyticEvents">sendAnalyticEvents()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendAnalyticEvents</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAnalyticsControlProtocol(im)getAnalyticsDeviceId:"></a>
+                    <a name="//apple_ref/swift/Method/getAnalyticsDeviceId(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAnalyticsControlProtocol(im)getAnalyticsDeviceId:">getAnalyticsDeviceId(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAnalyticsDeviceId</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">deviceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setWithLocations:"></a>
+                    <a name="//apple_ref/swift/Method/set(locations:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setWithLocations:">set(locations:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)setWithLocations:">ContextControlProtocol.set(locations:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="nv">locations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setWithUserLikes:"></a>
+                    <a name="//apple_ref/swift/Method/set(userLikes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setWithUserLikes:">set(userLikes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)setWithUserLikes:">ContextControlProtocol.set(userLikes:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="nv">userLikes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)currentUserContext"></a>
+                    <a name="//apple_ref/swift/Property/currentUserContext" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)currentUserContext">currentUserContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(py)currentUserContext">ContextControlProtocol.currentUserContext</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">currentUserContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/UserContext.html">UserContext</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addWithUserLikes:"></a>
+                    <a name="//apple_ref/swift/Method/add(userLikes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addWithUserLikes:">add(userLikes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)addWithUserLikes:">ContextControlProtocol.add(userLikes:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">userLikes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addWithLocations:"></a>
+                    <a name="//apple_ref/swift/Method/add(locations:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addWithLocations:">add(locations:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)addWithLocations:">ContextControlProtocol.add(locations:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">locations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeWithUserLikes:"></a>
+                    <a name="//apple_ref/swift/Method/remove(userLikes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeWithUserLikes:">remove(userLikes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)removeWithUserLikes:">ContextControlProtocol.remove(userLikes:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">userLikes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeWithLocations:"></a>
+                    <a name="//apple_ref/swift/Method/remove(locations:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeWithLocations:">remove(locations:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)removeWithLocations:">ContextControlProtocol.remove(locations:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">locations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(py)timeOffset"></a>
+                    <a name="//apple_ref/swift/Property/timeOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(py)timeOffset">timeOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timeOffset</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-10-16)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

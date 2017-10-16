@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AudioControlDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/AudioControlDelegate" class="dashAnchor"></a>
+
+    <a title="AudioControlDelegate Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          LwayveSDK Docs
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/LWAYVE/ios-sdk">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">LwayveSDK Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      AudioControlDelegate Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Location.html">Location</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LwayvePlaybackControlView.html">LwayvePlaybackControlView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LwayveSDK.html">LwayveSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/LwayveSDKConfiguration.html">LwayveSDKConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Playlist.html">Playlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Tag.html">Tag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/UserContext.html">UserContext</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9LwayveSDK01kA35AudioPlaybackControlRewindThresholdSdv">kLwayveAudioPlaybackControlRewindThreshold</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:9LwayveSDK01kA28AudioTrackDurationIndefiniteSdv">kLwayveAudioTrackDurationIndefinite</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ContentUpdateType.html">ContentUpdateType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LwayveLanguage.html">LwayveLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LwayveSDKConfigurationType.html">LwayveSDKConfigurationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnalyticsControlProtocol.html">AnalyticsControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ApplicationRemoteNotificationsHandler.html">ApplicationRemoteNotificationsHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AudioCacheControlProtocol.html">AudioCacheControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AudioControlDelegate.html">AudioControlDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AudioPlaybackControlProtocol.html">AudioPlaybackControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AudioTrack.html">AudioTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ContextControlProtocol.html">ContextControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ExperienceControlProtocol.html">ExperienceControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ExperienceSupplementaryInfo.html">ExperienceSupplementaryInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LwayveNowPlayingInfoProtocol.html">LwayveNowPlayingInfoProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LwayvePlaybackControlAppearenceProtocol.html">LwayvePlaybackControlAppearenceProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/LwayveSDKDelegate.html">LwayveSDKDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PlayListEventsListener.html">PlayListEventsListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PlaylistControlProtocol.html">PlaylistControlProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PlaylistItem.html">PlaylistItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/LwayveSDKLogComponent.html">LwayveSDKLogComponent</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>AudioControlDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AudioControlDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                </div>
+              </div>
+            <p>The methods of the protocol allow the delegate to handle the sequence of audio track calling.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidStartLoadingTrack:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(didStartLoadingTrack:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidStartLoadingTrack:">lwayveSDK(didStartLoadingTrack:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the audio track has started loading before actual playing.
+This method may be not called if the track was preloaded before.
+In this case method <code>didStartPlayingTrack</code> will be called at once.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didStartLoadingTrack</span> <span class="nv">track</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidStartPlayingTrack:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(didStartPlayingTrack:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidStartPlayingTrack:">lwayveSDK(didStartPlayingTrack:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the audio track has started playing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didStartPlayingTrack</span> <span class="nv">track</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidPauseTrack:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(didPauseTrack:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidPauseTrack:">lwayveSDK(didPauseTrack:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the audio track was paused.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didPauseTrack</span> <span class="nv">track</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidAlmostPlayTrackToEnd:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(didAlmostPlayTrackToEnd:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidAlmostPlayTrackToEnd:">lwayveSDK(didAlmostPlayTrackToEnd:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the audio track was almost played to the end (about 0.1 sec left to the end).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didAlmostPlayTrackToEnd</span> <span class="nv">track</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidPlayTrackToEnd:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(didPlayTrackToEnd:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidPlayTrackToEnd:">lwayveSDK(didPlayTrackToEnd:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the audio track was played to the end.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didPlayTrackToEnd</span> <span class="nv">track</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidEndPlayingTrack:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(didEndPlayingTrack:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidEndPlayingTrack:">lwayveSDK(didEndPlayingTrack:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the audio track has ended.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didEndPlayingTrack</span> <span class="nv">track</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidFailPlayingTrack:withError:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(didFailPlayingTrack:withError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithDidFailPlayingTrack:withError:">lwayveSDK(didFailPlayingTrack:withError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the SDK has reached an error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didFailPlayingTrack</span> <span class="nv">track</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">,</span> <span class="n">withError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithPlayerIsReadyToPlayStatusDidChange:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(playerIsReadyToPlayStatusDidChange:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithPlayerIsReadyToPlayStatusDidChange:">lwayveSDK(playerIsReadyToPlayStatusDidChange:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the audio player status has changed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">playerIsReadyToPlayStatusDidChange</span> <span class="nv">isReadyToPlay</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithPlayerCanSkipStatusDidChange:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(playerCanSkipStatusDidChange:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithPlayerCanSkipStatusDidChange:">lwayveSDK(playerCanSkipStatusDidChange:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the audio player status has changed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">playerCanSkipStatusDidChange</span> <span class="nv">canSkip</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithPlayerCanRewindStatusDidChange:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(playerCanRewindStatusDidChange:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAudioControlDelegate(im)lwayveSDKWithPlayerCanRewindStatusDidChange:">lwayveSDK(playerCanRewindStatusDidChange:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is called when the audio player status has changed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">playerCanRewindStatusDidChange</span> <span class="nv">canRewind</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-10-16)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
