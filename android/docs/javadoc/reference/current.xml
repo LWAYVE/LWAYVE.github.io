@@ -9,32 +9,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<method name="addLocation"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="location" type="java.lang.String">
-</parameter>
-</method>
-<method name="addLocations"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="locations" type="java.util.Set&lt;java.lang.String&gt;">
-</parameter>
-</method>
 <method name="addUserLike"
  return="void"
  abstract="false"
@@ -61,6 +35,32 @@
 <parameter name="likes" type="java.util.Set&lt;java.lang.String&gt;">
 </parameter>
 </method>
+<method name="addUserLocation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="location" type="java.lang.String">
+</parameter>
+</method>
+<method name="addUserLocations"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="locations" type="java.util.Set&lt;java.lang.String&gt;">
+</parameter>
+</method>
 <method name="clearPlayedItems"
  return="void"
  abstract="false"
@@ -84,7 +84,7 @@
 >
 <parameter name="activity" type="Activity">
 </parameter>
-<parameter name="mediaBrowserConnectionListner" type="MediaBrowserCompat.ConnectionCallback">
+<parameter name="mediaBrowserConnectionListener" type="MediaBrowserCompat.ConnectionCallback">
 </parameter>
 </method>
 <method name="deinit"
@@ -142,6 +142,28 @@
  visibility="public"
 >
 </method>
+<method name="generatePlaylistDebugInfo"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="generateQueueDebugInfo"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="getConfiguration"
  return="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration"
  abstract="false"
@@ -153,7 +175,7 @@
  visibility="public"
 >
 </method>
-<method name="getCurrentPlaylistItemDuration"
+<method name="getCurrentQueueItemDuration"
  return="long"
  abstract="false"
  native="false"
@@ -164,7 +186,7 @@
  visibility="public"
 >
 </method>
-<method name="getCurrentPlaylistItemIndex"
+<method name="getCurrentQueueItemIndex"
  return="int"
  abstract="false"
  native="false"
@@ -188,6 +210,28 @@
 </method>
 <method name="getExperience"
  return="ExperienceRoot"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getExperienceLikes"
+ return="java.util.Set&lt;Tag&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getExperienceLocations"
+ return="java.util.Set&lt;Location&gt;"
  abstract="false"
  native="false"
  synchronized="false"
@@ -221,6 +265,39 @@
 <exception name="SdkNotInitializedException" type="com.lixar.lwayve.sdk.exceptions.SdkNotInitializedException">
 </exception>
 </method>
+<method name="getLastExperienceEvent"
+ return="com.lixar.lwayve.sdk.events.ExperienceEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastPlaybackEvent"
+ return="com.lixar.lwayve.sdk.events.PlaybackEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPlayedContexts"
+ return="java.util.Set&lt;DecisionContext&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="getPlayingQueue"
  return="java.util.List&lt;MediaSessionCompat.QueueItem&gt;"
  abstract="false"
@@ -232,8 +309,52 @@
  visibility="public"
 >
 </method>
-<method name="getUnplayedPlaylistItemsCount"
+<method name="getQueueHistory"
+ return="java.util.List&lt;DecisionContext&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTimeOffset"
+ return="Duration"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUnplayedItemsCount"
  return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUserLikes"
+ return="java.util.Set&lt;Tag&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUserLocations"
+ return="java.util.Set&lt;Location&gt;"
  abstract="false"
  native="false"
  synchronized="false"
@@ -260,7 +381,7 @@
 <exception name="InvalidSdkConfigurationException" type="com.lixar.lwayve.sdk.exceptions.InvalidSdkConfigurationException">
 </exception>
 </method>
-<method name="isPlaying"
+<method name="isMediaBrowserConnected"
  return="boolean"
  abstract="false"
  native="false"
@@ -271,7 +392,7 @@
  visibility="public"
 >
 </method>
-<method name="isReadyToPlay"
+<method name="isPlaying"
  return="boolean"
  abstract="false"
  native="false"
@@ -315,6 +436,17 @@
  visibility="public"
 >
 </method>
+<method name="prepareMediaPlayer"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="prev"
  return="void"
  abstract="false"
@@ -326,7 +458,7 @@
  visibility="public"
 >
 </method>
-<method name="refreshPlaylist"
+<method name="refreshPlayingQueue"
  return="void"
  abstract="false"
  native="false"
@@ -336,32 +468,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-</method>
-<method name="removeLocation"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="location" type="java.lang.String">
-</parameter>
-</method>
-<method name="removeLocations"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="locations" type="java.util.Set&lt;java.lang.String&gt;">
-</parameter>
 </method>
 <method name="removeUserLike"
  return="void"
@@ -387,6 +493,56 @@
  visibility="public"
 >
 <parameter name="likes" type="java.util.Set&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="removeUserLocation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="location" type="java.lang.String">
+</parameter>
+</method>
+<method name="removeUserLocations"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="locations" type="java.util.Set&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="rewind"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setClipPlayedAction"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="com.lixar.lwayve.sdk.mediaplayer.ClipPlayedAction">
 </parameter>
 </method>
 <method name="setTimeOffset"
@@ -431,6 +587,72 @@
 </exception>
 </method>
 </class>
+<class name="LwayveSdkAsyncProvider"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="LwayveSdkAsyncProvider"
+ type="com.lixar.lwayve.sdk.core.LwayveSdkAsyncProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="Context">
+</parameter>
+<parameter name="configuration" type="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration">
+</parameter>
+</constructor>
+<method name="connect"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="callback" type="com.lixar.lwayve.sdk.core.LwayveSdkAsyncProvider.LwayveConnectionCallback">
+</parameter>
+</method>
+<method name="getInstance"
+ return="com.lixar.lwayve.sdk.core.LwayveSdkAsyncProvider"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="LwayveSdkAsyncProvider.LwayveConnectionCallback"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onConnected"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="lwayveSdk" type="com.lixar.lwayve.sdk.core.LwayveSdk">
+</parameter>
+</method>
+</interface>
 <class name="LwayveSdkConfiguration"
  extends="java.lang.Object"
  abstract="false"
@@ -758,6 +980,118 @@
 </method>
 </class>
 </package>
+<package name="com.lixar.lwayve.sdk.events"
+>
+<class name="ExperienceEvent"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getLastEventTime"
+ return="ZonedDateTime"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.lixar.lwayve.sdk.events.ExperienceEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.lixar.lwayve.sdk.events.ExperienceEvent[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="OnPlaybackEventListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onPlaybackEvent"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventType" type="com.lixar.lwayve.sdk.events.PlaybackEvent">
+</parameter>
+</method>
+</interface>
+<class name="PlaybackEvent"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getLastEventTime"
+ return="ZonedDateTime"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.lixar.lwayve.sdk.events.PlaybackEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.lixar.lwayve.sdk.events.PlaybackEvent[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
 <package name="com.lixar.lwayve.sdk.exceptions"
 >
 <class name="InvalidSdkConfigurationException"
@@ -794,14 +1128,12 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="message" type="java.lang.String">
-</parameter>
 </constructor>
 </class>
 </package>
-<package name="com.lixar.lwayve.sdk.services.audio"
+<package name="com.lixar.lwayve.sdk.mediaplayer"
 >
-<class name="PlaybackEventType"
+<class name="ClipPlayedAction"
  extends="java.lang.Enum"
  abstract="false"
  static="false"
@@ -810,7 +1142,7 @@
  visibility="public"
 >
 <method name="valueOf"
- return="com.lixar.lwayve.sdk.services.audio.PlaybackEventType"
+ return="com.lixar.lwayve.sdk.mediaplayer.ClipPlayedAction"
  abstract="false"
  native="false"
  synchronized="false"
@@ -823,7 +1155,7 @@
 </parameter>
 </method>
 <method name="values"
- return="com.lixar.lwayve.sdk.services.audio.PlaybackEventType[]"
+ return="com.lixar.lwayve.sdk.mediaplayer.ClipPlayedAction[]"
  abstract="false"
  native="false"
  synchronized="false"
@@ -919,6 +1251,94 @@
  visibility="public"
 >
 </method>
+<method name="getOuterBandDisabledIconColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOuterBandIconColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOuterBandTextColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPlayButtonIconColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTitleBarBackgroundColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTitleBarText"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTitleBarTextColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isOuterBandEnabled"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="setOnPlaybackEventListener"
  return="void"
  abstract="false"
@@ -929,27 +1349,10 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="playbackEventListener" type="com.lixar.lwayve.sdk.view.LwayvePlaybackControlView.OnPlaybackEventListener">
+<parameter name="playbackEventListener" type="com.lixar.lwayve.sdk.events.OnPlaybackEventListener">
 </parameter>
 </method>
-</class>
-<class name="LwayvePlaybackControlView.OnPlaybackEventListener"
- extends="java.lang.Object"
- abstract="true"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<constructor name="OnPlaybackEventListener"
- type="com.lixar.lwayve.sdk.view.LwayvePlaybackControlView.OnPlaybackEventListener"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</constructor>
-<method name="onPlaybackEvent"
+<method name="setOuterBandDisabledIconColor"
  return="void"
  abstract="false"
  native="false"
@@ -959,9 +1362,123 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="eventType" type="com.lixar.lwayve.sdk.services.audio.PlaybackEventType">
+<parameter name="disabledIconColor" type="int">
 </parameter>
 </method>
+<method name="setOuterBandEnabled"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enabled" type="boolean">
+</parameter>
+</method>
+<method name="setOuterBandIconColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="iconColor" type="int">
+</parameter>
+</method>
+<method name="setOuterBandTextColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textColor" type="int">
+</parameter>
+</method>
+<method name="setPlayButtonIconColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="iconColor" type="int">
+</parameter>
+</method>
+<method name="setTitleBarBackgroundColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="backgroundColor" type="int">
+</parameter>
+</method>
+<method name="setTitleBarEnabled"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enabled" type="boolean">
+</parameter>
+</method>
+<method name="setTitleBarText"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="text" type="java.lang.String">
+</parameter>
+</method>
+<method name="setTitleBarTextColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textColor" type="int">
+</parameter>
+</method>
+<field name="typeface"
+ type="Typeface"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
 </class>
 </package>
 </api>
