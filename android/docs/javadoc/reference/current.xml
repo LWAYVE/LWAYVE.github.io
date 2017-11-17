@@ -1,6 +1,175 @@
 <api>
+<package name="com.fasterxml.jackson.annotation"
+>
+<class name="JsonBackReference"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="JsonManagedReference"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+</package>
+<package name="com.github.jonpeterson.jackson.module.versioning"
+>
+<class name="JsonSerializeToVersion"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="JsonVersionedModel"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+</package>
+<package name="com.lixar.lwayve.proxsee"
+>
+<interface name="ProxSeeSdkAdapter"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="deinitialize"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getVersion"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialize"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="authToken" type="java.lang.String">
+</parameter>
+</method>
+<method name="isProxSeeSdkInitialized"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="start"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="stop"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="ProxSeeSdkAdapter.Factory"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="get"
+ return="com.lixar.lwayve.proxsee.ProxSeeSdkAdapter"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+</package>
 <package name="com.lixar.lwayve.sdk.core"
 >
+<interface name="LwayveConnectionCallback"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onConnected"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="lwayveSdk" type="com.lixar.lwayve.sdk.core.LwayveSdk">
+</parameter>
+</method>
+</interface>
 <class name="LwayveSdk"
  extends="java.lang.Object"
  abstract="false"
@@ -71,6 +240,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+</method>
+<method name="connect"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="callback" type="com.lixar.lwayve.sdk.core.LwayveConnectionCallback">
+</parameter>
 </method>
 <method name="connectToMediaBrowser"
  return="void"
@@ -198,7 +380,7 @@
 >
 </method>
 <method name="getDeviceUUID"
- return="java.lang.String"
+ return="java.util.UUID"
  abstract="false"
  native="false"
  synchronized="false"
@@ -251,19 +433,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-</method>
-<method name="getInstance"
- return="com.lixar.lwayve.sdk.core.LwayveSdk"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<exception name="SdkNotInitializedException" type="com.lixar.lwayve.sdk.exceptions.SdkNotInitializedException">
-</exception>
 </method>
 <method name="getLastExperienceEvent"
  return="com.lixar.lwayve.sdk.events.ExperienceEvent"
@@ -414,6 +583,21 @@
  visibility="public"
 >
 </method>
+<method name="onNetworkStateChanged"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="connected" type="boolean">
+</parameter>
+<parameter name="isMeteredNetwork" type="boolean">
+</parameter>
+</method>
 <method name="pause"
  return="void"
  abstract="false"
@@ -426,17 +610,6 @@
 >
 </method>
 <method name="play"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="prepareMediaPlayer"
  return="void"
  abstract="false"
  native="false"
@@ -579,80 +752,12 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="context" type="Context">
-</parameter>
 <parameter name="configuration" type="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration">
 </parameter>
 <exception name="InvalidSdkConfigurationException" type="com.lixar.lwayve.sdk.exceptions.InvalidSdkConfigurationException">
 </exception>
 </method>
 </class>
-<class name="LwayveSdkAsyncProvider"
- extends="java.lang.Object"
- abstract="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<constructor name="LwayveSdkAsyncProvider"
- type="com.lixar.lwayve.sdk.core.LwayveSdkAsyncProvider"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="context" type="Context">
-</parameter>
-<parameter name="configuration" type="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration">
-</parameter>
-</constructor>
-<method name="connect"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="callback" type="com.lixar.lwayve.sdk.core.LwayveSdkAsyncProvider.LwayveConnectionCallback">
-</parameter>
-</method>
-<method name="getInstance"
- return="com.lixar.lwayve.sdk.core.LwayveSdkAsyncProvider"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-</class>
-<interface name="LwayveSdkAsyncProvider.LwayveConnectionCallback"
- abstract="true"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<method name="onConnected"
- return="void"
- abstract="true"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="lwayveSdk" type="com.lixar.lwayve.sdk.core.LwayveSdk">
-</parameter>
-</method>
-</interface>
 <class name="LwayveSdkConfiguration"
  extends="java.lang.Object"
  abstract="false"
@@ -770,6 +875,17 @@
  visibility="public"
 >
 </method>
+<method name="getProxSeeSdkAdapterFactory"
+ return="com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.Factory"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="isCachingEnabled"
  return="boolean"
  abstract="false"
@@ -844,6 +960,19 @@
  visibility="public"
 >
 <parameter name="notificationSmallIconRes" type="int">
+</parameter>
+</method>
+<method name="setProxSeeSdkAdapterFactory"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="proxSeeSdkAdapterFactory" type="com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.Factory">
 </parameter>
 </method>
 </class>
@@ -978,6 +1107,19 @@
 <parameter name="notificationSmallIconRes" type="int">
 </parameter>
 </method>
+<method name="setProxSeeSdkAdapterFactory"
+ return="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration.Builder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="proxSeeSdkAdapterFactory" type="com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.Factory">
+</parameter>
+</method>
 </class>
 </package>
 <package name="com.lixar.lwayve.sdk.events"
@@ -1109,12 +1251,10 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="message" type="java.lang.String">
-</parameter>
 </constructor>
 </class>
 <class name="SdkNotInitializedException"
- extends="java.lang.Exception"
+ extends="java.lang.RuntimeException"
  abstract="false"
  static="false"
  final="false"
@@ -1129,6 +1269,18 @@
  visibility="public"
 >
 </constructor>
+</class>
+</package>
+<package name="com.lixar.lwayve.sdk.experience"
+>
+<class name="PlayingQueueGenerator"
+ extends="<any>"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
 </class>
 </package>
 <package name="com.lixar.lwayve.sdk.mediaplayer"
@@ -1161,6 +1313,194 @@
  synchronized="false"
  static="true"
  final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="MediaBrowserManager"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MediaBrowserManager"
+ type="com.lixar.lwayve.sdk.mediaplayer.MediaBrowserManager"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="Context">
+</parameter>
+</constructor>
+<method name="connectToMediaBrowser"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="Activity">
+</parameter>
+<parameter name="mediaBrowserConnectionListener" type="MediaBrowserCompat.ConnectionCallback">
+</parameter>
+</method>
+<method name="deinit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="disconnectFromMediaBrowser"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getClipMetadata"
+ return="MediaMetadataCompat"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCurrentQueueItemDuration"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isMediaBrowserConnected"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isPlaying"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="prepareMediaPlayer"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="sendNextCommand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="sendPauseCommand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="sendPlayCommand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="sendPrevCommand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="sendRewindCommand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="sendStopCommand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setPlayingQueue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
  deprecated="not deprecated"
  visibility="public"
 >

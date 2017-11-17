@@ -141,11 +141,15 @@
               <ul>
                 
     <li class="api apilevel-">
+  <a href="../../../../../com/lixar/lwayve/proxsee/package-summary.html">com.lixar.lwayve.proxsee</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/core/package-summary.html">com.lixar.lwayve.sdk.core</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/events/package-summary.html">com.lixar.lwayve.sdk.events</a></li>
     <li class="selected api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/exceptions/package-summary.html">com.lixar.lwayve.sdk.exceptions</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../com/lixar/lwayve/sdk/experience/package-summary.html">com.lixar.lwayve.sdk.experience</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/mediaplayer/package-summary.html">com.lixar.lwayve.sdk.mediaplayer</a></li>
     <li class="api apilevel-">
@@ -203,6 +207,11 @@
 <div id="api-info-block">
 
 
+
+  
+  
+  
+  
 
   
   
@@ -286,7 +295,11 @@ Summary:
   
 
   
-    extends Exception<br/>
+  
+  
+
+  
+    extends RuntimeException<br/>
   
   
   
@@ -306,7 +319,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="4" class="jd-inheritance-class-cell">java.lang.Object</td>
+        <td colspan="5" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
@@ -314,7 +327,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Throwable</td>
+        <td colspan="4" class="jd-inheritance-class-cell">java.lang.Throwable</td>
     </tr>
     
 
@@ -324,11 +337,25 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Exception</td>
+        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Exception</td>
     </tr>
     
 
     <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="2" class="jd-inheritance-class-cell">java.lang.RuntimeException</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
         
             <td class="jd-inheritance-space">&nbsp;</td>
         
@@ -352,7 +379,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>This exception will be thrown if <code><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#getInstance()">LwayveSdk.getInstance()</a></code> is called before the SDK has been
+<p>This exception will be thrown if <code><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#connect(com.lixar.lwayve.sdk.core.LwayveConnectionCallback)">connect(LwayveConnectionCallback)</a></code> is called before the SDK has been
  initialized.
 </p>
 
@@ -442,6 +469,8 @@ Summary:
 <table id="inhmethods" class="jd-sumtable"><tr><th>
   <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
   <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
 
 
 
