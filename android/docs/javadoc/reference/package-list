@@ -2,7 +2,6 @@ com.lixar.lwayve.proxsee
 com.lixar.lwayve.sdk.core
 com.lixar.lwayve.sdk.events
 com.lixar.lwayve.sdk.exceptions
-com.lixar.lwayve.sdk.experience
 com.lixar.lwayve.sdk.mediaplayer
 com.lixar.lwayve.sdk.view
 
