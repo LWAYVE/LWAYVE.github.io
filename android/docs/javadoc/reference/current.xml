@@ -128,7 +128,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<method name="addUserLike"
+<method name="clearCachedUrls"
  return="void"
  abstract="false"
  native="false"
@@ -138,47 +138,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="like" type="java.lang.String">
-</parameter>
-</method>
-<method name="addUserLikes"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="likes" type="java.util.Set&lt;java.lang.String&gt;">
-</parameter>
-</method>
-<method name="addUserLocation"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="location" type="java.lang.String">
-</parameter>
-</method>
-<method name="addUserLocations"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="locations" type="java.util.Set&lt;java.lang.String&gt;">
-</parameter>
 </method>
 <method name="clearPlayedItems"
  return="void"
@@ -287,6 +246,17 @@
 </method>
 <method name="generateQueueDebugInfo"
  return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCachedUrls"
+ return="java.util.List&lt;java.lang.String&gt;"
  abstract="false"
  native="false"
  synchronized="false"
@@ -406,8 +376,8 @@
  visibility="public"
 >
 </method>
-<method name="getPlayedContexts"
- return="java.util.Set&lt;DecisionContext&gt;"
+<method name="getPlayedClips"
+ return="java.util.Set&lt;java.lang.String&gt;"
  abstract="false"
  native="false"
  synchronized="false"
@@ -592,58 +562,6 @@
  visibility="public"
 >
 </method>
-<method name="removeUserLike"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="like" type="java.lang.String">
-</parameter>
-</method>
-<method name="removeUserLikes"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="likes" type="java.util.Set&lt;java.lang.String&gt;">
-</parameter>
-</method>
-<method name="removeUserLocation"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="location" type="java.lang.String">
-</parameter>
-</method>
-<method name="removeUserLocations"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="locations" type="java.util.Set&lt;java.lang.String&gt;">
-</parameter>
-</method>
 <method name="rewind"
  return="void"
  abstract="false"
@@ -679,6 +597,32 @@
  visibility="public"
 >
 <parameter name="timeOffset" type="Duration">
+</parameter>
+</method>
+<method name="setUserLikes"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="likes" type="java.util.Set&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="setUserLocations"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="locations" type="java.util.Set&lt;java.lang.String&gt;">
 </parameter>
 </method>
 <method name="stop"
@@ -724,17 +668,6 @@
  visibility="public"
 >
 </constructor>
-<method name="cacheNeverExpires"
- return="boolean"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
 <method name="from"
  return="void"
  abstract="false"
@@ -781,28 +714,6 @@
  visibility="public"
 >
 </method>
-<method name="getMaxCacheAge"
- return="int"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getMaxCacheSize"
- return="long"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
 <method name="getNotificationLargeIconRes"
  return="java.lang.Integer"
  abstract="false"
@@ -836,17 +747,6 @@
  visibility="public"
 >
 </method>
-<method name="isCachingEnabled"
- return="boolean"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
 <method name="setLanguage"
  return="void"
  abstract="false"
@@ -858,32 +758,6 @@
  visibility="public"
 >
 <parameter name="language" type="LanguageManager.LwayveSdkLanguage">
-</parameter>
-</method>
-<method name="setMaxCacheAge"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="days" type="int">
-</parameter>
-</method>
-<method name="setMaxCacheSize"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="megabytes" type="long">
 </parameter>
 </method>
 <method name="setNotificationLargeIconRes"
@@ -1003,32 +877,6 @@
  visibility="public"
 >
 <parameter name="language" type="LanguageManager.LwayveSdkLanguage">
-</parameter>
-</method>
-<method name="setMaxCacheAge"
- return="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration.Builder"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="days" type="int">
-</parameter>
-</method>
-<method name="setMaxCacheSize"
- return="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration.Builder"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="megabytes" type="long">
 </parameter>
 </method>
 <method name="setNotificationLargeIconRes"
@@ -1385,7 +1233,7 @@
  visibility="public"
 >
 </method>
-<method name="getTitleBarBackgroundColor"
+<method name="getTrackBarBackgroundColor"
  return="int"
  abstract="false"
  native="false"
@@ -1396,7 +1244,7 @@
  visibility="public"
 >
 </method>
-<method name="getTitleBarText"
+<method name="getTrackBarText"
  return="java.lang.String"
  abstract="false"
  native="false"
@@ -1407,7 +1255,7 @@
  visibility="public"
 >
 </method>
-<method name="getTitleBarTextColor"
+<method name="getTrackBarTextColor"
  return="int"
  abstract="false"
  native="false"
@@ -1507,7 +1355,7 @@
 <parameter name="iconColor" type="int">
 </parameter>
 </method>
-<method name="setTitleBarBackgroundColor"
+<method name="setTrackBarBackgroundColor"
  return="void"
  abstract="false"
  native="false"
@@ -1520,7 +1368,7 @@
 <parameter name="backgroundColor" type="int">
 </parameter>
 </method>
-<method name="setTitleBarEnabled"
+<method name="setTrackBarEnabled"
  return="void"
  abstract="false"
  native="false"
@@ -1533,7 +1381,7 @@
 <parameter name="enabled" type="boolean">
 </parameter>
 </method>
-<method name="setTitleBarText"
+<method name="setTrackBarText"
  return="void"
  abstract="false"
  native="false"
@@ -1546,7 +1394,7 @@
 <parameter name="text" type="java.lang.String">
 </parameter>
 </method>
-<method name="setTitleBarTextColor"
+<method name="setTrackBarTextColor"
  return="void"
  abstract="false"
  native="false"
