@@ -87,7 +87,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/ContentUpdateType.html">ContentUpdateType</a>
@@ -100,6 +100,29 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:9LwayveSDK6logAllyAA0A15SDKLogComponentV_SStF">logAll(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:9LwayveSDK8logDebugyAA0A15SDKLogComponentV_SStF">logDebug(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:9LwayveSDK8logErroryAA0A15SDKLogComponentV_SStF">logError(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:9LwayveSDK7logInfoyAA0A15SDKLogComponentV_SStF">logInfo(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:9LwayveSDK10logVerboseyAA0A15SDKLogComponentV_SStF">logVerbose(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:9LwayveSDK10logWarningyAA0A15SDKLogComponentV_SStF">logWarning(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -151,10 +174,13 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/PlaylistItem.html">PlaylistItem</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ProxSeeConfigurationProtocol.html">ProxSeeConfigurationProtocol</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/LwayveSDKLogComponent.html">LwayveSDKLogComponent</a>
@@ -173,7 +199,7 @@
 <p>The following document provides background information on the LWAYVE platform as well as provides setup and usage instructions for the LWAYVE SDK for iOS. The content in this document is divided into the following sections:</p>
 
 <ul>
-<li><a href="#section-1-introducing-lwayve-and-contextual-audio-experiences">Section 1: Introducing LWAYVE and Contextual Audio Experiences Audio</a>
+<li><a href="#section-1-introducing-lwayve-and-contextual-audio-experiences">Section 1: Introducing LWAYVE and Contextual Audio Experiences</a>
 
 <ul>
 <li><a href="#background">Background</a></li>
@@ -185,10 +211,10 @@
 
 <ul>
 <li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#add-the-lwayve-and-proxsee-sdks-as-dependencies">Add the LWAYVE and ProxSee SDKs as Dependencies</a></li>
+<li><a href="#add-the-lwayve-sdk-and-optionally-the-proxsee-sdk-as-dependencies">Add the LWAYVE SDK (and optionally the ProxSee SDK) as Dependencies</a></li>
 <li><a href="#configure-application-background-modes">Configure Application Background Modes</a></li>
-<li><a href="#initialize-the-lwayve-and-proxsee-sdks">Initialize the LWAYVE and ProxSee SDKs</a></li>
-<li><a href="#enable-communication-between-the-lwayve-and-proxsee-sdks">Enable Communication Between the LWAYVE and ProxSee SDKs</a></li>
+<li><a href="#set-up-push-notifications">Set Up Push Notifications</a></li>
+<li><a href="#initialize-the-lwayve-and-optionally-proxsee-sdks">Initialize the LWAYVE (and optionally ProxSee SDKs)</a></li>
 <li><a href="#set-up-branded-playback-control">Set Up Branded Playback Control</a></li>
 </ul></li>
 <li><a href="#section-3-testing-lwayve">Section 3: Testing LWAYVE</a>
@@ -269,13 +295,14 @@
 <p><img src="https://drive.google.com/uc?export=download&id=0B6FLg-DILCSrUm1ocFVGVnlMc0k" alt="Communication Diagram"></p>
 <h2 id='section-2-implementing-the-lwayve-and-proxsee-sdks-in-an-ios-project' class='heading'>Section 2: Implementing the LWAYVE and ProxSee SDKs in an iOS Project</h2>
 
-<p>Incorporating the LWAYVE and ProxSee SDKs in your iOS project is a simple four-step process:</p>
+<p>Incorporating the LWAYVE and ProxSee SDKs in your iOS project is a simple process:</p>
 
 <ol>
-<li><a href="#add-the-lawayve-and-proxsee-sdks-as-dependencies">Add the LWAYVE and ProxSee SDKs as Dependencies</a></li>
+<li><a href="#add-the-lwayve-sdk-and-optionally-the-proxsee-sdk-as-dependencies">Add the LWAYVE SDK (and optionally the ProxSee SDK) as Dependencies</a></li>
 <li><a href="#configure-application-background-modes">Configure Application Background Modes</a></li>
-<li><a href="#initialize-the-lwayve-and-proxsee-sdks">Initialize the LWAYVE and ProxSee SDKs</a></li>
-<li><a href="#set-up-an-event-logger">Set Up an Event Logger</a></li>
+<li><a href="#set-up-push-notifications">Set Up Push Notifications</a></li>
+<li><a href="#initialize-the-lwayve-and-optionally-proxsee-sdks">Initialize the LWAYVE (and optionally ProxSee SDKs)</a></li>
+<li><a href="#set-up-branded-playback-control">Set Up Branded Playback Control</a></li>
 </ol>
 <h3 id='prerequisites' class='heading'>Prerequisites</h3>
 
@@ -289,10 +316,9 @@
 <li>The corresponding audio files for the Contextual Audio Experience have been uploaded to your environment</li>
 <li>If ProxSee services are being used, Location tags needed for the LWAYVE Contextual Audio Experience have been defined within the ProxSee environment</li>
 </ul>
-<h3 id='add-the-lwayve-and-proxsee-sdks-as-dependencies' class='heading'>Add the LWAYVE and ProxSee SDKs as Dependencies</h3>
+<h3 id='add-the-lwayve-sdk-and-optionally-the-proxsee-sdk-as-dependencies' class='heading'>Add the LWAYVE SDK (and optionally the ProxSee SDK) as Dependencies</h3>
 
 <p>The first step in setting up LWAYVE is to add both the LWAYVE SDK and the ProxSee SDK as dependencies in your iOS project. The LWAYVE SDK handles the time, location, and audio of the Contextual Audio Experience. The ProxSee SDK passes the location tags to the LWAYVE SDK so that the LWAYVE SDK can complete the location aspect of the Contextual Audio Experience.</p>
-<h4 id='add-the-lwayve-and-proxsee-sdks-as-dependencies' class='heading'>Add the LWAYVE and ProxSee SDKs as Dependencies</h4>
 <h5 id='using-cocoapods-recomended' class='heading'>Using CocoaPods (recomended)</h5>
 
 <p>You can get the LWAYVE and ProxSee SDKs for iOS on Cocoapods:</p>
@@ -304,14 +330,16 @@
 
 <p>In order to add and manage the LWAYVE and ProxSee SDKs as dependencies in your iOS project, you must first install CocoaPods.</p>
 <pre class="highlight plaintext"><code>$ gem install cocoapods
-
 </code></pre>
 
 <p>In your iOS project, create a file named <code>Podfile</code>.</p>
 
-<p>In your <code>Podfile</code>, add the LWAYVE and ProxSee SDKs as dependencies.</p>
+<p>In your <code>Podfile</code>, add the LWAYVE dependency.</p>
 <pre class="highlight plaintext"><code>pod 'LwayveSDK'
-pod 'ProxSeeSDK'
+</code></pre>
+
+<p>(Optional) Add the ProxSee depedency.</p>
+<pre class="highlight plaintext"><code>pod 'LwayveSDK/ProxSee'
 </code></pre>
 
 <p>Run the install command.</p>
@@ -322,9 +350,7 @@ pod 'ProxSeeSDK'
 <p>Please use this approach only if you have strict requirements not to use CocoaPods, as this method is more difficult and error prone.</p>
 
 <ol>
-<li>Add LwayveSDK.framework to the Embedded Binaries section of your application. The latest version of the framework is available at <a href="#https://github.com/LWAYVE/ios-sdk/releases">https://github.com/LWAYVE/ios-sdk/releases</a>.</li>
-<li>Integrate the ProxSeeSDK. Full instructions are available at <a href="#https://github.com/proxsee/sdk-ios#add-the-proxsee-sdk-to-your-ios-project">https://github.com/proxsee/sdk-ios#add-the-proxsee-sdk-to-your-ios-project</a>.</li>
-<li>Integrate Firebase Cloud Messaging by following the instructions in the <q>Integrate without CocoaPods</q> section at <a href="#https://firebase.google.com/docs/ios/setup#frameworks">https://firebase.google.com/docs/ios/setup#frameworks</a>.</li>
+<li>Add LwayveSDK.framework (and optionally LwayveSDK_ProxSee.framework) to the Embedded Binaries section of your application. The latest version of the framework is available at <a href="#https://github.com/LWAYVE/ios-sdk/releases">https://github.com/LWAYVE/ios-sdk/releases</a>.</li>
 <li>Integrate other third-party dependencies using Carthage (recommended) or manually:</li>
 </ol>
 <pre class="highlight plaintext"><code>- Using Carthage (recommended):
@@ -335,7 +361,6 @@ pod 'ProxSeeSDK'
         ```
         $ cd &lt;your_directory&gt;
         $ carthage bootstrap --platform iOS
-
         ```
     4. Add the frameworks from &lt;your_directory&gt;/Carthage/Build/iOS to the Embedded Binaries section of your application.
 - Manually:
@@ -344,6 +369,7 @@ pod 'ProxSeeSDK'
     - SwiftyJSON - [https://github.com/SwiftyJSON/SwiftyJSON](#https://github.com/SwiftyJSON/SwiftyJSON). Version 3.1.4 (or compatible) must be used.
     - keychain-swift - [https://github.com/evgenyneu/keychain-swift](#https://github.com/evgenyneu/keychain-swift). Version 8.0.2 (or compatible) must be used.
     - CocoaLumberjack - [https://github.com/CocoaLumberjack/CocoaLumberjack](#https://github.com/CocoaLumberjack/CocoaLumberjack). Version 3.2.0 (or compatible) must be used.
+    - GoogleToolboxForMac/NSData+zlib - [https://github.com/google/google-toolbox-for-mac](#https://github.com/google/google-toolbox-for-mac). Version 2.1.1 (or compatible) must be used.
 </code></pre>
 <h3 id='configure-application-background-modes' class='heading'>Configure Application Background Modes</h3>
 
@@ -351,20 +377,44 @@ pod 'ProxSeeSDK'
 
 <ul>
 <li>audio: Allows your application to play audio or stream audio/video using AirPlay.</li>
+<li>remote-notification: Allows your application to receive and handle push notifications in the background.</li>
 </ul>
 
 <p>To configure the above application modes in your application, add the following to your application plist:</p>
 <pre class="highlight plaintext"><code>&lt;key&gt;UIBackgroundModes&lt;/key&gt;
 &lt;array&gt;
     &lt;string&gt;audio&lt;/string&gt;
+  &lt;string&gt;remote-notification&lt;/string&gt;
 &lt;/array&gt;
-
 </code></pre>
 
-<p>Refer to <a href="https://github.com/proxsee/sdk-ios#add-the-proxsee-sdk-to-your-ios-project">https://github.com/proxsee/sdk-ios#add-the-proxsee-sdk-to-your-ios-project</a> to configure ProxSee SDK.</p>
-<h3 id='initialize-the-lwayve-and-proxsee-sdks' class='heading'>Initialize the LWAYVE and ProxSee SDKs</h3>
+<p>(Optional) Refer to <a href="https://github.com/proxsee/sdk-ios#add-the-proxsee-sdk-to-your-ios-project">https://github.com/proxsee/sdk-ios#add-the-proxsee-sdk-to-your-ios-project</a> for plist values needed for ProxSee.</p>
+<h3 id='set-up-push-notifications' class='heading'>Set Up Push Notifications</h3>
 
-<p>The next step is to initialize (launch) both the LWAYVE SDK and the ProxSee SDK.</p>
+<p>Push notifications are used to notify the SDK of experience updates and situational audio.</p>
+
+<p>The push notifications will be handled by the SDK. Here is an example push notification payload.</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"experience.updated"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nt">"aps"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"content-available"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">},</span><span class="w"> 
+  </span><span class="nt">"experience_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">194950</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h4 id='enable-push-notifications' class='heading'>Enable Push Notifications</h4>
+
+<p>To enable push notifications for your application, please refer to <a href="http://help.apple.com/xcode/mac/current/#/devdfd3d04a1">Enable push notifications</a> from the Apple Documentation.</p>
+<h4 id='generate-authentication-token' class='heading'>Generate Authentication Token</h4>
+
+<p>To allow push notifications, an APNs key (.p8) must be provided to Lixar. Please refer to the <a href="http://help.apple.com/xcode/mac/current/#/dev54d690a66">Communicate with APNs using authentication tokens</a> from the Apple Documentation. </p>
+
+<blockquote>
+<p><strong>NOTE:</strong> It is recommended that only APNs is enabled for this key. </p>
+</blockquote>
+<h3 id='initialize-the-lwayve-and-optionally-proxsee-sdks' class='heading'>Initialize the LWAYVE (and optionally ProxSee SDKs)</h3>
+
+<p>The next step is to initialize (launch) the LWAYVE SDK.</p>
 <h4 id='initialize-the-lwayve-sdk' class='heading'>Initialize the LWAYVE SDK</h4>
 
 <p>When initializing the LWAYVE SDK, you need to pass the Authentication token provided to you by Lixar.  </p>
@@ -391,71 +441,30 @@ pod 'ProxSeeSDK'
 
   return true
 }
-</code></pre>
-<h4 id='initialize-the-proxsee-sdk' class='heading'>Initialize the ProxSee SDK</h4>
 
-<p>When initializing and launching the ProxSee SDK you need to pass the ProxSee API key which passes the location information from the ProxSee backend. The ProxSee API Key has been provided to you by Lixar.</p>
-<pre class="highlight plaintext"><code>func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
-  // Launch the ProxSee SDK and set the AppDelegate as the tags observer.
-  // ProxSee will be used to pass location tags to the LWAYVE SDK.
-  LXProxSeeSDKManager.launchProxSee(withApiKey: proxSeeAPIKey))
-
-  return true
-}
-</code></pre>
-<h3 id='enable-communication-between-the-lwayve-and-proxsee-sdks' class='heading'>Enable Communication Between the LWAYVE and ProxSee SDKs</h3>
-
-<p>Now that the LWAYVE SDK and ProxSee SDK have been added to your project and initialized, you need to ensure that they can communicate with each other. This is done by sending the LWAYVE Device ID to the ProxSee SDK as well as sending ProxSee locations to the LWAYVE SDK. Sending the LWAYVE Device ID to the ProxSee SDK is required to link the data captured by LWAYVE to the location tag data captured by the Proxsee SDK.</p>
-<h4 id='send-the-lwayve-device-id-to-proxsee-sdk' class='heading'>Send the LWAYVE Device ID to ProxSee SDK</h4>
-
-<p>Add the following code to your mobile application.</p>
-<pre class="highlight plaintext"><code>
 ...
 
-
-public func lwayveSDK(didInit sdk: LwayveSDK) {
-  // Set the AppDelegate as the tags observer. See LXProxSeeNotificationsHandler below.
-  // ProxSee will be used to pass location tags to the LWAYVE SDK.
-  self.addProxSeeNotifcationObserver()
-
-  // Pass LWAYVE device id to ProxSee SDK to link the data captured by LWAYVE to the location tag data captured by the Proxsee SDK.
-  LwayveSDK.sharedSDK.getAnalyticsDeviceId { (deviceId) in
-      LXProxSeeSDKManager.sharedInstance().updateMetadata(["lwayve_deviceid": deviceId], completionHandler: { (success, error) in
-          if !success {
-              NSLog("Error sending lwayve deviceid to proxsee: \(String (describing: error))")
-          }
-      })
-  }
-}
-...
-
-</code></pre>
-
-<p>Note: You can see an example of the implementation of the full initialization sequence in the application delegate of PlaybackControlSampleApp (<a href="https://github.com/LWAYVE/ios-sdk/blob/master/Examples/PlaybackControlSampleApplication/PlaybackControlSampleApp/Source/AppDelegate.swift">https://github.com/LWAYVE/ios-sdk/blob/master/Examples/PlaybackControlSampleApplication/PlaybackControlSampleApp/Source/AppDelegate.swift</a>)</p>
-<h4 id='send-proxsee-locations-to-the-lwayve-sdk' class='heading'>Send ProxSee Locations to the LWAYVE SDK</h4>
-
-<p>Add the following code to your mobile application.</p>
-<pre class="highlight plaintext"><code>
-...
-    // Set the AppDelegate as the tags observer. See LXProxSeeNotificationsHandler below.
-    // ProxSee will be used to pass location tags to the LWAYVE SDK.
-    self.addProxSeeNotifcationObserver()
-...
-
-// MARK: - LXProxSeeNotificationsHandler
-extension AppDelegate {
-    override func didChangeTagsSet(_ proximityNotificationObject: LXProxSeeNotificationObject!) {
-        // Retrieve the newly updated tags and pass them to LWAYVE as locations.
-        guard let tags = proximityNotificationObject.currentTagsChangeSet.tags as? Set&lt;String&gt; else {
-            return
-        }
-
-        NSLog("ProxSee tag set updated: \(tags)")
-
-        LwayveSDK.sharedSDK.set(locations: Array(tags))
-    }
+func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -&gt; Void) {
+  // Pass the notification data to the LWAYVE SDK so that it can process any information relevant to it.
+  LwayveSDK.sharedSDK.handleApplication(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
 }
 
+func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+  // Pass the device token to the Lwayve SDK
+  LwayveSDK.sharedSDK.handleApplication(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
+}
+</code></pre>
+
+<p>(Optional) To initialize Lwayve with ProxSee, import Lwayve with ProxSee and replace the initialize method.</p>
+<pre class="highlight plaintext"><code>import LwayveSDK_ProxSee
+
+...
+
+do {
+  try LwayveSDK.sharedSDK.initializeWithProxSee(configuration: configuration)
+} catch {
+  NSLog("LwayveSDK initialization error: \(error)")
+}
 </code></pre>
 <h3 id='set-up-branded-playback-control' class='heading'>Set Up Branded Playback Control</h3>
 
@@ -464,7 +473,7 @@ extension AppDelegate {
 <p>LwayvePlaybackControlView is a subclass of UIView. It can be used with or without Storyboard or Xib.</p>
 <h4 id='with-storyboard-or-xib' class='heading'>With Storyboard or Xib</h4>
 
-<p>To add <code>LwayvePlaybackControlView</code> using Storyboard or Xib:</p>
+<p>To add <code><a href="Classes/LwayvePlaybackControlView.html">LwayvePlaybackControlView</a></code> using Storyboard or Xib:</p>
 
 <ol>
 <li>Add a view</li>
@@ -475,7 +484,7 @@ extension AppDelegate {
 </ol>
 <h4 id='from-code' class='heading'>From Code</h4>
 
-<p>To add  <code>LwayvePlaybackControlView</code> from code:</p>
+<p>To add  <code><a href="Classes/LwayvePlaybackControlView.html">LwayvePlaybackControlView</a></code> from code:</p>
 
 <ol>
 <li>Create an instance of  <strong>LwayvePlaybackControlView</strong>(e.g., let playbackControl = LwayvePlaybackControlView(frame: frame)).</li>
@@ -499,8 +508,8 @@ extension AppDelegate {
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-10-16)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-11-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

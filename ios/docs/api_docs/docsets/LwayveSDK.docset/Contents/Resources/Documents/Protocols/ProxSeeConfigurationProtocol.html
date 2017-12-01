@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LwayveSDKConfigurationType Enumeration Reference</title>
+    <title>ProxSeeConfigurationProtocol Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Enum/LwayveSDKConfigurationType" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Protocol/ProxSeeConfigurationProtocol" class="dashAnchor"></a>
 
-    <a title="LwayveSDKConfigurationType Enumeration Reference"></a>
+    <a title="ProxSeeConfigurationProtocol Protocol Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">LwayveSDK Reference</a>
       <img class="carat" src="../img/carat.png" />
-      LwayveSDKConfigurationType Enumeration Reference
+      ProxSeeConfigurationProtocol Protocol Reference
     </p>
 
     <div class="content-wrapper">
@@ -194,10 +194,10 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>LwayveSDKConfigurationType</h1>
+            <h1>ProxSeeConfigurationProtocol</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LwayveSDKConfigurationType</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ProxSeeConfigurationProtocol</span></code></pre>
 
                 </div>
               </div>
@@ -213,9 +213,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@E@LwayveSDKConfigurationType@LwayveSDKConfigurationTypeQa"></a>
-                    <a name="//apple_ref/swift/Element/qa" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveSDKConfigurationType@LwayveSDKConfigurationTypeQa">qa</a>
+                    <a name="/s:9LwayveSDK28ProxSeeConfigurationProtocolP03getcdE3KeyyySSSgcF"></a>
+                    <a name="//apple_ref/swift/Method/getProxSeeConfigurationKey(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LwayveSDK28ProxSeeConfigurationProtocolP03getcdE3KeyyySSSgcF">getProxSeeConfigurationKey(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -223,78 +223,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retreives the ProxSee key linked to the current Lwayve application.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Most applications should not need to call this method. To integrate Lwayve
+with ProxSee, please refer to <q>Implementing the LWAYVE and ProxSee SDKs</q> of the README.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">qa</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getProxSeeConfigurationKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">proxSeeKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@LwayveSDK@E@LwayveSDKConfigurationType@LwayveSDKConfigurationTypeProd"></a>
-                    <a name="//apple_ref/swift/Element/prod" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveSDKConfigurationType@LwayveSDKConfigurationTypeProd">prod</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">prod</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9LwayveSDK0A20SDKConfigurationTypeO14defaultBaseURL10Foundation0G0VyF"></a>
-                    <a name="//apple_ref/swift/Method/defaultBaseURL()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LwayveSDK0A20SDKConfigurationTypeO14defaultBaseURL10Foundation0G0VyF">defaultBaseURL()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">defaultBaseURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">URL</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A completion block with the ProxSee key, if it exists.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
