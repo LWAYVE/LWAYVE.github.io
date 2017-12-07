@@ -376,7 +376,7 @@
  visibility="public"
 >
 </method>
-<method name="getPlayedClips"
+<method name="getPlayedContexts"
  return="java.util.Set&lt;java.lang.String&gt;"
  abstract="false"
  native="false"
