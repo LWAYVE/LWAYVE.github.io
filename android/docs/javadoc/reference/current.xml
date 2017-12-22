@@ -99,6 +99,31 @@
 </package>
 <package name="com.lixar.lwayve.sdk.core"
 >
+<interface name="ConfigUpdatedListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onConfigUpdated"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="credentialsChanged" type="boolean">
+</parameter>
+<parameter name="languageChanged" type="boolean">
+</parameter>
+<parameter name="proxSeeStateUpdated" type="boolean">
+</parameter>
+</method>
+</interface>
 <interface name="LwayveConnectionCallback"
  abstract="true"
  static="false"
@@ -376,7 +401,7 @@
  visibility="public"
 >
 </method>
-<method name="getPlayedContexts"
+<method name="getPlayedClips"
  return="java.util.Set&lt;java.lang.String&gt;"
  abstract="false"
  native="false"
