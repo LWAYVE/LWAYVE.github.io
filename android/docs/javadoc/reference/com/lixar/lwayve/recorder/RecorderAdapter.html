@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
 <title>
 
-  ProxSeeSdkAdapter
+  RecorderAdapter
 
 
 </title>
@@ -140,9 +140,9 @@
               </div>
               <ul>
                 
-    <li class="selected api apilevel-">
-  <a href="../../../../com/lixar/lwayve/proxsee/package-summary.html">com.lixar.lwayve.proxsee</a></li>
     <li class="api apilevel-">
+  <a href="../../../../com/lixar/lwayve/proxsee/package-summary.html">com.lixar.lwayve.proxsee</a></li>
+    <li class="selected api apilevel-">
   <a href="../../../../com/lixar/lwayve/recorder/package-summary.html">com.lixar.lwayve.recorder</a></li>
     <li class="api apilevel-">
   <a href="../../../../com/lixar/lwayve/sdk/core/package-summary.html">com.lixar.lwayve.sdk.core</a></li>
@@ -164,8 +164,8 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.html">ProxSeeSdkAdapter</a></li>
-          <li class="api apilevel-"><a href="../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.Factory.html">ProxSeeSdkAdapter.Factory</a></li>
+          <li class="selected api apilevel-"><a href="../../../../com/lixar/lwayve/recorder/RecorderAdapter.html">RecorderAdapter</a></li>
+          <li class="api apilevel-"><a href="../../../../com/lixar/lwayve/recorder/RecorderAdapter.Factory.html">RecorderAdapter.Factory</a></li>
       </ul>
     </li>
               
@@ -234,7 +234,7 @@
      
     
     interface
-<h1>ProxSeeSdkAdapter</h1>
+<h1>RecorderAdapter</h1>
 
 
 
@@ -253,7 +253,7 @@
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.proxsee.ProxSeeSdkAdapter</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.recorder.RecorderAdapter</td>
     </tr>
     
 
@@ -308,7 +308,7 @@
          
         
         interface</td>
-      <td class="jd-linkcol"><a href="../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.Factory.html">ProxSeeSdkAdapter.Factory</a></td>
+      <td class="jd-linkcol"><a href="../../../../com/lixar/lwayve/recorder/RecorderAdapter.Factory.html">RecorderAdapter.Factory</a></td>
       <td class="jd-descrcol" width="100%">&nbsp;</td>
     </tr>
     
@@ -357,7 +357,7 @@
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.html#deinitialize()">deinitialize</a></span>()
+        <span class="sympad"><a href="../../../../com/lixar/lwayve/recorder/RecorderAdapter.html#cancelUpload()">cancelUpload</a></span>()
         
   </td></tr>
 
@@ -370,10 +370,10 @@
             
             
             
-            String
+            void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.html#getVersion()">getVersion</a></span>()
+        <span class="sympad"><a href="../../../../com/lixar/lwayve/recorder/RecorderAdapter.html#deinitialize()">deinitialize</a></span>()
         
   </td></tr>
 
@@ -389,7 +389,7 @@
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.html#initialize(java.lang.String)">initialize</a></span>(String authToken)
+        <span class="sympad"><a href="../../../../com/lixar/lwayve/recorder/RecorderAdapter.html#initialize()">initialize</a></span>()
         
   </td></tr>
 
@@ -405,7 +405,7 @@
             boolean
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.html#isProxSeeSdkInitialized()">isProxSeeSdkInitialized</a></span>()
+        <span class="sympad"><a href="../../../../com/lixar/lwayve/recorder/RecorderAdapter.html#isUploading()">isUploading</a></span>()
         
   </td></tr>
 
@@ -421,23 +421,7 @@
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.html#start()">start</a></span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            abstract
-            
-            
-            
-            
-            void
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.html#stop()">stop</a></span>()
+        <span class="sympad"><a href="../../../../com/lixar/lwayve/recorder/RecorderAdapter.html#uploadRecording(java.io.File)">uploadRecording</a></span>(File file)
         
   </td></tr>
 
@@ -490,6 +474,37 @@
 
 
 
+<a id="cancelUpload()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">cancelUpload</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 <a id="deinitialize()"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -521,38 +536,7 @@
 </div>
 
 
-<a id="getVersion()"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        String
-      </span>
-      <span class="sympad">getVersion</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<a id="initialize(java.lang.String)"></a>
+<a id="initialize()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -565,7 +549,7 @@
         void
       </span>
       <span class="sympad">initialize</span>
-      <span class="normal">(String authToken)</span>
+      <span class="normal">()</span>
     </h4>
       <div class="api-level">
         <div>
@@ -583,7 +567,7 @@
 </div>
 
 
-<a id="isProxSeeSdkInitialized()"></a>
+<a id="isUploading()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -595,7 +579,7 @@
          
         boolean
       </span>
-      <span class="sympad">isProxSeeSdkInitialized</span>
+      <span class="sympad">isUploading</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -614,7 +598,7 @@
 </div>
 
 
-<a id="start()"></a>
+<a id="uploadRecording(java.io.File)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -626,39 +610,8 @@
          
         void
       </span>
-      <span class="sympad">start</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<a id="stop()"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        void
-      </span>
-      <span class="sympad">stop</span>
-      <span class="normal">()</span>
+      <span class="sympad">uploadRecording</span>
+      <span class="normal">(File file)</span>
     </h4>
       <div class="api-level">
         <div>

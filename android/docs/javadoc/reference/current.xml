@@ -97,16 +97,16 @@
 </method>
 </interface>
 </package>
-<package name="com.lixar.lwayve.sdk.core"
+<package name="com.lixar.lwayve.recorder"
 >
-<interface name="ConfigUpdatedListener"
+<interface name="RecorderAdapter"
  abstract="true"
  static="false"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-<method name="onConfigUpdated"
+<method name="cancelUpload"
  return="void"
  abstract="true"
  native="false"
@@ -116,14 +116,76 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="credentialsChanged" type="boolean">
-</parameter>
-<parameter name="languageChanged" type="boolean">
-</parameter>
-<parameter name="proxSeeStateUpdated" type="boolean">
+</method>
+<method name="deinitialize"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialize"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isUploading"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="uploadRecording"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="file" type="java.io.File">
 </parameter>
 </method>
 </interface>
+<interface name="RecorderAdapter.Factory"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="get"
+ return="com.lixar.lwayve.recorder.RecorderAdapter"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+</package>
+<package name="com.lixar.lwayve.sdk.core"
+>
 <interface name="LwayveConnectionCallback"
  abstract="true"
  static="false"
@@ -153,6 +215,17 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<method name="cancelUpload"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="clearCachedUrls"
  return="void"
  abstract="false"
@@ -335,6 +408,17 @@
  visibility="public"
 >
 </method>
+<method name="getExclusiveLike"
+ return="Tag"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="getExperience"
  return="ExperienceRoot"
  abstract="false"
@@ -424,7 +508,7 @@
 >
 </method>
 <method name="getQueueHistory"
- return="java.util.List&lt;DecisionContext&gt;"
+ return="java.util.List&lt;Node&gt;"
  abstract="false"
  native="false"
  synchronized="false"
@@ -611,6 +695,19 @@
 <parameter name="action" type="com.lixar.lwayve.sdk.mediaplayer.ClipPlayedAction">
 </parameter>
 </method>
+<method name="setExclusiveLike"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="like" type="java.lang.String">
+</parameter>
+</method>
 <method name="setTimeOffset"
  return="void"
  abstract="false"
@@ -675,6 +772,19 @@
 </parameter>
 <exception name="InvalidSdkConfigurationException" type="com.lixar.lwayve.sdk.exceptions.InvalidSdkConfigurationException">
 </exception>
+</method>
+<method name="uploadRecording"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="file" type="java.io.File">
+</parameter>
 </method>
 </class>
 <class name="LwayveSdkConfiguration"
@@ -772,6 +882,17 @@
  visibility="public"
 >
 </method>
+<method name="getRecorderAdapterFactory"
+ return="com.lixar.lwayve.recorder.RecorderAdapter.Factory"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="setLanguage"
  return="void"
  abstract="false"
@@ -822,6 +943,19 @@
  visibility="public"
 >
 <parameter name="proxSeeSdkAdapterFactory" type="com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.Factory">
+</parameter>
+</method>
+<method name="setRecorderAdapterFactory"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="recorderAdapterFactory" type="com.lixar.lwayve.recorder.RecorderAdapter.Factory">
 </parameter>
 </method>
 </class>
@@ -941,6 +1075,19 @@
  visibility="public"
 >
 <parameter name="proxSeeSdkAdapterFactory" type="com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.Factory">
+</parameter>
+</method>
+<method name="setRecorderAdapterFactory"
+ return="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration.Builder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="recorderAdapterFactory" type="com.lixar.lwayve.recorder.RecorderAdapter.Factory">
 </parameter>
 </method>
 </class>
@@ -1076,6 +1223,23 @@
 >
 </constructor>
 </class>
+<class name="RecorderAdapterNotInitializedException"
+ extends="java.lang.RuntimeException"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="RecorderAdapterNotInitializedException"
+ type="com.lixar.lwayve.sdk.exceptions.RecorderAdapterNotInitializedException"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
 <class name="SdkNotInitializedException"
  extends="java.lang.RuntimeException"
  abstract="false"
@@ -1092,6 +1256,52 @@
  visibility="public"
 >
 </constructor>
+</class>
+</package>
+<package name="com.lixar.lwayve.sdk.experience"
+>
+<class name="ClipMetadata"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.lixar.lwayve.sdk.experience.ClipMetadata"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.lixar.lwayve.sdk.experience.ClipMetadata[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="key"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
 </class>
 </package>
 <package name="com.lixar.lwayve.sdk.mediaplayer"
@@ -1258,6 +1468,94 @@
  visibility="public"
 >
 </method>
+<method name="getRecBackgroundColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRecCloseBtnColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRecPlayStopBtnColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRecProgressColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRecSendBtnColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRecStatusTxtColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRecTryAgainBtnColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getShowRecordInOuterBand"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="getTrackBarBackgroundColor"
  return="int"
  abstract="false"
@@ -1367,6 +1665,19 @@
 <parameter name="textColor" type="int">
 </parameter>
 </method>
+<method name="setPlayButtonBackground"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="option" type="int">
+</parameter>
+</method>
 <method name="setPlayButtonIconColor"
  return="void"
  abstract="false"
@@ -1378,6 +1689,110 @@
  visibility="public"
 >
 <parameter name="iconColor" type="int">
+</parameter>
+</method>
+<method name="setRecBackgroundColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setRecCloseBtnColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setRecPlayStopBtnColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setRecProgressColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setRecSendBtnColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setRecStatusTxtColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setRecTryAgainBtnColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setShowRecordInOuterBand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="show" type="boolean">
 </parameter>
 </method>
 <method name="setTrackBarBackgroundColor"
@@ -1432,7 +1847,28 @@
 <parameter name="textColor" type="int">
 </parameter>
 </method>
-<field name="typeface"
+<field name="RECORD_ACTIVITY_NAME"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;com.lixar.lwayve.sdk.recorder.view.RecordActivity&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="latoLight"
+ type="Typeface"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="latoSemiBold"
  type="Typeface"
  transient="false"
  volatile="false"

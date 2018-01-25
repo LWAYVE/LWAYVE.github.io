@@ -142,12 +142,16 @@
                 
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/proxsee/package-summary.html">com.lixar.lwayve.proxsee</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../com/lixar/lwayve/recorder/package-summary.html">com.lixar.lwayve.recorder</a></li>
     <li class="selected api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/core/package-summary.html">com.lixar.lwayve.sdk.core</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/events/package-summary.html">com.lixar.lwayve.sdk.events</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/exceptions/package-summary.html">com.lixar.lwayve.sdk.exceptions</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../com/lixar/lwayve/sdk/experience/package-summary.html">com.lixar.lwayve.sdk.experience</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/mediaplayer/package-summary.html">com.lixar.lwayve.sdk.mediaplayer</a></li>
     <li class="api apilevel-">
@@ -160,7 +164,6 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/core/ConfigUpdatedListener.html">ConfigUpdatedListener</a></li>
           <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveConnectionCallback.html">LwayveConnectionCallback</a></li>
       </ul>
     </li>
@@ -559,6 +562,24 @@ Summary:
             
             
             
+            <a href="../../../../../com/lixar/lwayve/recorder/RecorderAdapter.Factory.html">RecorderAdapter.Factory</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html#getRecorderAdapterFactory()">getRecorderAdapterFactory</a></span>()
+        
+        <div class="jd-descrdiv">Get the RecorderAdapter.Factory object set for this configuration</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
             void
         </td>
         <td class="jd-linkcol" width="100%">
@@ -570,7 +591,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -588,7 +609,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -606,7 +627,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -619,6 +640,24 @@ Summary:
         <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html#setProxSeeSdkAdapterFactory(com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.Factory)">setProxSeeSdkAdapterFactory</a></span>(<a href="../../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.Factory.html">ProxSeeSdkAdapter.Factory</a> proxSeeSdkAdapterFactory)
         
         <div class="jd-descrdiv">Set the ProxSeeSdkAdapter object for LWAYVE to initialize</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html#setRecorderAdapterFactory(com.lixar.lwayve.recorder.RecorderAdapter.Factory)">setRecorderAdapterFactory</a></span>(<a href="../../../../../com/lixar/lwayve/recorder/RecorderAdapter.Factory.html">RecorderAdapter.Factory</a> recorderAdapterFactory)
+        
+        <div class="jd-descrdiv">Set the RecorderAdapter object for LWAYVE to initialize</div>
   
   </td></tr>
 
@@ -1134,6 +1173,42 @@ From class
 </div>
 
 
+<a id="getRecorderAdapterFactory()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../com/lixar/lwayve/recorder/RecorderAdapter.Factory.html">RecorderAdapter.Factory</a>
+      </span>
+      <span class="sympad">getRecorderAdapterFactory</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the RecorderAdapter.Factory object set for this configuration</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>an instance of RecorderAdapter.Factory
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <a id="setLanguage(LanguageManager.LwayveSdkLanguage)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -1289,6 +1364,47 @@ From class
         <tr>
           <th>proxSeeSdkAdapterFactory</th>
           <td>an instance of ProxSeeSdkAdapter
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="setRecorderAdapterFactory(com.lixar.lwayve.recorder.RecorderAdapter.Factory)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setRecorderAdapterFactory</span>
+      <span class="normal">(<a href="../../../../../com/lixar/lwayve/recorder/RecorderAdapter.Factory.html">RecorderAdapter.Factory</a> recorderAdapterFactory)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set the RecorderAdapter object for LWAYVE to initialize</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>recorderAdapterFactory</th>
+          <td>an instance of RecorderAdapter
 </td>
         </tr>
       </table>
