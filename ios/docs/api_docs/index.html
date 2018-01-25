@@ -53,10 +53,22 @@
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AsyncRetrier.html">AsyncRetrier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ContentUpdateInfo.html">ContentUpdateInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Location.html">Location</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/LwayvePlaybackControlView.html">LwayvePlaybackControlView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/LwayvePlaybackControlView/BackgroundStyle.html">– BackgroundStyle</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/LwayveSDK.html">LwayveSDK</a>
@@ -90,6 +102,9 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/AsyncRetrierOperationResult.html">AsyncRetrierOperationResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/ContentUpdateType.html">ContentUpdateType</a>
               </li>
               <li class="nav-group-task">
@@ -100,6 +115,23 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/UserRecordedAudioUploaderError.html">UserRecordedAudioUploaderError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/UserRecordedAudioValidatorError.html">UserRecordedAudioValidatorError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/RandomAccessCollection.html">RandomAccessCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
               </li>
             </ul>
           </li>
@@ -136,6 +168,9 @@
                 <a class="nav-group-task-link" href="Protocols/ApplicationRemoteNotificationsHandler.html">ApplicationRemoteNotificationsHandler</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AsyncRetrierProtocol.html">AsyncRetrierProtocol</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/AudioCacheControlProtocol.html">AudioCacheControlProtocol</a>
               </li>
               <li class="nav-group-task">
@@ -160,10 +195,13 @@
                 <a class="nav-group-task-link" href="Protocols/LwayveNowPlayingInfoProtocol.html">LwayveNowPlayingInfoProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/LwayvePlaybackControlAppearenceProtocol.html">LwayvePlaybackControlAppearenceProtocol</a>
+                <a class="nav-group-task-link" href="Protocols/LwayvePlaybackControlAppearanceProtocol.html">LwayvePlaybackControlAppearanceProtocol</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/LwayveSDKDelegate.html">LwayveSDKDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/OuterBandAppearanceProtocol.html">OuterBandAppearanceProtocol</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/PlayListEventsListener.html">PlayListEventsListener</a>
@@ -175,7 +213,13 @@
                 <a class="nav-group-task-link" href="Protocols/PlaylistItem.html">PlaylistItem</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/PlaylistItemMetadata.html">PlaylistItemMetadata</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/ProxSeeConfigurationProtocol.html">ProxSeeConfigurationProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/UserRecordedAudioUploadProtocol.html">UserRecordedAudioUploadProtocol</a>
               </li>
             </ul>
           </li>
@@ -350,7 +394,7 @@
 <p>Please use this approach only if you have strict requirements not to use CocoaPods, as this method is more difficult and error prone.</p>
 
 <ol>
-<li>Add LwayveSDK.framework (and optionally LwayveSDK_ProxSee.framework) to the Embedded Binaries section of your application. The latest version of the framework is available at <a href="#https://github.com/LWAYVE/ios-sdk/releases">https://github.com/LWAYVE/ios-sdk/releases</a>.</li>
+<li>Add LwayveSDK.framework to the Embedded Binaries section of your application. The latest version of the framework is available at <a href="#https://github.com/LWAYVE/ios-sdk/releases">https://github.com/LWAYVE/ios-sdk/releases</a>.</li>
 <li>Integrate other third-party dependencies using Carthage (recommended) or manually:</li>
 </ol>
 <pre class="highlight plaintext"><code>- Using Carthage (recommended):
@@ -387,6 +431,13 @@
   &lt;string&gt;remote-notification&lt;/string&gt;
 &lt;/array&gt;
 </code></pre>
+<h3 id='add-plist-values' class='heading'>Add Plist Values</h3>
+
+<p>The following plist values are required by the Lwayve SDK.</p>
+
+<ul>
+<li>NSMicrophoneUsageDescription: Required for user generated audio</li>
+</ul>
 
 <p>(Optional) Refer to <a href="https://github.com/proxsee/sdk-ios#add-the-proxsee-sdk-to-your-ios-project">https://github.com/proxsee/sdk-ios#add-the-proxsee-sdk-to-your-ios-project</a> for plist values needed for ProxSee.</p>
 <h3 id='set-up-push-notifications' class='heading'>Set Up Push Notifications</h3>
@@ -394,14 +445,14 @@
 <p>Push notifications are used to notify the SDK of experience updates and situational audio.</p>
 
 <p>The push notifications will be handled by the SDK. Here is an example push notification payload.</p>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"experience.updated"</span><span class="p">,</span><span class="w"> 
-  </span><span class="nt">"aps"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"content-available"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-  </span><span class="p">},</span><span class="w"> 
-  </span><span class="nt">"experience_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">194950</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+<pre class="highlight plaintext"><code>{
+  "event": "experience.updated", 
+  "aps": {
+    "content-available": 1
+  }, 
+  "experience_id": 194950
+}
+</code></pre>
 <h4 id='enable-push-notifications' class='heading'>Enable Push Notifications</h4>
 
 <p>To enable push notifications for your application, please refer to <a href="http://help.apple.com/xcode/mac/current/#/devdfd3d04a1">Enable push notifications</a> from the Apple Documentation.</p>
@@ -456,7 +507,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 </code></pre>
 
 <p>(Optional) To initialize Lwayve with ProxSee, import Lwayve with ProxSee and replace the initialize method.</p>
-<pre class="highlight plaintext"><code>import LwayveSDK_ProxSee
+<pre class="highlight plaintext"><code>import LwayveSDK
 
 ...
 
@@ -508,8 +559,8 @@ do {
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-11-15)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-01-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
