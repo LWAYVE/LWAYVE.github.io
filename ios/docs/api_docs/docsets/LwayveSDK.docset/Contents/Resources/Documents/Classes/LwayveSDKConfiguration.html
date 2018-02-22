@@ -60,6 +60,12 @@
                 <a class="nav-group-task-link" href="../Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ClipAction.html">ClipAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ClipActions.html">ClipActions</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ContentUpdateInfo.html">ContentUpdateInfo</a>
               </li>
               <li class="nav-group-task">
@@ -79,6 +85,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Playlist.html">Playlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PredefinedClipActionTypes.html">PredefinedClipActionTypes</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Tag.html">Tag</a>
@@ -116,6 +125,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/UserRecordedAudioDuration.html">UserRecordedAudioDuration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/UserRecordedAudioUploaderError.html">UserRecordedAudioUploaderError</a>
@@ -182,6 +194,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/AudioTrack.html">AudioTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ClipActionsProtocol.html">ClipActionsProtocol</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/ContextControlProtocol.html">ContextControlProtocol</a>
@@ -392,9 +407,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(im)initWithConfigurationType:baseURL:authenticationToken:userAudioRecordingEnabled:audioRecordingScreenAppearance:"></a>
-                    <a name="//apple_ref/swift/Method/init(configurationType:baseURL:authenticationToken:userAudioRecordingEnabled:audioRecordingScreenAppearance:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(im)initWithConfigurationType:baseURL:authenticationToken:userAudioRecordingEnabled:audioRecordingScreenAppearance:">init(configurationType:baseURL:authenticationToken:userAudioRecordingEnabled:audioRecordingScreenAppearance:)</a>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)localizedEventName"></a>
+                    <a name="//apple_ref/swift/Property/localizedEventName" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)localizedEventName">localizedEventName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The event name is used for user messages presented by SDK where the app or event name is important (e.g. microphone permissions request, etc)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">localizedEventName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(im)initWithConfigurationType:baseURL:authenticationToken:userAudioRecordingEnabled:audioRecordingScreenAppearance:localizedEventName:"></a>
+                    <a name="//apple_ref/swift/Method/init(configurationType:baseURL:authenticationToken:userAudioRecordingEnabled:audioRecordingScreenAppearance:localizedEventName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(im)initWithConfigurationType:baseURL:authenticationToken:userAudioRecordingEnabled:audioRecordingScreenAppearance:localizedEventName:">init(configurationType:baseURL:authenticationToken:userAudioRecordingEnabled:audioRecordingScreenAppearance:localizedEventName:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -409,11 +451,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configurationType</span><span class="p">:</span> <span class="kt"><a href="../Enums/LwayveSDKConfigurationType.html">LwayveSDKConfigurationType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">qa</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configurationType</span><span class="p">:</span> <span class="kt"><a href="../Enums/LwayveSDKConfigurationType.html">LwayveSDKConfigurationType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">prod</span><span class="p">,</span>
             <span class="nv">baseURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">authenticationToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
             <span class="nv">userAudioRecordingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nv">audioRecordingScreenAppearance</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a></span><span class="p">())</span></code></pre>
+            <span class="nv">audioRecordingScreenAppearance</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a></span><span class="p">(),</span>
+            <span class="nv">localizedEventName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"LWAYVE"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -429,7 +472,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>- see <code><a href="../Classes/LwayveSDKConfiguration.html#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)configurationType">configurationType</a></code></p>
+                                  <p>- see <code><a href="../Classes/LwayveSDKConfiguration.html#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)configurationType">LwayveSDKConfiguration.configurationType</a></code></p>
                                 </div>
                               </td>
                             </tr>
@@ -453,7 +496,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>- see <code><a href="../Classes/LwayveSDKConfiguration.html#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)authenticationToken">authenticationToken</a></code></p>
+                                  <p>- see <code><a href="../Classes/LwayveSDKConfiguration.html#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)authenticationToken">LwayveSDKConfiguration.authenticationToken</a></code></p>
                                 </div>
                               </td>
                             </tr>
@@ -465,7 +508,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>- see <code><a href="../Classes/LwayveSDKConfiguration.html#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)userAudioRecordingEnabled">userAudioRecordingEnabled</a></code></p>
+                                  <p>- see <code><a href="../Classes/LwayveSDKConfiguration.html#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)userAudioRecordingEnabled">LwayveSDKConfiguration.userAudioRecordingEnabled</a></code>. Default value <code>false</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -477,7 +520,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>- see <code><a href="../Classes/LwayveSDKConfiguration.html#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)audioRecordingScreenAppearance">audioRecordingScreenAppearance</a></code></p>
+                                  <p>- see <code><a href="../Classes/LwayveSDKConfiguration.html#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)audioRecordingScreenAppearance">LwayveSDKConfiguration.audioRecordingScreenAppearance</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localizedEventName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>see <code><a href="../Classes/LwayveSDKConfiguration.html#/c:@M@LwayveSDK@objc(cs)LwayveSDKConfiguration(py)localizedEventName">LwayveSDKConfiguration.localizedEventName</a></code>. Default value <code>LWAYVE</code></p>
                                 </div>
                               </td>
                             </tr>
@@ -495,7 +550,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-01-18)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-02-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

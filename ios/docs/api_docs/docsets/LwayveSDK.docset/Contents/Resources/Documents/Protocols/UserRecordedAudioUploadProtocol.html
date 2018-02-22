@@ -60,6 +60,12 @@
                 <a class="nav-group-task-link" href="../Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ClipAction.html">ClipAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ClipActions.html">ClipActions</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ContentUpdateInfo.html">ContentUpdateInfo</a>
               </li>
               <li class="nav-group-task">
@@ -79,6 +85,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Playlist.html">Playlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PredefinedClipActionTypes.html">PredefinedClipActionTypes</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Tag.html">Tag</a>
@@ -116,6 +125,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/UserRecordedAudioDuration.html">UserRecordedAudioDuration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/UserRecordedAudioUploaderError.html">UserRecordedAudioUploaderError</a>
@@ -182,6 +194,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/AudioTrack.html">AudioTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ClipActionsProtocol.html">ClipActionsProtocol</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/ContextControlProtocol.html">ContextControlProtocol</a>
@@ -290,7 +305,14 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code>fileURL</code> must be a URL to the local file system accessible to the application.</p>
+                                  <p>The <code>fileURL</code> must be a URL to the local file system accessible to the application. The audio file requirements:
+
+<ul>
+<li>Supported formats: .mp3, .m4a;</li>
+<li>The file must contain non-empty audio;</li>
+<li>The audio file size must be not more than 2MB;</li>
+<li>the length of the audio in the file must be not more than 1 minute.</li>
+</ul></p>
                                 </div>
                               </td>
                             </tr>
@@ -302,12 +324,39 @@
                               </td>
                               <td>
                                 <div>
-                                  <p><code>error == nil</code> indicates a successful finish of the upload.</p>
+                                  <p><code>error == nil</code> indicates a successful finish of the upload. <code>error</code> can be of following types: <code><a href="../Enums/UserRecordedAudioUploaderError.html">UserRecordedAudioUploaderError</a></code>, <code><a href="../Enums/UserRecordedAudioValidatorError.html">UserRecordedAudioValidatorError</a></code></p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(py)maximumUserRecordedAudioDuration"></a>
+                    <a name="//apple_ref/swift/Property/maximumUserRecordedAudioDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(py)maximumUserRecordedAudioDuration">maximumUserRecordedAudioDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maximum audio duration that can be recored using record action from the outer band.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">maximumUserRecordedAudioDuration</span><span class="p">:</span> <span class="kt"><a href="../Enums/UserRecordedAudioDuration.html">UserRecordedAudioDuration</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -320,7 +369,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-01-18)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-02-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

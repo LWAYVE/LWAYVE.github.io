@@ -60,6 +60,12 @@
                 <a class="nav-group-task-link" href="../Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ClipAction.html">ClipAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ClipActions.html">ClipActions</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ContentUpdateInfo.html">ContentUpdateInfo</a>
               </li>
               <li class="nav-group-task">
@@ -79,6 +85,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Playlist.html">Playlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PredefinedClipActionTypes.html">PredefinedClipActionTypes</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Tag.html">Tag</a>
@@ -116,6 +125,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/UserRecordedAudioDuration.html">UserRecordedAudioDuration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/UserRecordedAudioUploaderError.html">UserRecordedAudioUploaderError</a>
@@ -182,6 +194,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/AudioTrack.html">AudioTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ClipActionsProtocol.html">ClipActionsProtocol</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/ContextControlProtocol.html">ContextControlProtocol</a>
@@ -257,9 +272,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveAudioRecordingScreenAppearance(im)initWithBackgroundColor:statusTextColor:tryAgainButtonColor:sendButtonColor:playButtonColor:"></a>
-                    <a name="//apple_ref/swift/Method/init(backgroundColor:statusTextColor:tryAgainButtonColor:sendButtonColor:playButtonColor:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveAudioRecordingScreenAppearance(im)initWithBackgroundColor:statusTextColor:tryAgainButtonColor:sendButtonColor:playButtonColor:">init(backgroundColor:statusTextColor:tryAgainButtonColor:sendButtonColor:playButtonColor:)</a>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveAudioRecordingScreenAppearance(im)initWithBackgroundColor:statusTextColor:tryAgainButtonColor:sendButtonColor:playButtonColor:closeButtonColor:topTextColor:"></a>
+                    <a name="//apple_ref/swift/Method/init(backgroundColor:statusTextColor:tryAgainButtonColor:sendButtonColor:playButtonColor:closeButtonColor:topTextColor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveAudioRecordingScreenAppearance(im)initWithBackgroundColor:statusTextColor:tryAgainButtonColor:sendButtonColor:playButtonColor:closeButtonColor:topTextColor:">init(backgroundColor:statusTextColor:tryAgainButtonColor:sendButtonColor:playButtonColor:closeButtonColor:topTextColor:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -274,11 +289,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span><span class="p">,</span>
-            <span class="nv">statusTextColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">black</span><span class="p">,</span>
+            <span class="nv">statusTextColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">white</span><span class="p">,</span>
             <span class="nv">tryAgainButtonColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.9607843137</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.6549019608</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.02352941176</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span>
             <span class="nv">sendButtonColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.9607843137</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.6549019608</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.02352941176</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span>
-            <span class="nv">playButtonColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.9607843137</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.6549019608</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.02352941176</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">))</span></code></pre>
+            <span class="nv">playButtonColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.9607843137</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.6549019608</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.02352941176</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="nv">closeButtonColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.9607843137</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.6549019608</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.02352941176</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="nv">topTextColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">white</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -293,7 +310,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-01-18)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-02-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

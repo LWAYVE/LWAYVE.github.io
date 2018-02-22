@@ -59,6 +59,12 @@
                 <a class="nav-group-task-link" href="Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ClipAction.html">ClipAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ClipActions.html">ClipActions</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ContentUpdateInfo.html">ContentUpdateInfo</a>
               </li>
               <li class="nav-group-task">
@@ -78,6 +84,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Playlist.html">Playlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PredefinedClipActionTypes.html">PredefinedClipActionTypes</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Tag.html">Tag</a>
@@ -115,6 +124,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/UserRecordedAudioDuration.html">UserRecordedAudioDuration</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/UserRecordedAudioUploaderError.html">UserRecordedAudioUploaderError</a>
@@ -183,6 +195,9 @@
                 <a class="nav-group-task-link" href="Protocols/AudioTrack.html">AudioTrack</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ClipActionsProtocol.html">ClipActionsProtocol</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/ContextControlProtocol.html">ContextControlProtocol</a>
               </li>
               <li class="nav-group-task">
@@ -243,29 +258,55 @@
 <p>The following document provides background information on the LWAYVE platform as well as provides setup and usage instructions for the LWAYVE SDK for iOS. The content in this document is divided into the following sections:</p>
 
 <ul>
-<li><a href="#section-1-introducing-lwayve-and-contextual-audio-experiences">Section 1: Introducing LWAYVE and Contextual Audio Experiences</a>
+<li><a href="#section-1--introducing-lwayve-and-contextual-audio-experiences">Section 1: Introducing LWAYVE and Contextual Audio Experiences</a>
 
 <ul>
 <li><a href="#background">Background</a></li>
-<li><a href="#who-are-the-players">Who are the Players?</a></li>
-<li><a href="#what-are-the-components-of-the-lwayve-platform">What are the Components of the LWAYVE Platform?</a></li>
-<li><a href="#how-does-lwayve-work">How Does LWAYVE Work?</a></li>
+<li><a href="#who-are-the-players-">Who are the Players?</a></li>
+<li><a href="#what-are-the-components-of-the-lwayve-platform-">What are the Components of the LWAYVE Platform?</a></li>
+<li><a href="#mobile-sdks">Mobile SDKs</a></li>
+<li><a href="#customer-mobile-application">Customer Mobile Application</a></li>
+<li><a href="#experience-service-and-contextual-audio-experience">Experience Service and Contextual Audio Experience</a></li>
+<li><a href="#how-does-lwayve-work-">How Does LWAYVE Work?</a></li>
 </ul></li>
-<li><a href="#section-2-implementing-the-lwayve-and-proxsee-sdks-in-an-ios-project">Section 2: Implementing the LWAYVE and ProxSee SDKs in an iOS Project</a>
+<li><a href="#section-2--implementing-the-lwayve-and-proxsee-sdks-in-an-ios-project">Section 2: Implementing the LWAYVE and ProxSee SDKs in an iOS Project</a>
 
 <ul>
 <li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#add-the-lwayve-sdk-and-optionally-the-proxsee-sdk-as-dependencies">Add the LWAYVE SDK (and optionally the ProxSee SDK) as Dependencies</a></li>
-<li><a href="#configure-application-background-modes">Configure Application Background Modes</a></li>
-<li><a href="#set-up-push-notifications">Set Up Push Notifications</a></li>
-<li><a href="#initialize-the-lwayve-and-optionally-proxsee-sdks">Initialize the LWAYVE (and optionally ProxSee SDKs)</a></li>
-<li><a href="#set-up-branded-playback-control">Set Up Branded Playback Control</a></li>
+<li><a href="#add-the-lwayve-sdk--and-optionally-the-proxsee-sdk--as-dependencies">Add the LWAYVE SDK (and optionally the ProxSee SDK) as Dependencies</a>
+
+<ul>
+<li><a href="#using-cocoapods--recomended-">Using CocoaPods (recomended)</a></li>
+<li><a href="#manually">Manually</a></li>
 </ul></li>
-<li><a href="#section-3-testing-lwayve">Section 3: Testing LWAYVE</a>
+<li><a href="#configure-application-background-modes">Configure Application Background Modes</a></li>
+<li><a href="#add-plist-values">Add Plist Values</a></li>
+<li><a href="#set-up-push-notifications">Set Up Push Notifications</a></li>
+<li><a href="#enable-push-notifications">Enable Push Notifications</a></li>
+<li><a href="#generate-authentication-token">Generate Authentication Token</a></li>
+<li><a href="#initialize-the-lwayve--and-optionally-proxsee-sdks-">Initialize the LWAYVE (and optionally ProxSee SDKs)</a></li>
+<li><a href="#initialize-the-lwayve-sdk">Initialize the LWAYVE SDK</a></li>
+<li><a href="#set-up-branded-playback-control">Set Up Branded Playback Control</a></li>
+<li><a href="#with-storyboard-or-xib">With Storyboard or Xib</a></li>
+<li><a href="#from-code">From Code</a></li>
+</ul></li>
+<li><a href="#section-3--testing-lwayve">Section 3: Testing LWAYVE</a>
 
 <ul>
 <li><a href="#api">API</a></li>
-<li><a href="#classes">Classes</a></li>
+<li><a href="#lwayve-sdk-reference">LWAYVE SDK Reference</a></li>
+</ul></li>
+<li><a href="#section-4--clip-contextual-actions">Section 4: Clip Contextual Actions</a>
+
+<ul>
+<li><a href="#clip-contextual-action-with-branded-playback-control">Clip Contextual Action with Branded Playback Control</a></li>
+<li><a href="#appearance-customization">Appearance customization</a></li>
+<li><a href="#audio-recording-action">Audio Recording Action</a></li>
+<li><a href="#clip-contextual-action-without-branded-playback-control">Clip Contextual Action without Branded Playback Control</a></li>
+<li><a href="#access-to-currently-playing-audio-clips">Access to currently playing audio clips</a></li>
+<li><a href="#retreive-clip-actions-ui-info">Retreive clip actions UI info</a></li>
+<li><a href="#perform-a-clip-action">Perform a clip action</a></li>
+<li><a href="#audio-record-upload-action">Audio record upload action</a></li>
 </ul></li>
 </ul>
 <h2 id='section-1-introducing-lwayve-and-contextual-audio-experiences' class='heading'>Section 1: Introducing LWAYVE and Contextual Audio Experiences</h2>
@@ -446,10 +487,10 @@
 
 <p>The push notifications will be handled by the SDK. Here is an example push notification payload.</p>
 <pre class="highlight plaintext"><code>{
-  "event": "experience.updated", 
+  "event": "experience.updated",
   "aps": {
     "content-available": 1
-  }, 
+  },
   "experience_id": 194950
 }
 </code></pre>
@@ -458,10 +499,10 @@
 <p>To enable push notifications for your application, please refer to <a href="http://help.apple.com/xcode/mac/current/#/devdfd3d04a1">Enable push notifications</a> from the Apple Documentation.</p>
 <h4 id='generate-authentication-token' class='heading'>Generate Authentication Token</h4>
 
-<p>To allow push notifications, an APNs key (.p8) must be provided to Lixar. Please refer to the <a href="http://help.apple.com/xcode/mac/current/#/dev54d690a66">Communicate with APNs using authentication tokens</a> from the Apple Documentation. </p>
+<p>To allow push notifications, an APNs key (.p8) must be provided to Lixar. Please refer to the <a href="http://help.apple.com/xcode/mac/current/#/dev54d690a66">Communicate with APNs using authentication tokens</a> from the Apple Documentation.</p>
 
 <blockquote>
-<p><strong>NOTE:</strong> It is recommended that only APNs is enabled for this key. </p>
+<p><strong>NOTE:</strong> It is recommended that only APNs is enabled for this key.</p>
 </blockquote>
 <h3 id='initialize-the-lwayve-and-optionally-proxsee-sdks' class='heading'>Initialize the LWAYVE (and optionally ProxSee SDKs)</h3>
 
@@ -551,6 +592,44 @@ do {
 <h3 id='lwayve-sdk-reference' class='heading'>LWAYVE SDK Reference</h3>
 
 <p>For LWAYVE SDK reference information (e.g., classes, global variables, enums, protocols, and structs) refer to <a href="https://lwayve.github.io/ios/docs/api_docs/Classes.html">https://lwayve.github.io/ios/docs/api_docs/Classes.html</a>.</p>
+<h2 id='section-4-clip-contextual-actions' class='heading'>Section 4: Clip Contextual Actions</h2>
+
+<p>Each audio clip may be accompanied by supplementary actions related to the clip, e.g. open web page, open map, share, etc. LWAYVE provides 5 default icons and text:</p>
+
+<ol>
+<li>Tickets - This can be a URL to a website where the listener can find tickets for the artist that is playing, or the festival event.</li>
+<li>Map - This can be used as a google maps location for the artist show, point of interest, or sponsor location</li>
+<li>Link - A relevant link for the audio that is playing</li>
+<li>Share - A string that can used for the listener sharing over social media.</li>
+<li>Hotel - A URL for a hotel near the event that the artist is playing at</li>
+</ol>
+<h3 id='clip-contextual-action-with-branded-playback-control' class='heading'>Clip Contextual Action with Branded Playback Control</h3>
+
+<p>The actions are rendered by the LWAYVE Branded Playback Control (see also <a href="#set-up-branded-playback-control">Set Up Branded Playback Control</a>). They can be accessed from the Outer Band when a user does a long press or a swipe down gesture on the play button.</p>
+<h4 id='appearance-customization' class='heading'>Appearance customization</h4>
+
+<p>The default icons and text resources used in the LWAYVE Branded Playback Control&rsquo;s Outer Band can be overridden if desired. The overridden values will apply for all audio clips in the experience.
+See also : <a href="https://lwayve.github.io/ios/docs/api_docs/Protocols/OuterBandAppearanceProtocol.html">API</a> and <a href="https://github.com/LWAYVE/ios-sdk/blob/master/Examples/PlaybackControlSampleApplication/PlaybackControlSampleApp/Source/AppDelegate.swift">Code sample</a></p>
+<h4 id='audio-recording-action' class='heading'>Audio Recording Action</h4>
+
+<p>Audio Recording Action is the 6th optional action. It provides users a way to record their own short recording and submit this for consideration in the experience playlist.</p>
+<h3 id='clip-contextual-action-without-branded-playback-control' class='heading'>Clip Contextual Action without Branded Playback Control</h3>
+
+<p>If you want to use LWAYVE service without using the Branded Playback Control you still can access the clip contextual actions using following API:</p>
+<h4 id='access-to-currently-playing-audio-clips' class='heading'>Access to currently playing audio clips</h4>
+
+<p><a href="https://lwayve.github.io/ios/docs/api_docs/Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(py)audioQueue">https://lwayve.github.io/ios/docs/api_docs/Protocols/PlaylistControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayvePlaylistControlProtocol(py)audioQueue</a></p>
+<h4 id='retreive-clip-actions-ui-info' class='heading'>Retreive clip actions UI info</h4>
+
+<p><a href="https://lwayve.github.io/ios/docs/api_docs/Protocols/ClipActionsProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveClipActionsProtocol(im)loadActionsWithActions:completion:">https://lwayve.github.io/ios/docs/api_docs/Protocols/ClipActionsProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveClipActionsProtocol(im)loadActionsWithActions:completion:</a></p>
+<h4 id='perform-a-clip-action' class='heading'>Perform a clip action</h4>
+
+<p><a href="https://lwayve.github.io/ios/docs/api_docs/Protocols/ClipActionsProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveClipActionsProtocol(im)performClipAction:completion:">https://lwayve.github.io/ios/docs/api_docs/Protocols/ClipActionsProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveClipActionsProtocol(im)performClipAction:completion:</a></p>
+<h4 id='audio-record-upload-action' class='heading'>Audio record upload action</h4>
+
+<p><a href="https://lwayve.github.io/ios/docs/api_docs/Protocols/UserRecordedAudioUploadProtocol.html#/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(py)maximumUserRecordedAudioDuration">https://lwayve.github.io/ios/docs/api_docs/Protocols/UserRecordedAudioUploadProtocol.html#/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(py)maximumUserRecordedAudioDuration</a></p>
+
+<p>See also <a href="https://github.com/LWAYVE/ios-sdk/blob/master/Examples/SampleApplication/SampleApplication/ClipContextualActionsViewController.swift">Code Sample</a></p>
 
           </div>
         </section>
@@ -559,7 +638,7 @@ do {
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-01-18)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-02-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
