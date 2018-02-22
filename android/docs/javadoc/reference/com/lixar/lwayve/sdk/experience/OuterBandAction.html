@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  ExperienceEvent
+  OuterBandAction
 
 
 </title>
@@ -146,11 +146,11 @@
   <a href="../../../../../com/lixar/lwayve/recorder/package-summary.html">com.lixar.lwayve.recorder</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/core/package-summary.html">com.lixar.lwayve.sdk.core</a></li>
-    <li class="selected api apilevel-">
+    <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/events/package-summary.html">com.lixar.lwayve.sdk.events</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/exceptions/package-summary.html">com.lixar.lwayve.sdk.exceptions</a></li>
-    <li class="api apilevel-">
+    <li class="selected api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/experience/package-summary.html">com.lixar.lwayve.sdk.experience</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/mediaplayer/package-summary.html">com.lixar.lwayve.sdk.mediaplayer</a></li>
@@ -162,18 +162,14 @@
           <div id="classes-nav">
             <ul>
               
-    <li><h2>Interfaces</h2>
-      <ul>
-          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/events/OnPlaybackEventListener.html">OnPlaybackEventListener</a></li>
-      </ul>
-    </li>
               
               
               
     <li><h2>Enums</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent</a></li>
-          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a></li>
       </ul>
     </li>
               
@@ -256,6 +252,9 @@ Summary:
 
 
 
+  &#124; <a href="#lfields">Fields</a>
+  
+
 
 
 
@@ -289,7 +288,7 @@ Summary:
     final 
     
     enum
-<h1>ExperienceEvent</h1>
+<h1>OuterBandAction</h1>
 
 
 
@@ -336,7 +335,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.events.ExperienceEvent</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.experience.OuterBandAction</td>
     </tr>
     
 
@@ -352,7 +351,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Experience related events
+<p>Enums representing the actions in the Outer Band of the <code><a href="../../../../../com/lixar/lwayve/sdk/view/LwayvePlaybackControlView.html">LwayvePlaybackControlView</a></code>
 </p>
 
 
@@ -396,16 +395,44 @@ Summary:
 
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">EXPERIENCE_LOADED_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">Sent when the saved experience has loaded from disk.&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>&nbsp;</td>
+        <td class="jd-linkcol">HOTEL&nbsp;</td>
+        <td class="jd-descrcol" width="100%">&nbsp;</td>
     </tr>
     
     
     <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">EXPERIENCE_UPDATED_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">Sent when the current experience has been updated with a new version from the server.&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>&nbsp;</td>
+        <td class="jd-linkcol">MAP&nbsp;</td>
+        <td class="jd-descrcol" width="100%">&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>&nbsp;</td>
+        <td class="jd-linkcol">RECORD&nbsp;</td>
+        <td class="jd-descrcol" width="100%">&nbsp;</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>&nbsp;</td>
+        <td class="jd-linkcol">SHARE&nbsp;</td>
+        <td class="jd-descrcol" width="100%">&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>&nbsp;</td>
+        <td class="jd-linkcol">TICKET&nbsp;</td>
+        <td class="jd-descrcol" width="100%">&nbsp;</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>&nbsp;</td>
+        <td class="jd-linkcol">URL&nbsp;</td>
+        <td class="jd-descrcol" width="100%">&nbsp;</td>
     </tr>
     
     
@@ -417,6 +444,37 @@ Summary:
 
 
 
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="lfields" class="jd-sumtable"><tr><th colspan="12">Fields</th></tr>
+
+
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol">
+          public
+          
+          
+          int</td>
+          <td class="jd-linkcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html#iconRes">iconRes</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol">
+          public
+          
+          
+          int</td>
+          <td class="jd-linkcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html#stringRes">stringRes</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+
+</table>
 
 
 
@@ -441,10 +499,42 @@ Summary:
             
             
             
-            ZonedDateTime
+            String
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html#getLastEventTime()">getLastEventTime</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html#getActionType()">getActionType</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html#getIconId()">getIconId</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html#getTextId()">getTextId</a></span>()
         
   </td></tr>
 
@@ -457,10 +547,10 @@ Summary:
             
             static
             
-            <a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent</a>
+            <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html#valueOf(java.lang.String)">valueOf</a></span>(String name)
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html#valueOf(java.lang.String)">valueOf</a></span>(String name)
         
   </td></tr>
 
@@ -473,10 +563,10 @@ Summary:
             final
             static
             
-            <a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent[]</a>
+            <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction[]</a>
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html#values()">values</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html#values()">values</a></span>()
         
   </td></tr>
 
@@ -905,7 +995,7 @@ From interface
 
 
 
-<a id="EXPERIENCE_LOADED_EVENT"></a>
+<a id="HOTEL"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -913,9 +1003,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent</a>
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>
       </span>
-        EXPERIENCE_LOADED_EVENT
+        HOTEL
     </h4>
       <div class="api-level">
         
@@ -927,8 +1017,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Sent when the saved experience has loaded from disk.
-</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     
     </div>
@@ -936,7 +1025,7 @@ From interface
 
 
 
-<a id="EXPERIENCE_UPDATED_EVENT"></a>
+<a id="MAP"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -944,9 +1033,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent</a>
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>
       </span>
-        EXPERIENCE_UPDATED_EVENT
+        MAP
     </h4>
       <div class="api-level">
         
@@ -958,8 +1047,127 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Sent when the current experience has been updated with a new version from the server.
-</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<a id="RECORD"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>
+      </span>
+        RECORD
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<a id="SHARE"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>
+      </span>
+        SHARE
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<a id="TICKET"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>
+      </span>
+        TICKET
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<a id="URL"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>
+      </span>
+        URL
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     
     </div>
@@ -972,6 +1180,73 @@ From interface
 
 
 <!-- Fields -->
+
+
+<!-- ========= FIELD DETAIL ======== -->
+<h2>Fields</h2>
+
+
+
+
+<a id="iconRes"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        int
+      </span>
+        iconRes
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<a id="stringRes"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        int
+      </span>
+        stringRes
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
 
 
 <!-- Public ctors -->
@@ -990,7 +1265,7 @@ From interface
 
 
 
-<a id="getLastEventTime()"></a>
+<a id="getActionType()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1000,9 +1275,71 @@ From interface
          
          
          
-        ZonedDateTime
+        String
       </span>
-      <span class="sympad">getLastEventTime</span>
+      <span class="sympad">getActionType</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getIconId()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        int
+      </span>
+      <span class="sympad">getIconId</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getTextId()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        int
+      </span>
+      <span class="sympad">getTextId</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -1031,7 +1368,7 @@ From interface
          
          
          
-        <a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent</a>
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a>
       </span>
       <span class="sympad">valueOf</span>
       <span class="normal">(String name)</span>
@@ -1062,7 +1399,7 @@ From interface
         final 
          
          
-        <a href="../../../../../com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent[]</a>
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction[]</a>
       </span>
       <span class="sympad">values</span>
       <span class="normal">()</span>

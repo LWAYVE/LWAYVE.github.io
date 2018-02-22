@@ -231,12 +231,9 @@ Summary:
 
 
 
-  <a href="#constants">Constants</a>
-  
 
 
-
-  &#124; <a href="#lfields">Fields</a>
+  <a href="#lfields">Fields</a>
   
 
 
@@ -380,22 +377,6 @@ Summary:
 
 
 
-
-
-<!-- =========== ENUM CONSTANT SUMMARY =========== -->
-<table id="constants" class="jd-sumtable"><tr><th colspan="12">Constants</th></tr>
-
-
-    
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">String</td>
-        <td class="jd-linkcol"><a href="../../../../../com/lixar/lwayve/sdk/view/LwayvePlaybackControlView.html#RECORD_ACTIVITY_NAME">RECORD_ACTIVITY_NAME</a></td>
-        <td class="jd-descrcol" width="100%"></td>
-    </tr>
-    
-    
-
-</table>
 
 
 
@@ -799,7 +780,7 @@ Summary:
             
             
             
-            String
+            CharSequence
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/view/LwayvePlaybackControlView.html#getTrackBarText()">getTrackBarText</a></span>()
@@ -948,6 +929,8 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/view/LwayvePlaybackControlView.html#setPlayButtonBackground(int)">setPlayButtonBackground</a></span>(int option)
         
+        <div class="jd-descrdiv">Set Play Button Background Opacity</div>
+  
   </td></tr>
 
 
@@ -1392,52 +1375,6 @@ From class
 
 
 <!-- Constants -->
-
-
-<!-- ========= ENUM CONSTANTS DETAIL ======== -->
-<h2>Constants</h2>
-
-
-
-
-<a id="RECORD_ACTIVITY_NAME"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        String
-      </span>
-        RECORD_ACTIVITY_NAME
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-        <div class="jd-tagdata">
-        <span class="jd-tagtitle">Constant Value: </span>
-        <span>
-            
-                "com.lixar.lwayve.sdk.recorder.view.RecordActivity"
-            
-        </span>
-        </div>
-    
-    </div>
-</div>
-
-
 
 
 <!-- Fields -->
@@ -2215,7 +2152,7 @@ From class
          
          
          
-        String
+        CharSequence
       </span>
       <span class="sympad">getTrackBarText</span>
       <span class="normal">()</span>
@@ -2235,7 +2172,7 @@ From class
  <P>Gets the text to display in the track name bar.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>a String representing the text to display in the track name bar.
+      <ul class="nolist"><li>a CharSequence representing the text to display in the track name bar.
 </li></ul>
   </div>
 
@@ -2560,7 +2497,27 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Set Play Button Background Opacity<p>
+
+ <P>Sets the opacity level for the playback control background
+ <P>Can be set from an xml layout using attribute app:backgroundOpacity eg: app:bacgroundOpacity="opacity25".</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>option</th>
+          <td>int value representing the level of opacity for the play button background.<br><br>
+               Possible values:<br>
+               0 - default (75%)<br>
+               1 - 10% opacity<br>
+               2 - 25% opacity<br>
+               3 - 50% opacity<br>
+               4 - 75% opacity<br>
+               5 - 100% opacity<br>
+</td>
+        </tr>
+      </table>
+  </div>
 
     </div>
 </div>

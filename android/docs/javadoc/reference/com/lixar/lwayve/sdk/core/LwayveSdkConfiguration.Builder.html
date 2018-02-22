@@ -487,7 +487,25 @@ Summary:
             <a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html">LwayveSdkConfiguration.Builder</a>
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html#setLanguage(LanguageManager.LwayveSdkLanguage)">setLanguage</a></span>(LanguageManager.LwayveSdkLanguage language)
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html#setEventName(java.lang.String)">setEventName</a></span>(String eventName)
+        
+        <div class="jd-descrdiv">Set the event/brand name for LWAYVE to use when displaying certain messages in the UI.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html">LwayveSdkConfiguration.Builder</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html#setLanguage(com.lixar.lwayve.sdk.experience.ExperienceLanguage)">setLanguage</a></span>(<a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a> language)
         
         <div class="jd-descrdiv">Set the preferred language for audio clips in the SDK.</div>
   
@@ -495,7 +513,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -513,7 +531,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -531,7 +549,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -543,13 +561,13 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html#setProxSeeSdkAdapterFactory(com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.Factory)">setProxSeeSdkAdapterFactory</a></span>(<a href="../../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.Factory.html">ProxSeeSdkAdapter.Factory</a> proxSeeSdkAdapterFactory)
         
-        <div class="jd-descrdiv">Set the ProxSeeSdkAdapter.Factory object for LWAYVE to initialize</div>
+        <div class="jd-descrdiv">Set the ProxSeeSdkAdapter.Factory object for LWAYVE to initialize.</div>
   
   </td></tr>
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -561,7 +579,7 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html#setRecorderAdapterFactory(com.lixar.lwayve.recorder.RecorderAdapter.Factory)">setRecorderAdapterFactory</a></span>(<a href="../../../../../com/lixar/lwayve/recorder/RecorderAdapter.Factory.html">RecorderAdapter.Factory</a> recorderAdapterFactory)
         
-        <div class="jd-descrdiv">Set the RecorderAdapter object for LWAYVE to initialize</div>
+        <div class="jd-descrdiv">Set the RecorderAdapter object for LWAYVE to initialize.</div>
   
   </td></tr>
 
@@ -980,7 +998,48 @@ From class
 </div>
 
 
-<a id="setLanguage(LanguageManager.LwayveSdkLanguage)"></a>
+<a id="setEventName(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html">LwayveSdkConfiguration.Builder</a>
+      </span>
+      <span class="sympad">setEventName</span>
+      <span class="normal">(String eventName)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set the event/brand name for LWAYVE to use when displaying certain messages in the UI. (optional)</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>eventName</th>
+          <td>a String representing the desired event or brand name to display.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="setLanguage(com.lixar.lwayve.sdk.experience.ExperienceLanguage)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -993,7 +1052,7 @@ From class
         <a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html">LwayveSdkConfiguration.Builder</a>
       </span>
       <span class="sympad">setLanguage</span>
-      <span class="normal">(LanguageManager.LwayveSdkLanguage language)</span>
+      <span class="normal">(<a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a> language)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1005,7 +1064,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Set the preferred language for audio clips in the SDK.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Set the preferred language for audio clips in the SDK. (optional)</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1046,7 +1105,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Sets the drawable resource to use for the image shown on the media notification.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Sets the drawable resource to use for the image shown on the media notification. (optional)</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1087,7 +1146,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Sets the drawable resource to use for the media notification status bar icon.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Sets the drawable resource to use for the media notification status bar icon. (optional)</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1128,7 +1187,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Set the ProxSeeSdkAdapter.Factory object for LWAYVE to initialize</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Set the ProxSeeSdkAdapter.Factory object for LWAYVE to initialize. Requires ProxSee add-on module. (optional)</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1169,7 +1228,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Set the RecorderAdapter object for LWAYVE to initialize</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Set the RecorderAdapter object for LWAYVE to initialize. Requires recorder add-on module. (optional)</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">

@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  ClipMetadata
+  InvalidFileUploadException
 
 
 </title>
@@ -148,9 +148,9 @@
   <a href="../../../../../com/lixar/lwayve/sdk/core/package-summary.html">com.lixar.lwayve.sdk.core</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/events/package-summary.html">com.lixar.lwayve.sdk.events</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../com/lixar/lwayve/sdk/exceptions/package-summary.html">com.lixar.lwayve.sdk.exceptions</a></li>
     <li class="selected api apilevel-">
+  <a href="../../../../../com/lixar/lwayve/sdk/exceptions/package-summary.html">com.lixar.lwayve.sdk.exceptions</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/experience/package-summary.html">com.lixar.lwayve.sdk.experience</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/mediaplayer/package-summary.html">com.lixar.lwayve.sdk.mediaplayer</a></li>
@@ -165,14 +165,15 @@
               
               
               
-    <li><h2>Enums</h2>
+              
+    <li><h2>Exceptions</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata</a></li>
-          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a></li>
-          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/exceptions/InvalidFileUploadException.html">InvalidFileUploadException</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/exceptions/InvalidSdkConfigurationException.html">InvalidSdkConfigurationException</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/exceptions/RecorderAdapterNotInitializedException.html">RecorderAdapterNotInitializedException</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/exceptions/SdkNotInitializedException.html">SdkNotInitializedException</a></li>
       </ul>
     </li>
-              
               
             </ul><br/>
           </div><!-- end classes -->
@@ -212,6 +213,11 @@
 
 
   
+  
+  
+  
+
+  
    
   
   
@@ -225,13 +231,6 @@
   
   
 
-  
-  
-  
-  
-
-  
-   
   
   
   
@@ -246,16 +245,13 @@ Summary:
 
 
 
-  <a href="#enumconstants">Enums</a>
+
+
+
+
+
+  <a href="#pubctors">Ctors</a>
   
-
-
-
-
-  &#124; <a href="#lfields">Fields</a>
-  
-
-
 
 
 
@@ -285,10 +281,10 @@ Summary:
 <div id="jd-header">
     public
      
-    final 
+     
     
-    enum
-<h1>ClipMetadata</h1>
+    class
+<h1>InvalidFileUploadException</h1>
 
 
 
@@ -297,7 +293,11 @@ Summary:
   
 
   
-    extends Enum&lt;E&nbsp;extends&nbsp;Enum&lt;E&gt;&gt;<br/>
+  
+  
+
+  
+    extends Exception<br/>
   
   
   
@@ -317,7 +317,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Object</td>
+        <td colspan="4" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
@@ -325,7 +325,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Enum&lt;E&nbsp;extends&nbsp;java.lang.Enum&lt;E&gt;&gt;</td>
+        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Throwable</td>
     </tr>
     
 
@@ -335,7 +335,19 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.experience.ClipMetadata</td>
+        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Exception</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.exceptions.InvalidFileUploadException</td>
     </tr>
     
 
@@ -351,7 +363,8 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Enum representing metadata keys used in the metadata field of an AudioClip.
+<p>Exception thrown when an invalid file is passed to the LwayveSdk.<code><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#uploadRecording(java.io.File)">uploadRecording(File)</a></code>
+ method. Used by the recorder module.
 </p>
 
 
@@ -390,50 +403,41 @@ Summary:
 
 
 
-<!-- =========== ENUM CONSTANT SUMMARY =========== -->
-<table id="enumconstants" class="jd-sumtable"><tr><th colspan="12">Enum Values</th></tr>
 
-    
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata</a>&nbsp;</td>
-        <td class="jd-linkcol">TICKER&nbsp;</td>
-        <td class="jd-descrcol" width="100%">&nbsp;</td>
-    </tr>
-    
-    
-</table>
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/exceptions/InvalidFileUploadException.html#InvalidFileUploadException(java.lang.String, int)">InvalidFileUploadException</a></span>(String message, int errorCode)
+        
+  </td></tr>
 
 
-
-
-
-
-
-
-
-<!-- =========== FIELD SUMMARY =========== -->
-<table id="lfields" class="jd-sumtable"><tr><th colspan="12">Fields</th></tr>
-
-
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol">
-          public
-          
-          
-          String</td>
-          <td class="jd-linkcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html#key">key</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
 
 </table>
-
-
-
-
-
 
 
 
@@ -451,28 +455,12 @@ Summary:
             
             
             
-            static
             
-            <a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata</a>
+            
+            int
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html#valueOf(java.lang.String)">valueOf</a></span>(String name)
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
-            static
-            
-            <a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata[]</a>
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html#values()">values</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/exceptions/InvalidFileUploadException.html#getErrorCode()">getErrorCode</a></span>()
         
   </td></tr>
 
@@ -492,21 +480,23 @@ Summary:
   <div style="clear:left;">Inherited Methods</div></th></tr>
 
 
+
+
 <tr class="api apilevel-" >
 <td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Enum" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-java.lang.Enum-trigger"
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Throwable" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Throwable-trigger"
           src="../../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From class
 
-  java.lang.Enum
+  java.lang.Throwable
 
-<div id="inherited-methods-java.lang.Enum">
-  <div id="inherited-methods-java.lang.Enum-list"
+<div id="inherited-methods-java.lang.Throwable">
+  <div id="inherited-methods-java.lang.Throwable-list"
         class="jd-inheritedlinks">
   </div>
-  <div id="inherited-methods-java.lang.Enum-summary" style="display: none;">
+  <div id="inherited-methods-java.lang.Throwable-summary" style="display: none;">
     <table class="jd-sumtable-expando">
     
 
@@ -515,14 +505,14 @@ From class
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
-            
+            synchronized
             final
             
             
-            int
+            void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad">compareTo</span>(E arg0)
+        <span class="sympad">addSuppressed</span>(Throwable arg0)
         
   </td></tr>
 
@@ -531,14 +521,14 @@ From class
     <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
+            synchronized
             
             
             
-            
-            int
+            Throwable
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad">compareTo</span>(Object arg0)
+        <span class="sympad">fillInStackTrace</span>()
         
   </td></tr>
 
@@ -547,14 +537,14 @@ From class
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
+            synchronized
             
-            final
             
             
-            boolean
+            Throwable
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad">equals</span>(Object arg0)
+        <span class="sympad">getCause</span>()
         
   </td></tr>
 
@@ -564,45 +554,13 @@ From class
         <td class="jd-typecol">
             
             
-            final
             
-            
-            Class&lt;E&gt;
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">getDeclaringClass</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
-            
-            
-            int
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">hashCode</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
             
             
             String
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad">name</span>()
+        <span class="sympad">getLocalizedMessage</span>()
         
   </td></tr>
 
@@ -612,19 +570,131 @@ From class
         <td class="jd-typecol">
             
             
-            final
             
             
-            int
+            
+            String
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad">ordinal</span>()
+        <span class="sympad">getMessage</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            StackTraceElement[]
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getStackTrace</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            final
+            
+            
+            Throwable[]
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getSuppressed</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            
+            
+            Throwable
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">initCause</span>(Throwable arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">printStackTrace</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">printStackTrace</span>(PrintWriter arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">printStackTrace</span>(PrintStream arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setStackTrace</span>(StackTraceElement[] arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -635,22 +705,6 @@ From class
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad">toString</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            &lt;T&nbsp;extends&nbsp;Enum&lt;T&gt;&gt;
-            T
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">valueOf</span>(Class&lt;T&gt; arg0, String arg1)
         
   </td></tr>
 
@@ -833,48 +887,6 @@ From class
 
 
 
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Comparable" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-java.lang.Comparable-trigger"
-          src="../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  java.lang.Comparable
-
-<div id="inherited-methods-java.lang.Comparable">
-  <div id="inherited-methods-java.lang.Comparable-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-java.lang.Comparable-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            abstract
-            
-            
-            
-            
-            int
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">compareTo</span>(T arg0)
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
 </table>
 
 
@@ -895,116 +907,34 @@ From interface
 <!-- Enum Values -->
 
 
-<!-- ========= ENUM CONSTANTS DETAIL ======== -->
-<h2>Enum Values</h2>
-
-
-
-
-<a id="TICKER"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata</a>
-      </span>
-        TICKER
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-
 <!-- Constants -->
 
 
 <!-- Fields -->
 
 
-<!-- ========= FIELD DETAIL ======== -->
-<h2>Fields</h2>
-
-
-
-
-<a id="key"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        String
-      </span>
-        key
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-
 <!-- Public ctors -->
 
 
-
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
-<!-- Protected ctors -->
+<h2>Public Constructors</h2>
 
 
 
-<!-- ========= METHOD DETAIL ======== -->
-<!-- Public methdos -->
-
-<h2>Public Methods</h2>
-
-
-
-<a id="valueOf(java.lang.String)"></a>
+<a id="InvalidFileUploadException(java.lang.String, int)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
-        static 
          
          
          
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata</a>
+         
+        
       </span>
-      <span class="sympad">valueOf</span>
-      <span class="normal">(String name)</span>
+      <span class="sympad">InvalidFileUploadException</span>
+      <span class="normal">(String message, int errorCode)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1022,19 +952,34 @@ From interface
 </div>
 
 
-<a id="values()"></a>
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<a id="getErrorCode()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
-        static 
-        final 
          
          
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata[]</a>
+         
+         
+        int
       </span>
-      <span class="sympad">values</span>
+      <span class="sympad">getErrorCode</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">

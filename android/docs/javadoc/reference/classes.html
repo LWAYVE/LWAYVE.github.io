@@ -220,7 +220,7 @@
     
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-descrcol" width="100%">Enum representing metadata keys used in the metadata field of an AudioClip.&nbsp;</td>
         </tr>
     
     
@@ -238,9 +238,8 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/events/ExperienceEvent.html">ExperienceEvent</a></td>
-            <td class="jd-descrcol" width="100%">Experience related events
-&nbsp;</td>
+            <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a></td>
+            <td class="jd-descrcol" width="100%">Enum representing the languages supported by the LWAYVE SDK.&nbsp;</td>
         </tr>
     
     
@@ -252,6 +251,13 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/exceptions/InvalidFileUploadException.html">InvalidFileUploadException</a></td>
+            <td class="jd-descrcol" width="100%">Exception thrown when an invalid file is passed to the LwayveSdk.<code><a href="./com/lixar/lwayve/sdk/core/LwayveSdk.html#uploadRecording(java.io.File)">uploadRecording(File)</a></code>
+ method.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/exceptions/InvalidSdkConfigurationException.html">InvalidSdkConfigurationException</a></td>
             <td class="jd-descrcol" width="100%">An exception thrown in the event an invalid <code><a href="./com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html">LwayveSdkConfiguration</a></code> is passed to the LWAYVE SDK
 &nbsp;</td>
@@ -267,7 +273,7 @@
     
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/core/LwayveConnectionCallback.html">LwayveConnectionCallback</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-descrcol" width="100%">Callback from LwayveSdk.<code><a href="./com/lixar/lwayve/sdk/core/LwayveSdk.html#connect(com.lixar.lwayve.sdk.core.LwayveConnectionCallback)">connect(LwayveConnectionCallback)</a></code>.&nbsp;</td>
         </tr>
     
     
@@ -305,7 +311,14 @@
     
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/events/OnPlaybackEventListener.html">OnPlaybackEventListener</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-descrcol" width="100%">Listener for playback events emitted by the SDK.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a></td>
+            <td class="jd-descrcol" width="100%">Enums representing the actions in the Outer Band of the <code><a href="./com/lixar/lwayve/sdk/view/LwayvePlaybackControlView.html">LwayvePlaybackControlView</a></code>
+&nbsp;</td>
         </tr>
     
     
@@ -325,7 +338,7 @@
     
         <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.html">ProxSeeSdkAdapter</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-descrcol" width="100%">Adapter interface for interacting with the ProxSee SDK add-on module.&nbsp;</td>
         </tr>
     
     
@@ -344,7 +357,7 @@
     
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/lixar/lwayve/recorder/RecorderAdapter.html">RecorderAdapter</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-descrcol" width="100%">Adapter interface for interacting with the recorder add-on module.&nbsp;</td>
         </tr>
     
     
@@ -356,7 +369,15 @@
     
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/exceptions/RecorderAdapterNotInitializedException.html">RecorderAdapterNotInitializedException</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-descrcol" width="100%">Exception thrown when a method is called that requires the recorder add-on module, but it has not
+ been properly initialized.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/lixar/lwayve/recorder/RecordingDuration.html">RecordingDuration</a></td>
+            <td class="jd-descrcol" width="100%">Enum representing the maximum length of time to allow for a recording created with the recorder
+ module.&nbsp;</td>
         </tr>
     
     
@@ -369,8 +390,8 @@
     
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/lixar/lwayve/sdk/exceptions/SdkNotInitializedException.html">SdkNotInitializedException</a></td>
-            <td class="jd-descrcol" width="100%">This exception will be thrown if <code><a href="./com/lixar/lwayve/sdk/core/LwayveSdk.html#connect(com.lixar.lwayve.sdk.core.LwayveConnectionCallback)">connect(LwayveConnectionCallback)</a></code> is called before the SDK has been
- initialized.&nbsp;</td>
+            <td class="jd-descrcol" width="100%">This exception will be thrown if LwayveSdk.<code><a href="./com/lixar/lwayve/sdk/core/LwayveSdk.html#connect(com.lixar.lwayve.sdk.core.LwayveConnectionCallback)">connect(LwayveConnectionCallback)</a></code> is
+ called before the SDK has been initialized.&nbsp;</td>
         </tr>
     
     

@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  PlaybackEvent
+  ExperienceLanguage
 
 
 </title>
@@ -146,11 +146,11 @@
   <a href="../../../../../com/lixar/lwayve/recorder/package-summary.html">com.lixar.lwayve.recorder</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/core/package-summary.html">com.lixar.lwayve.sdk.core</a></li>
-    <li class="selected api apilevel-">
+    <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/events/package-summary.html">com.lixar.lwayve.sdk.events</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/exceptions/package-summary.html">com.lixar.lwayve.sdk.exceptions</a></li>
-    <li class="api apilevel-">
+    <li class="selected api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/experience/package-summary.html">com.lixar.lwayve.sdk.experience</a></li>
     <li class="api apilevel-">
   <a href="../../../../../com/lixar/lwayve/sdk/mediaplayer/package-summary.html">com.lixar.lwayve.sdk.mediaplayer</a></li>
@@ -162,17 +162,14 @@
           <div id="classes-nav">
             <ul>
               
-    <li><h2>Interfaces</h2>
-      <ul>
-          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/events/OnPlaybackEventListener.html">OnPlaybackEventListener</a></li>
-      </ul>
-    </li>
               
               
               
     <li><h2>Enums</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a></li>
       </ul>
     </li>
               
@@ -288,7 +285,7 @@ Summary:
     final 
     
     enum
-<h1>PlaybackEvent</h1>
+<h1>ExperienceLanguage</h1>
 
 
 
@@ -335,7 +332,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.events.PlaybackEvent</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.experience.ExperienceLanguage</td>
     </tr>
     
 
@@ -351,7 +348,11 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>The playback events broadcast by the LWAYVE SDK
+<p>Enum representing the languages supported by the LWAYVE SDK. When no ExperienceLanguage is passed
+ when initializing the SDK, it will attempt to use the device language if it is supported, otherwise
+ it will fallback to the default language. The language used for audio content and associated metadata
+ can be overridden through the LwayveSdkConfiguration.<code><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html#setLanguage(com.lixar.lwayve.sdk.experience.ExperienceLanguage)">setLanguage(ExperienceLanguage)</a></code>
+ method when initializing the SDK.
 </p>
 
 
@@ -395,98 +396,23 @@ Summary:
 
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">COMPLETION_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">A track in the media queue has completed playback
-&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>&nbsp;</td>
+        <td class="jd-linkcol">ENGLISH&nbsp;</td>
+        <td class="jd-descrcol" width="100%">&nbsp;</td>
     </tr>
     
     
     <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">END_OF_PLAYLIST_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">The last track in the media queue has been played
-&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>&nbsp;</td>
+        <td class="jd-linkcol">FRENCH&nbsp;</td>
+        <td class="jd-descrcol" width="100%">&nbsp;</td>
     </tr>
     
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">NOT_PREPARED_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">The media queue is empty and there is no content queued in the media player
-&nbsp;</td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">PAUSE_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">Audio playback has been paused
-&nbsp;</td>
-    </tr>
-    
-    
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">PLAY_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">LWAYVE has begun playing audio
-&nbsp;</td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">PREPARED_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">The media queue contains content and the media player is ready to play
-&nbsp;</td>
-    </tr>
-    
-    
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">PREPARING_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">The media player is in the process of loading content
-&nbsp;</td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">REFRESH_COMPLETE_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">The playlist has been refreshed
-&nbsp;</td>
-    </tr>
-    
-    
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">REFRESH_STARTED_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">The playlist has started refreshing
-&nbsp;</td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">SKIP_NEXT_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">LWAYVE has skipped to the next track in the media queue
-&nbsp;</td>
-    </tr>
-    
-    
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">SKIP_PREV_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">LWAYVE has skipped to the previous track in the media queue
-&nbsp;</td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>&nbsp;</td>
-        <td class="jd-linkcol">STOP_EVENT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">Audio playback has been stopped
-&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>&nbsp;</td>
+        <td class="jd-linkcol">SPANISH&nbsp;</td>
+        <td class="jd-descrcol" width="100%">&nbsp;</td>
     </tr>
     
     
@@ -520,12 +446,44 @@ Summary:
             
             
             
+            static
             
-            
-            ZonedDateTime
+            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html#getLastEventTime()">getLastEventTime</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#getDeviceDefaultLanguage()">getDeviceDefaultLanguage</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#getLanguageCode()">getLanguageCode</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#getLanguageForCode(java.lang.String)">getLanguageForCode</a></span>(String languageCode)
         
   </td></tr>
 
@@ -538,10 +496,10 @@ Summary:
             
             static
             
-            <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
+            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage[]</a>
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html#valueOf(java.lang.String)">valueOf</a></span>(String name)
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#getSupportedLanguages()">getSupportedLanguages</a></span>()
         
   </td></tr>
 
@@ -551,13 +509,29 @@ Summary:
         <td class="jd-typecol">
             
             
+            
+            static
+            
+            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#valueOf(java.lang.String)">valueOf</a></span>(String name)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
             final
             static
             
-            <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent[]</a>
+            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage[]</a>
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html#values()">values</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#values()">values</a></span>()
         
   </td></tr>
 
@@ -986,7 +960,7 @@ From interface
 
 
 
-<a id="COMPLETION_EVENT"></a>
+<a id="ENGLISH"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -994,9 +968,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
       </span>
-        COMPLETION_EVENT
+        ENGLISH
     </h4>
       <div class="api-level">
         
@@ -1008,8 +982,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>A track in the media queue has completed playback
-</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     
     </div>
@@ -1017,7 +990,7 @@ From interface
 
 
 
-<a id="END_OF_PLAYLIST_EVENT"></a>
+<a id="FRENCH"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1025,9 +998,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
       </span>
-        END_OF_PLAYLIST_EVENT
+        FRENCH
     </h4>
       <div class="api-level">
         
@@ -1039,8 +1012,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>The last track in the media queue has been played
-</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     
     </div>
@@ -1048,7 +1020,7 @@ From interface
 
 
 
-<a id="NOT_PREPARED_EVENT"></a>
+<a id="SPANISH"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1056,9 +1028,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
       </span>
-        NOT_PREPARED_EVENT
+        SPANISH
     </h4>
       <div class="api-level">
         
@@ -1070,287 +1042,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>The media queue is empty and there is no content queued in the media player
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="PAUSE_EVENT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
-      </span>
-        PAUSE_EVENT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Audio playback has been paused
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="PLAY_EVENT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
-      </span>
-        PLAY_EVENT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>LWAYVE has begun playing audio
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="PREPARED_EVENT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
-      </span>
-        PREPARED_EVENT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>The media queue contains content and the media player is ready to play
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="PREPARING_EVENT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
-      </span>
-        PREPARING_EVENT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>The media player is in the process of loading content
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="REFRESH_COMPLETE_EVENT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
-      </span>
-        REFRESH_COMPLETE_EVENT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>The playlist has been refreshed
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="REFRESH_STARTED_EVENT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
-      </span>
-        REFRESH_STARTED_EVENT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>The playlist has started refreshing
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="SKIP_NEXT_EVENT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
-      </span>
-        SKIP_NEXT_EVENT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>LWAYVE has skipped to the next track in the media queue
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="SKIP_PREV_EVENT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
-      </span>
-        SKIP_PREV_EVENT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>LWAYVE has skipped to the previous track in the media queue
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="STOP_EVENT"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
-      </span>
-        STOP_EVENT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Audio playback has been stopped
-</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     
     </div>
@@ -1381,7 +1073,38 @@ From interface
 
 
 
-<a id="getLastEventTime()"></a>
+<a id="getDeviceDefaultLanguage()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
+      </span>
+      <span class="sympad">getDeviceDefaultLanguage</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getLanguageCode()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1391,9 +1114,71 @@ From interface
          
          
          
-        ZonedDateTime
+        String
       </span>
-      <span class="sympad">getLastEventTime</span>
+      <span class="sympad">getLanguageCode</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getLanguageForCode(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
+      </span>
+      <span class="sympad">getLanguageForCode</span>
+      <span class="normal">(String languageCode)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getSupportedLanguages()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage[]</a>
+      </span>
+      <span class="sympad">getSupportedLanguages</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -1422,7 +1207,7 @@ From interface
          
          
          
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
       </span>
       <span class="sympad">valueOf</span>
       <span class="normal">(String name)</span>
@@ -1453,7 +1238,7 @@ From interface
         final 
          
          
-        <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent[]</a>
+        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage[]</a>
       </span>
       <span class="sympad">values</span>
       <span class="normal">()</span>

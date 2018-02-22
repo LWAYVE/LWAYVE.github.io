@@ -8,7 +8,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<method name="deinitialize"
+<method name="deinit"
  return="void"
  abstract="true"
  native="false"
@@ -30,7 +30,7 @@
  visibility="public"
 >
 </method>
-<method name="initialize"
+<method name="init"
  return="void"
  abstract="true"
  native="false"
@@ -117,7 +117,7 @@
  visibility="public"
 >
 </method>
-<method name="deinitialize"
+<method name="deinit"
  return="void"
  abstract="true"
  native="false"
@@ -128,7 +128,18 @@
  visibility="public"
 >
 </method>
-<method name="initialize"
+<method name="getMaxRecordingDuration"
+ return="com.lixar.lwayve.recorder.RecordingDuration"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="init"
  return="void"
  abstract="true"
  native="false"
@@ -162,6 +173,8 @@
 >
 <parameter name="file" type="java.io.File">
 </parameter>
+<exception name="InvalidFileUploadException" type="com.lixar.lwayve.sdk.exceptions.InvalidFileUploadException">
+</exception>
 </method>
 </interface>
 <interface name="RecorderAdapter.Factory"
@@ -183,6 +196,50 @@
 >
 </method>
 </interface>
+<class name="RecordingDuration"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getDuration"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.lixar.lwayve.recorder.RecordingDuration"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.lixar.lwayve.recorder.RecordingDuration[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 </package>
 <package name="com.lixar.lwayve.sdk.core"
 >
@@ -298,6 +355,19 @@
  visibility="public"
 >
 </method>
+<method name="executeOuterBandAction"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="com.lixar.lwayve.sdk.experience.OuterBandAction">
+</parameter>
+</method>
 <method name="fetchExperienceFromServer"
  return="void"
  abstract="false"
@@ -375,6 +445,28 @@
  visibility="public"
 >
 </method>
+<method name="getCurrentAudioClip"
+ return="AudioClip"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCurrentProgram"
+ return="Program"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="getCurrentQueueItemDuration"
  return="long"
  abstract="false"
@@ -388,6 +480,17 @@
 </method>
 <method name="getCurrentQueueItemIndex"
  return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCurrentSegment"
+ return="Segment"
  abstract="false"
  native="false"
  synchronized="false"
@@ -464,7 +567,7 @@
 >
 </method>
 <method name="getLastExperienceEvent"
- return="com.lixar.lwayve.sdk.events.ExperienceEvent"
+ return="ExperienceEvent"
  abstract="false"
  native="false"
  synchronized="false"
@@ -476,6 +579,17 @@
 </method>
 <method name="getLastPlaybackEvent"
  return="com.lixar.lwayve.sdk.events.PlaybackEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOuterBandActions"
+ return="java.util.Set&lt;com.lixar.lwayve.sdk.experience.OuterBandAction&gt;"
  abstract="false"
  native="false"
  synchronized="false"
@@ -612,21 +726,6 @@
  visibility="public"
 >
 </method>
-<method name="onNetworkStateChanged"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="connected" type="boolean">
-</parameter>
-<parameter name="isMeteredNetwork" type="boolean">
-</parameter>
-</method>
 <method name="pause"
  return="void"
  abstract="false"
@@ -708,6 +807,36 @@
 <parameter name="like" type="java.lang.String">
 </parameter>
 </method>
+<method name="setOuterBandActionIcon"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="com.lixar.lwayve.sdk.experience.OuterBandAction">
+</parameter>
+<parameter name="iconRes" type="int">
+</parameter>
+</method>
+<method name="setOuterBandActionText"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="com.lixar.lwayve.sdk.experience.OuterBandAction">
+</parameter>
+<parameter name="stringRes" type="int">
+</parameter>
+</method>
 <method name="setTimeOffset"
  return="void"
  abstract="false"
@@ -745,6 +874,34 @@
  visibility="public"
 >
 <parameter name="locations" type="java.util.Set&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="startRecordActivity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="Context">
+</parameter>
+</method>
+<method name="startRecordActivity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="Context">
+</parameter>
+<parameter name="bundle" type="Bundle">
 </parameter>
 </method>
 <method name="stop"
@@ -785,6 +942,8 @@
 >
 <parameter name="file" type="java.io.File">
 </parameter>
+<exception name="InvalidFileUploadException" type="com.lixar.lwayve.sdk.exceptions.InvalidFileUploadException">
+</exception>
 </method>
 </class>
 <class name="LwayveSdkConfiguration"
@@ -816,6 +975,17 @@
 <parameter name="configuration" type="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration">
 </parameter>
 </method>
+<method name="getAppLanguage"
+ return="com.lixar.lwayve.sdk.experience.ExperienceLanguage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="getAuthToken"
  return="java.lang.String"
  abstract="false"
@@ -838,8 +1008,30 @@
  visibility="public"
 >
 </method>
+<method name="getDeviceLanguage"
+ return="com.lixar.lwayve.sdk.experience.ExperienceLanguage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getEventName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="getLanguage"
- return="LanguageManager.LwayveSdkLanguage"
+ return="com.lixar.lwayve.sdk.experience.ExperienceLanguage"
  abstract="false"
  native="false"
  synchronized="false"
@@ -893,6 +1085,19 @@
  visibility="public"
 >
 </method>
+<method name="setEventName"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventName" type="java.lang.String">
+</parameter>
+</method>
 <method name="setLanguage"
  return="void"
  abstract="false"
@@ -903,7 +1108,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="language" type="LanguageManager.LwayveSdkLanguage">
+<parameter name="language" type="com.lixar.lwayve.sdk.experience.ExperienceLanguage">
 </parameter>
 </method>
 <method name="setNotificationLargeIconRes"
@@ -1025,6 +1230,19 @@
 <parameter name="baseUrl" type="java.lang.String">
 </parameter>
 </method>
+<method name="setEventName"
+ return="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration.Builder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventName" type="java.lang.String">
+</parameter>
+</method>
 <method name="setLanguage"
  return="com.lixar.lwayve.sdk.core.LwayveSdkConfiguration.Builder"
  abstract="false"
@@ -1035,7 +1253,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="language" type="LanguageManager.LwayveSdkLanguage">
+<parameter name="language" type="com.lixar.lwayve.sdk.experience.ExperienceLanguage">
 </parameter>
 </method>
 <method name="setNotificationLargeIconRes"
@@ -1094,50 +1312,6 @@
 </package>
 <package name="com.lixar.lwayve.sdk.events"
 >
-<class name="ExperienceEvent"
- extends="java.lang.Enum"
- abstract="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-<method name="getLastEventTime"
- return="ZonedDateTime"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="valueOf"
- return="com.lixar.lwayve.sdk.events.ExperienceEvent"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="name" type="java.lang.String">
-</parameter>
-</method>
-<method name="values"
- return="com.lixar.lwayve.sdk.events.ExperienceEvent[]"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-</class>
 <interface name="OnPlaybackEventListener"
  abstract="true"
  static="false"
@@ -1206,6 +1380,38 @@
 </package>
 <package name="com.lixar.lwayve.sdk.exceptions"
 >
+<class name="InvalidFileUploadException"
+ extends="java.lang.Exception"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="InvalidFileUploadException"
+ type="com.lixar.lwayve.sdk.exceptions.InvalidFileUploadException"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+<parameter name="errorCode" type="int">
+</parameter>
+</constructor>
+<method name="getErrorCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="InvalidSdkConfigurationException"
  extends="java.lang.Exception"
  abstract="false"
@@ -1294,6 +1500,171 @@
 </method>
 <field name="key"
  type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="ExperienceLanguage"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getDeviceDefaultLanguage"
+ return="com.lixar.lwayve.sdk.experience.ExperienceLanguage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLanguageCode"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLanguageForCode"
+ return="com.lixar.lwayve.sdk.experience.ExperienceLanguage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="languageCode" type="java.lang.String">
+</parameter>
+</method>
+<method name="getSupportedLanguages"
+ return="com.lixar.lwayve.sdk.experience.ExperienceLanguage[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.lixar.lwayve.sdk.experience.ExperienceLanguage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.lixar.lwayve.sdk.experience.ExperienceLanguage[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OuterBandAction"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getActionType"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIconId"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTextId"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.lixar.lwayve.sdk.experience.OuterBandAction"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.lixar.lwayve.sdk.experience.OuterBandAction[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="iconRes"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="stringRes"
+ type="int"
  transient="false"
  volatile="false"
  static="false"
@@ -1568,7 +1939,7 @@
 >
 </method>
 <method name="getTrackBarText"
- return="java.lang.String"
+ return="java.lang.CharSequence"
  abstract="false"
  native="false"
  synchronized="false"
@@ -1847,17 +2218,6 @@
 <parameter name="textColor" type="int">
 </parameter>
 </method>
-<field name="RECORD_ACTIVITY_NAME"
- type="java.lang.String"
- transient="false"
- volatile="false"
- value="&quot;com.lixar.lwayve.sdk.recorder.view.RecordActivity&quot;"
- static="true"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</field>
 <field name="latoLight"
  type="Typeface"
  transient="false"
