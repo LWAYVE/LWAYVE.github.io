@@ -1588,6 +1588,49 @@
 >
 </method>
 </class>
+<class name="FirebaseRoutedMessageService"
+ extends="IntentService"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="FirebaseRoutedMessageService"
+ type="com.lixar.lwayve.sdk.experience.FirebaseRoutedMessageService"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="handleRemoteMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="Context">
+</parameter>
+<parameter name="remoteMessage" type="RemoteMessage">
+</parameter>
+</method>
+<method name="onCreate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="OuterBandAction"
  extends="java.lang.Enum"
  abstract="false"
@@ -1628,6 +1671,30 @@
  deprecated="not deprecated"
  visibility="public"
 >
+</method>
+<method name="isEnabled"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setEnabled"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enabled" type="boolean">
+</parameter>
 </method>
 <method name="valueOf"
  return="com.lixar.lwayve.sdk.experience.OuterBandAction"

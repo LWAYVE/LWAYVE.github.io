@@ -22,10 +22,11 @@ var DATA = [
       { id:20, label:"com.lixar.lwayve.sdk.experience", link:"com/lixar/lwayve/sdk/experience/package-summary.html", type:"package" },
       { id:21, label:"com.lixar.lwayve.sdk.experience.ClipMetadata", link:"com/lixar/lwayve/sdk/experience/ClipMetadata.html", type:"class" },
       { id:22, label:"com.lixar.lwayve.sdk.experience.ExperienceLanguage", link:"com/lixar/lwayve/sdk/experience/ExperienceLanguage.html", type:"class" },
-      { id:23, label:"com.lixar.lwayve.sdk.experience.OuterBandAction", link:"com/lixar/lwayve/sdk/experience/OuterBandAction.html", type:"class" },
-      { id:24, label:"com.lixar.lwayve.sdk.mediaplayer", link:"com/lixar/lwayve/sdk/mediaplayer/package-summary.html", type:"package" },
-      { id:25, label:"com.lixar.lwayve.sdk.mediaplayer.ClipPlayedAction", link:"com/lixar/lwayve/sdk/mediaplayer/ClipPlayedAction.html", type:"class" },
-      { id:26, label:"com.lixar.lwayve.sdk.view", link:"com/lixar/lwayve/sdk/view/package-summary.html", type:"package" },
-      { id:27, label:"com.lixar.lwayve.sdk.view.LwayvePlaybackControlView", link:"com/lixar/lwayve/sdk/view/LwayvePlaybackControlView.html", type:"class" }
+      { id:23, label:"com.lixar.lwayve.sdk.experience.FirebaseRoutedMessageService", link:"com/lixar/lwayve/sdk/experience/FirebaseRoutedMessageService.html", type:"class" },
+      { id:24, label:"com.lixar.lwayve.sdk.experience.OuterBandAction", link:"com/lixar/lwayve/sdk/experience/OuterBandAction.html", type:"class" },
+      { id:25, label:"com.lixar.lwayve.sdk.mediaplayer", link:"com/lixar/lwayve/sdk/mediaplayer/package-summary.html", type:"package" },
+      { id:26, label:"com.lixar.lwayve.sdk.mediaplayer.ClipPlayedAction", link:"com/lixar/lwayve/sdk/mediaplayer/ClipPlayedAction.html", type:"class" },
+      { id:27, label:"com.lixar.lwayve.sdk.view", link:"com/lixar/lwayve/sdk/view/package-summary.html", type:"package" },
+      { id:28, label:"com.lixar.lwayve.sdk.view.LwayvePlaybackControlView", link:"com/lixar/lwayve/sdk/view/LwayvePlaybackControlView.html", type:"class" }
 
     ];

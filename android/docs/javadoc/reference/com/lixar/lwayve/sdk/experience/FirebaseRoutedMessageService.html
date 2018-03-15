@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  ExperienceLanguage
+  FirebaseRoutedMessageService
 
 
 </title>
@@ -165,7 +165,7 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/FirebaseRoutedMessageService.html">FirebaseRoutedMessageService</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/FirebaseRoutedMessageService.html">FirebaseRoutedMessageService</a></li>
       </ul>
     </li>
               
@@ -173,7 +173,7 @@
     <li><h2>Enums</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/ClipMetadata.html">ClipMetadata</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a></li>
           <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/experience/OuterBandAction.html">OuterBandAction</a></li>
       </ul>
     </li>
@@ -217,20 +217,6 @@
 
 
   
-   
-  
-  
-  
-  
-
-  
-   
-  
-  
-  
-  
-
-  
   
   
   
@@ -251,13 +237,13 @@ Summary:
 
 
 
-  <a href="#enumconstants">Enums</a>
+
+
+
+
+
+  <a href="#pubctors">Ctors</a>
   
-
-
-
-
-
 
 
 
@@ -287,10 +273,10 @@ Summary:
 <div id="jd-header">
     public
      
-    final 
+     
     
-    enum
-<h1>ExperienceLanguage</h1>
+    class
+<h1>FirebaseRoutedMessageService</h1>
 
 
 
@@ -299,7 +285,7 @@ Summary:
   
 
   
-    extends Enum&lt;E&nbsp;extends&nbsp;Enum&lt;E&gt;&gt;<br/>
+    extends IntentService<br/>
   
   
   
@@ -327,7 +313,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Enum&lt;E&nbsp;extends&nbsp;java.lang.Enum&lt;E&gt;&gt;</td>
+        <td colspan="2" class="jd-inheritance-class-cell">IntentService</td>
     </tr>
     
 
@@ -337,7 +323,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.experience.ExperienceLanguage</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.lixar.lwayve.sdk.experience.FirebaseRoutedMessageService</td>
     </tr>
     
 
@@ -353,11 +339,8 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Enum representing the languages supported by the LWAYVE SDK. When no ExperienceLanguage is passed
- when initializing the SDK, it will attempt to use the device language if it is supported, otherwise
- it will fallback to the default language. The language used for audio content and associated metadata
- can be overridden through the LwayveSdkConfiguration.<code><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html#setLanguage(com.lixar.lwayve.sdk.experience.ExperienceLanguage)">setLanguage(ExperienceLanguage)</a></code>
- method when initializing the SDK.
+<p>Allows for RemoteMessages received in another FirebaseMessagingService to be forwarded to the
+ LWAYVE SDK for processing.
 </p>
 
 
@@ -396,44 +379,41 @@ Summary:
 
 
 
-<!-- =========== ENUM CONSTANT SUMMARY =========== -->
-<table id="enumconstants" class="jd-sumtable"><tr><th colspan="12">Enum Values</th></tr>
 
-    
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>&nbsp;</td>
-        <td class="jd-linkcol">ENGLISH&nbsp;</td>
-        <td class="jd-descrcol" width="100%">&nbsp;</td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>&nbsp;</td>
-        <td class="jd-linkcol">FRENCH&nbsp;</td>
-        <td class="jd-descrcol" width="100%">&nbsp;</td>
-    </tr>
-    
-    
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>&nbsp;</td>
-        <td class="jd-linkcol">SPANISH&nbsp;</td>
-        <td class="jd-descrcol" width="100%">&nbsp;</td>
-    </tr>
-    
-    
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/FirebaseRoutedMessageService.html#FirebaseRoutedMessageService()">FirebaseRoutedMessageService</a></span>()
+        
+  </td></tr>
+
+
+
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -453,11 +433,14 @@ Summary:
             
             static
             
-            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
+            void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#getDeviceDefaultLanguage()">getDeviceDefaultLanguage</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/FirebaseRoutedMessageService.html#handleRemoteMessage(Context, RemoteMessage)">handleRemoteMessage</a></span>(Context context, RemoteMessage remoteMessage)
         
+        <div class="jd-descrdiv">Helper method which will start the FirebaseRoutedMessageService and pass the
+ remoteMessage to the LWAYVE SDK.</div>
+  
   </td></tr>
 
 
@@ -469,74 +452,10 @@ Summary:
             
             
             
-            String
+            void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#getLanguageCode()">getLanguageCode</a></span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#getLanguageForCode(java.lang.String)">getLanguageForCode</a></span>(String languageCode)
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage[]</a>
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#getSupportedLanguages()">getSupportedLanguages</a></span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#valueOf(java.lang.String)">valueOf</a></span>(String name)
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
-            static
-            
-            <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage[]</a>
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html#values()">values</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/experience/FirebaseRoutedMessageService.html#onCreate()">onCreate</a></span>()
         
   </td></tr>
 
@@ -555,174 +474,6 @@ Summary:
   <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
   <div style="clear:left;">Inherited Methods</div></th></tr>
 
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Enum" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-java.lang.Enum-trigger"
-          src="../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From class
-
-  java.lang.Enum
-
-<div id="inherited-methods-java.lang.Enum">
-  <div id="inherited-methods-java.lang.Enum-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-java.lang.Enum-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
-            
-            
-            int
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">compareTo</span>(E arg0)
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
-            int
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">compareTo</span>(Object arg0)
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
-            
-            
-            boolean
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">equals</span>(Object arg0)
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
-            
-            
-            Class&lt;E&gt;
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">getDeclaringClass</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
-            
-            
-            int
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">hashCode</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
-            
-            
-            String
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">name</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            final
-            
-            
-            int
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">ordinal</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
-            String
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">toString</span>()
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            &lt;T&nbsp;extends&nbsp;Enum&lt;T&gt;&gt;
-            T
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">valueOf</span>(Class&lt;T&gt; arg0, String arg1)
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
 
 
 
@@ -895,50 +646,6 @@ From class
 </td></tr>
 
 
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Comparable" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-java.lang.Comparable-trigger"
-          src="../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  java.lang.Comparable
-
-<div id="inherited-methods-java.lang.Comparable">
-  <div id="inherited-methods-java.lang.Comparable-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-java.lang.Comparable-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            abstract
-            
-            
-            
-            
-            int
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">compareTo</span>(T arg0)
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
 </table>
 
 
@@ -959,103 +666,6 @@ From interface
 <!-- Enum Values -->
 
 
-<!-- ========= ENUM CONSTANTS DETAIL ======== -->
-<h2>Enum Values</h2>
-
-
-
-
-<a id="ENGLISH"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
-      </span>
-        ENGLISH
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="FRENCH"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
-      </span>
-        FRENCH
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<a id="SPANISH"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
-      </span>
-        SPANISH
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-
 <!-- Constants -->
 
 
@@ -1063,6 +673,44 @@ From interface
 
 
 <!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<a id="FirebaseRoutedMessageService()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">FirebaseRoutedMessageService</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 
 
 
@@ -1078,7 +726,7 @@ From interface
 
 
 
-<a id="getDeviceDefaultLanguage()"></a>
+<a id="handleRemoteMessage(Context, RemoteMessage)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1088,10 +736,10 @@ From interface
          
          
          
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
+        void
       </span>
-      <span class="sympad">getDeviceDefaultLanguage</span>
-      <span class="normal">()</span>
+      <span class="sympad">handleRemoteMessage</span>
+      <span class="normal">(Context context, RemoteMessage remoteMessage)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1103,13 +751,15 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Helper method which will start the FirebaseRoutedMessageService and pass the
+ remoteMessage to the LWAYVE SDK.
+</p></div>
 
     </div>
 </div>
 
 
-<a id="getLanguageCode()"></a>
+<a id="onCreate()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1119,133 +769,9 @@ From interface
          
          
          
-        String
+        void
       </span>
-      <span class="sympad">getLanguageCode</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<a id="getLanguageForCode(java.lang.String)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
-      </span>
-      <span class="sympad">getLanguageForCode</span>
-      <span class="normal">(String languageCode)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<a id="getSupportedLanguages()"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage[]</a>
-      </span>
-      <span class="sympad">getSupportedLanguages</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<a id="valueOf(java.lang.String)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage</a>
-      </span>
-      <span class="sympad">valueOf</span>
-      <span class="normal">(String name)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<a id="values()"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-         
-         
-        <a href="../../../../../com/lixar/lwayve/sdk/experience/ExperienceLanguage.html">ExperienceLanguage[]</a>
-      </span>
-      <span class="sympad">values</span>
+      <span class="sympad">onCreate</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
