@@ -312,7 +312,7 @@
                         <p>This method must be called before the SDK can be used.</p>
 <div class="aside aside-seealso">
     <p class="aside-title">Seealso</p>
-    <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKWithDidInit:">LwayveSDKDelegate.lwayveSDK(didInit:)</a></code>
+    <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:">LwayveSDKDelegate.lwayveSDK(didInit:)</a></code>
 
 </div>
 <div class="aside aside-seealso">
@@ -368,7 +368,7 @@
                         <p>The SDK will be deinitialized after calling this method. </p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    Deinitialization may be asynchronious. Wait for <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKWithDidDeinit:">LwayveSDKDelegate.lwayveSDK(didDeinit:)</a></code> to be called before initializing the SDK again.
+    Deinitialization may be asynchronious. Wait for <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidDeinit:">LwayveSDKDelegate.lwayveSDK(didDeinit:)</a></code> to be called before initializing the SDK again.
 
 </div>
 
@@ -414,9 +414,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithPlaylistEventsListener:"></a>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addPlaylistEventsListener:"></a>
                     <a name="//apple_ref/swift/Method/add(playlistEventsListener:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithPlaylistEventsListener:">add(playlistEventsListener:)</a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addPlaylistEventsListener:">add(playlistEventsListener:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -441,9 +441,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithPlaylistEventsListener:"></a>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removePlaylistEventsListener:"></a>
                     <a name="//apple_ref/swift/Method/remove(playlistEventsListener:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithPlaylistEventsListener:">remove(playlistEventsListener:)</a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removePlaylistEventsListener:">remove(playlistEventsListener:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -468,9 +468,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithDelegate:"></a>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addDelegate:"></a>
                     <a name="//apple_ref/swift/Method/add(delegate:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithDelegate:">add(delegate:)</a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addDelegate:">add(delegate:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -514,9 +514,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithDelegate:"></a>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeDelegate:"></a>
                     <a name="//apple_ref/swift/Method/remove(delegate:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithDelegate:">remove(delegate:)</a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeDelegate:">remove(delegate:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -628,7 +628,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Using this property you can get or update the SDK preferred language. 
+                        <p>Using this property you can get or update the SDK preferred language.
 Update is an asynchronous operation. The default value is the current device language, if the LWAYVE SDK supports it. 
 If a language is not set on the current device, the default is LwayveLanguage.english.</p>
 
@@ -647,9 +647,9 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithAudioControlDelegate:"></a>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addAudioControlDelegate:"></a>
                     <a name="//apple_ref/swift/Method/add(audioControlDelegate:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addWithAudioControlDelegate:">add(audioControlDelegate:)</a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)addAudioControlDelegate:">add(audioControlDelegate:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -693,9 +693,9 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithAudioControlDelegate:"></a>
+                    <a name="/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeAudioControlDelegate:"></a>
                     <a name="//apple_ref/swift/Method/remove(audioControlDelegate:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeWithAudioControlDelegate:">remove(audioControlDelegate:)</a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)removeAudioControlDelegate:">remove(audioControlDelegate:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1670,7 +1670,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
 This method must be called before the SDK can be used.</p>
 <div class="aside aside-seealso">
     <p class="aside-title">Seealso</p>
-    <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKWithDidInit:">LwayveSDKDelegate.lwayveSDK(didInit:)</a></code>
+    <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:">LwayveSDKDelegate.lwayveSDK(didInit:)</a></code>
 
 </div>
 <div class="aside aside-seealso">
@@ -1717,9 +1717,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKWithDidInit:"></a>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:"></a>
                     <a name="//apple_ref/swift/Method/lwayveSDK(didInit:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKWithDidInit:">lwayveSDK(didInit:)</a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:">lwayveSDK(didInit:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1743,9 +1743,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKWithDidDeinit:"></a>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidDeinit:"></a>
                     <a name="//apple_ref/swift/Method/lwayveSDK(didDeinit:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKWithDidDeinit:">lwayveSDK(didDeinit:)</a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidDeinit:">lwayveSDK(didDeinit:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1944,9 +1944,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)loadActionsWithActions:completion:"></a>
-                    <a name="//apple_ref/swift/Method/loadActions(actions:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)loadActionsWithActions:completion:">loadActions(actions:completion:)</a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)loadActions:completion:"></a>
+                    <a name="//apple_ref/swift/Method/loadActions(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)loadActions:completion:">loadActions(_:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1954,14 +1954,14 @@ This method must be called before the SDK can be used.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/ClipActionsProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveClipActionsProtocol(im)loadActionsWithActions:completion:">ClipActionsProtocol.loadActions(actions:completion:)</a></code></p>
+                        <p>See <code>ClipActionsProtocol.loadActions(actions:completion:)</code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadActions</span><span class="p">(</span><span class="nv">actions</span><span class="p">:</span> <span class="kt"><a href="../Classes/ClipActions.html">ClipActions</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">actions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ClipAction.html">ClipAction</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadActions</span><span class="p">(</span><span class="n">_</span> <span class="nv">actions</span><span class="p">:</span> <span class="kt"><a href="../Classes/ClipActions.html">ClipActions</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">actions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ClipAction.html">ClipAction</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2060,9 +2060,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setWithLocations:"></a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setLocations:"></a>
                     <a name="//apple_ref/swift/Method/set(locations:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setWithLocations:">set(locations:)</a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setLocations:">set(locations:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2070,7 +2070,7 @@ This method must be called before the SDK can be used.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)setWithLocations:">ContextControlProtocol.set(locations:)</a></code></p>
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)setLocations:">ContextControlProtocol.set(locations:)</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -2087,9 +2087,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setWithUserLikes:"></a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setUserLikes:"></a>
                     <a name="//apple_ref/swift/Method/set(userLikes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setWithUserLikes:">set(userLikes:)</a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)setUserLikes:">set(userLikes:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2097,7 +2097,7 @@ This method must be called before the SDK can be used.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)setWithUserLikes:">ContextControlProtocol.set(userLikes:)</a></code></p>
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)setUserLikes:">ContextControlProtocol.set(userLikes:)</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -2141,9 +2141,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addWithUserLikes:"></a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addUserLikes:"></a>
                     <a name="//apple_ref/swift/Method/add(userLikes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addWithUserLikes:">add(userLikes:)</a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addUserLikes:">add(userLikes:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2151,7 +2151,7 @@ This method must be called before the SDK can be used.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)addWithUserLikes:">ContextControlProtocol.add(userLikes:)</a></code></p>
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)addUserLikes:">ContextControlProtocol.add(userLikes:)</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -2168,9 +2168,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addWithLocations:"></a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addLocations:"></a>
                     <a name="//apple_ref/swift/Method/add(locations:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addWithLocations:">add(locations:)</a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addLocations:">add(locations:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2178,7 +2178,7 @@ This method must be called before the SDK can be used.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)addWithLocations:">ContextControlProtocol.add(locations:)</a></code></p>
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)addLocations:">ContextControlProtocol.add(locations:)</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -2195,9 +2195,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeWithUserLikes:"></a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeUserLikes:"></a>
                     <a name="//apple_ref/swift/Method/remove(userLikes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeWithUserLikes:">remove(userLikes:)</a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeUserLikes:">remove(userLikes:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2205,7 +2205,7 @@ This method must be called before the SDK can be used.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)removeWithUserLikes:">ContextControlProtocol.remove(userLikes:)</a></code></p>
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)removeUserLikes:">ContextControlProtocol.remove(userLikes:)</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -2222,9 +2222,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeWithLocations:"></a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeLocations:"></a>
                     <a name="//apple_ref/swift/Method/remove(locations:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeWithLocations:">remove(locations:)</a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)removeLocations:">remove(locations:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2232,7 +2232,7 @@ This method must be called before the SDK can be used.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)removeWithLocations:">ContextControlProtocol.remove(locations:)</a></code></p>
+                        <p>See <code><a href="../Protocols/ContextControlProtocol.html#/c:@M@LwayveSDK@objc(pl)LwayveContextControlProtocol(im)removeLocations:">ContextControlProtocol.remove(locations:)</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -2306,7 +2306,7 @@ This method must be called before the SDK can be used.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-02-13)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-03-06)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
