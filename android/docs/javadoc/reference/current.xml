@@ -355,7 +355,7 @@
  visibility="public"
 >
 </method>
-<method name="executeOuterBandAction"
+<method name="executeClipAction"
  return="void"
  abstract="false"
  native="false"
@@ -365,7 +365,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="action" type="com.lixar.lwayve.sdk.experience.OuterBandAction">
+<parameter name="action" type="com.lixar.lwayve.sdk.experience.ClipAction">
 </parameter>
 </method>
 <method name="fetchExperienceFromServer"
@@ -425,6 +425,17 @@
 </method>
 <method name="getCachedUrls"
  return="java.util.List&lt;java.lang.String&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getClipActions"
+ return="java.util.Set&lt;com.lixar.lwayve.sdk.experience.ClipAction&gt;"
  abstract="false"
  native="false"
  synchronized="false"
@@ -588,17 +599,6 @@
  visibility="public"
 >
 </method>
-<method name="getOuterBandActions"
- return="java.util.Set&lt;com.lixar.lwayve.sdk.experience.OuterBandAction&gt;"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
 <method name="getPlayedClips"
  return="java.util.Set&lt;java.lang.String&gt;"
  abstract="false"
@@ -623,6 +623,17 @@
 </method>
 <method name="getQueueHistory"
  return="java.util.List&lt;Node&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTickerText"
+ return="java.lang.String"
  abstract="false"
  native="false"
  synchronized="false"
@@ -693,6 +704,17 @@
 <exception name="InvalidSdkConfigurationException" type="com.lixar.lwayve.sdk.exceptions.InvalidSdkConfigurationException">
 </exception>
 </method>
+<method name="isEndOfQueue"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="isMediaBrowserConnected"
  return="boolean"
  abstract="false"
@@ -704,7 +726,40 @@
  visibility="public"
 >
 </method>
+<method name="isNewContentAvailable"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="isPlaying"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isSituationalUpdatePending"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isStartOfQueue"
  return="boolean"
  abstract="false"
  native="false"
@@ -781,6 +836,36 @@
  visibility="public"
 >
 </method>
+<method name="setClipActionIcon"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="com.lixar.lwayve.sdk.experience.ClipAction">
+</parameter>
+<parameter name="iconRes" type="int">
+</parameter>
+</method>
+<method name="setClipActionText"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="com.lixar.lwayve.sdk.experience.ClipAction">
+</parameter>
+<parameter name="stringRes" type="int">
+</parameter>
+</method>
 <method name="setClipPlayedAction"
  return="void"
  abstract="false"
@@ -805,36 +890,6 @@
  visibility="public"
 >
 <parameter name="like" type="java.lang.String">
-</parameter>
-</method>
-<method name="setOuterBandActionIcon"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="action" type="com.lixar.lwayve.sdk.experience.OuterBandAction">
-</parameter>
-<parameter name="iconRes" type="int">
-</parameter>
-</method>
-<method name="setOuterBandActionText"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="action" type="com.lixar.lwayve.sdk.experience.OuterBandAction">
-</parameter>
-<parameter name="stringRes" type="int">
 </parameter>
 </method>
 <method name="setTimeOffset"
@@ -1466,6 +1521,116 @@
 </package>
 <package name="com.lixar.lwayve.sdk.experience"
 >
+<class name="ClipAction"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getActionType"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIconId"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTextId"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isEnabled"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setEnabled"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enabled" type="boolean">
+</parameter>
+</method>
+<method name="valueOf"
+ return="com.lixar.lwayve.sdk.experience.ClipAction"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.lixar.lwayve.sdk.experience.ClipAction[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="iconRes"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="stringRes"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
 <class name="ClipMetadata"
  extends="java.lang.Enum"
  abstract="false"
@@ -1630,116 +1795,6 @@
  visibility="public"
 >
 </method>
-</class>
-<class name="OuterBandAction"
- extends="java.lang.Enum"
- abstract="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-<method name="getActionType"
- return="java.lang.String"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getIconId"
- return="int"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="getTextId"
- return="int"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="isEnabled"
- return="boolean"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="setEnabled"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="enabled" type="boolean">
-</parameter>
-</method>
-<method name="valueOf"
- return="com.lixar.lwayve.sdk.experience.OuterBandAction"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="name" type="java.lang.String">
-</parameter>
-</method>
-<method name="values"
- return="com.lixar.lwayve.sdk.experience.OuterBandAction[]"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<field name="iconRes"
- type="int"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</field>
-<field name="stringRes"
- type="int"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</field>
 </class>
 </package>
 <package name="com.lixar.lwayve.sdk.mediaplayer"

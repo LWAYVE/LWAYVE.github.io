@@ -13,7 +13,7 @@ var NAVTREE_DATA =
 , "" ], [ "com.lixar.lwayve.sdk.exceptions", "com/lixar/lwayve/sdk/exceptions/package-summary.html", [ [ "Exceptions", null, [ [ "InvalidFileUploadException", "com/lixar/lwayve/sdk/exceptions/InvalidFileUploadException.html", null, "" ], [ "InvalidSdkConfigurationException", "com/lixar/lwayve/sdk/exceptions/InvalidSdkConfigurationException.html", null, "" ], [ "RecorderAdapterNotInitializedException", "com/lixar/lwayve/sdk/exceptions/RecorderAdapterNotInitializedException.html", null, "" ], [ "SdkNotInitializedException", "com/lixar/lwayve/sdk/exceptions/SdkNotInitializedException.html", null, "" ] ]
 , "" ] ]
 , "" ], [ "com.lixar.lwayve.sdk.experience", "com/lixar/lwayve/sdk/experience/package-summary.html", [ [ "Classes", null, [ [ "FirebaseRoutedMessageService", "com/lixar/lwayve/sdk/experience/FirebaseRoutedMessageService.html", null, "" ] ]
-, "" ], [ "Enums", null, [ [ "ClipMetadata", "com/lixar/lwayve/sdk/experience/ClipMetadata.html", null, "" ], [ "ExperienceLanguage", "com/lixar/lwayve/sdk/experience/ExperienceLanguage.html", null, "" ], [ "OuterBandAction", "com/lixar/lwayve/sdk/experience/OuterBandAction.html", null, "" ] ]
+, "" ], [ "Enums", null, [ [ "ClipAction", "com/lixar/lwayve/sdk/experience/ClipAction.html", null, "" ], [ "ClipMetadata", "com/lixar/lwayve/sdk/experience/ClipMetadata.html", null, "" ], [ "ExperienceLanguage", "com/lixar/lwayve/sdk/experience/ExperienceLanguage.html", null, "" ] ]
 , "" ] ]
 , "" ], [ "com.lixar.lwayve.sdk.mediaplayer", "com/lixar/lwayve/sdk/mediaplayer/package-summary.html", [ [ "Enums", null, [ [ "ClipPlayedAction", "com/lixar/lwayve/sdk/mediaplayer/ClipPlayedAction.html", null, "" ] ]
 , "" ] ]
