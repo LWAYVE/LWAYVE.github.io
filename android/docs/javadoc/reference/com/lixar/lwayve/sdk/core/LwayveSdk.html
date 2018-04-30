@@ -173,6 +173,7 @@
           <li class="selected api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html">LwayveSdk</a></li>
           <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html">LwayveSdkConfiguration</a></li>
           <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html">LwayveSdkConfiguration.Builder</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdkManagers.html">LwayveSdkManagers</a></li>
       </ul>
     </li>
               
@@ -855,12 +856,12 @@ Summary:
             
             
             
-            Playlist
+            ExperienceEvent
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#getGeneratedPlaylist()">getGeneratedPlaylist</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#getLastExperienceEvent()">getLastExperienceEvent</a></span>()
         
-        <div class="jd-descrdiv">Get Current Playlist</div>
+        <div class="jd-descrdiv">Get Last Experience Event</div>
   
   </td></tr>
 
@@ -873,12 +874,12 @@ Summary:
             
             
             
-            ExperienceEvent
+            <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#getLastExperienceEvent()">getLastExperienceEvent</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#getLastPlaybackEvent()">getLastPlaybackEvent</a></span>()
         
-        <div class="jd-descrdiv">Get Last Experience Event</div>
+        <div class="jd-descrdiv">Get Last Playback Event</div>
   
   </td></tr>
 
@@ -891,12 +892,12 @@ Summary:
             
             
             
-            <a href="../../../../../com/lixar/lwayve/sdk/events/PlaybackEvent.html">PlaybackEvent</a>
+            Playlist
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#getLastPlaybackEvent()">getLastPlaybackEvent</a></span>()
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#getLwayvePlaylist()">getLwayvePlaylist</a></span>()
         
-        <div class="jd-descrdiv">Get Last Playback Event</div>
+        <div class="jd-descrdiv">Get Current Playlist</div>
   
   </td></tr>
 
@@ -1416,7 +1417,7 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#startRecordActivity(Context)">startRecordActivity</a></span>(Context context)
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#startRecordActivity(Bundle)">startRecordActivity</a></span>(Bundle bundle)
         
         <div class="jd-descrdiv">Start Recording Activity</div>
   
@@ -1434,7 +1435,7 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#startRecordActivity(Context, Bundle)">startRecordActivity</a></span>(Context context, Bundle bundle)
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#startRecordActivity()">startRecordActivity</a></span>()
         
         <div class="jd-descrdiv">Start Recording Activity</div>
   
@@ -1817,7 +1818,8 @@ From class
       
   <div class="jd-tagdata jd-tagdescr"><p>Clear Played Items<p>
 
- <P>Clear the history of played items in the LWAYVE SDK.
+ <P>Clears the history queue and marks all nodes as un-played. If audio is currently playing it
+ will be stopped.
 </p></div>
 
     </div>
@@ -2702,45 +2704,6 @@ From class
 </div>
 
 
-<a id="getGeneratedPlaylist()"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        Playlist
-      </span>
-      <span class="sympad">getGeneratedPlaylist</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Get Current Playlist<p>
-
- <P>Returns the current LWAYVE playlist based on the current experience and location, time and tag
- parameters passed to the LWAYVE SDK.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>a Playlist object representing the current LWAYVE playlist
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
 <a id="getLastExperienceEvent()"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -2810,6 +2773,45 @@ From class
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>a PlaybackEvent representing the last broadcast playback event.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getLwayvePlaylist()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        Playlist
+      </span>
+      <span class="sympad">getLwayvePlaylist</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get Current Playlist<p>
+
+ <P>Returns the current LWAYVE playlist based on the current experience and location, time and tag
+ parameters passed to the LWAYVE SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a Playlist object representing the current LWAYVE playlist
 </li></ul>
   </div>
 
@@ -3904,7 +3906,7 @@ From class
 </div>
 
 
-<a id="startRecordActivity(Context)"></a>
+<a id="startRecordActivity(Bundle)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -3917,7 +3919,61 @@ From class
         void
       </span>
       <span class="sympad">startRecordActivity</span>
-      <span class="normal">(Context context)</span>
+      <span class="normal">(Bundle bundle)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Start Recording Activity<p>
+
+ <P>Launch the UI for recording and sending an audio clip to the LWAYVE backend.
+ <P>Note: This feature requires the lwayve-recorder module to be initialized.
+
+ <P>The following Bundle extras can be passed in the form of color resources to this method to
+ customize the colours used in the record window:
+ <br> - backgroundColor
+ <br> - playStopBtnColor
+ <br> - tryAgainBtnColor
+ <br> - sendBtnColor
+ <br> - closeBtnColor
+ <br> - statusTxtColor
+ <br> - progressColor</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>bundle</th>
+          <td>a bundle containing configuration parameters for customizing the RecordActivity.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="startRecordActivity()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">startRecordActivity</span>
+      <span class="normal">()</span>
     </h4>
       <div class="api-level">
         <div>
@@ -3934,60 +3990,6 @@ From class
  <P>Launch the UI for recording and sending an audio clip to the LWAYVE backend.
  <P>Note: This feature requires the lwayve-recorder module to be initialized.
 </p></div>
-
-    </div>
-</div>
-
-
-<a id="startRecordActivity(Context, Bundle)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">startRecordActivity</span>
-      <span class="normal">(Context context, Bundle bundle)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Start Recording Activity<p>
-
- <P>Launch the UI for recording and sending an audio clip to the LWAYVE backend.
- <P>Note: This feature requires the lwayve-recorder module to be initialized.
-
- The following Bundle extras can be passed in the form of color resources to this method to
- customize the colours used in the record window:
-  - backgroundColor
-  - playStopBtnColor
-  - tryAgainBtnColor
-  - sendBtnColor
-  - closeBtnColor
-  - statusTxtColor
-  - progressColor</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>bundle</th>
-          <td>a bundle containing configuration parameters for customizing the RecordActivity.
-</td>
-        </tr>
-      </table>
-  </div>
 
     </div>
 </div>

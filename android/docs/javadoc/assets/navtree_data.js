@@ -5,7 +5,7 @@ var NAVTREE_DATA =
 , "" ], [ "Enums", null, [ [ "RecordingDuration", "com/lixar/lwayve/recorder/RecordingDuration.html", null, "" ] ]
 , "" ] ]
 , "" ], [ "com.lixar.lwayve.sdk.core", "com/lixar/lwayve/sdk/core/package-summary.html", [ [ "Interfaces", null, [ [ "LwayveConnectionCallback", "com/lixar/lwayve/sdk/core/LwayveConnectionCallback.html", null, "" ] ]
-, "" ], [ "Classes", null, [ [ "LwayveSdk", "com/lixar/lwayve/sdk/core/LwayveSdk.html", null, "" ], [ "LwayveSdkConfiguration", "com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html", null, "" ], [ "LwayveSdkConfiguration.Builder", "com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html", null, "" ] ]
+, "" ], [ "Classes", null, [ [ "LwayveSdk", "com/lixar/lwayve/sdk/core/LwayveSdk.html", null, "" ], [ "LwayveSdkConfiguration", "com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.html", null, "" ], [ "LwayveSdkConfiguration.Builder", "com/lixar/lwayve/sdk/core/LwayveSdkConfiguration.Builder.html", null, "" ], [ "LwayveSdkManagers", "com/lixar/lwayve/sdk/core/LwayveSdkManagers.html", null, "" ] ]
 , "" ] ]
 , "" ], [ "com.lixar.lwayve.sdk.events", "com/lixar/lwayve/sdk/events/package-summary.html", [ [ "Interfaces", null, [ [ "OnPlaybackEventListener", "com/lixar/lwayve/sdk/events/OnPlaybackEventListener.html", null, "" ] ]
 , "" ], [ "Enums", null, [ [ "PlaybackEvent", "com/lixar/lwayve/sdk/events/PlaybackEvent.html", null, "" ] ]

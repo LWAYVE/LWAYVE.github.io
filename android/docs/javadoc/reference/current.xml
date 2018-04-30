@@ -161,6 +161,19 @@
  visibility="public"
 >
 </method>
+<method name="startRecordActivity"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="extras" type="Bundle">
+</parameter>
+</method>
 <method name="uploadRecording"
  return="void"
  abstract="true"
@@ -566,17 +579,6 @@
  visibility="public"
 >
 </method>
-<method name="getGeneratedPlaylist"
- return="Playlist"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
 <method name="getLastExperienceEvent"
  return="ExperienceEvent"
  abstract="false"
@@ -590,6 +592,17 @@
 </method>
 <method name="getLastPlaybackEvent"
  return="com.lixar.lwayve.sdk.events.PlaybackEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLwayvePlaylist"
+ return="Playlist"
  abstract="false"
  native="false"
  synchronized="false"
@@ -941,8 +954,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="context" type="Context">
-</parameter>
 </method>
 <method name="startRecordActivity"
  return="void"
@@ -954,8 +965,6 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="context" type="Context">
-</parameter>
 <parameter name="bundle" type="Bundle">
 </parameter>
 </method>
@@ -1362,6 +1371,102 @@
 >
 <parameter name="recorderAdapterFactory" type="com.lixar.lwayve.recorder.RecorderAdapter.Factory">
 </parameter>
+</method>
+</class>
+<class name="LwayveSdkManagers"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="LwayveSdkManagers"
+ type="com.lixar.lwayve.sdk.core.LwayveSdkManagers"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="managerComponentBuilder" type="ManagerComponent.Builder">
+</parameter>
+</constructor>
+<method name="getConfigurationManager"
+ return="ConfigurationManager"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getExperienceManager"
+ return="ExperienceManager"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMediaBrowserManager"
+ return="MediaBrowserManager"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPlayingQueueManager"
+ return="PlayingQueueManager"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSituationalManager"
+ return="SituationalManager"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUserPreferencesManager"
+ return="UserPreferencesManager"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="inject"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
 </method>
 </class>
 </package>
@@ -1961,7 +2066,18 @@
  visibility="public"
 >
 </method>
-<method name="getRecBackgroundColor"
+<method name="getRecBackgroundResource"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRecButtonBgnColor"
  return="int"
  abstract="false"
  native="false"
@@ -1994,7 +2110,18 @@
  visibility="public"
 >
 </method>
-<method name="getRecProgressColor"
+<method name="getRecProgressBaseColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRecProgressFillColor"
  return="int"
  abstract="false"
  native="false"
@@ -2184,7 +2311,20 @@
 <parameter name="iconColor" type="int">
 </parameter>
 </method>
-<method name="setRecBackgroundColor"
+<method name="setRecBackgroundResource"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="res" type="int">
+</parameter>
+</method>
+<method name="setRecButtonBgnColor"
  return="void"
  abstract="false"
  native="false"
@@ -2223,7 +2363,20 @@
 <parameter name="color" type="int">
 </parameter>
 </method>
-<method name="setRecProgressColor"
+<method name="setRecProgressBaseColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setRecProgressFillColor"
  return="void"
  abstract="false"
  native="false"
