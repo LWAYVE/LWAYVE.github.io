@@ -54,6 +54,23 @@
  visibility="public"
 >
 </method>
+<method name="setMetadata"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+<parameter name="callback" type="com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.UpdateMetadataCallBack">
+</parameter>
+</method>
 <method name="start"
  return="void"
  abstract="true"
@@ -94,6 +111,29 @@
  deprecated="not deprecated"
  visibility="public"
 >
+</method>
+</interface>
+<interface name="ProxSeeSdkAdapter.UpdateMetadataCallBack"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onComplete"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="success" type="boolean">
+</parameter>
+<parameter name="ex" type="java.lang.Exception">
+</parameter>
 </method>
 </interface>
 </package>
@@ -905,6 +945,23 @@
 <parameter name="like" type="java.lang.String">
 </parameter>
 </method>
+<method name="setProxSeeMetadata"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+<parameter name="callback" type="com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.UpdateMetadataCallBack">
+</parameter>
+</method>
 <method name="setTimeOffset"
  return="void"
  abstract="false"
@@ -1589,7 +1646,7 @@
 >
 </constructor>
 </class>
-<class name="RecorderAdapterNotInitializedException"
+<class name="ModuleNotInitializedException"
  extends="java.lang.RuntimeException"
  abstract="false"
  static="false"
@@ -1597,8 +1654,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<constructor name="RecorderAdapterNotInitializedException"
- type="com.lixar.lwayve.sdk.exceptions.RecorderAdapterNotInitializedException"
+<constructor name="ModuleNotInitializedException"
+ type="com.lixar.lwayve.sdk.exceptions.ModuleNotInitializedException"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -1936,6 +1993,27 @@
  visibility="public"
 >
 </method>
+</class>
+<class name="PreCacheAsyncTask"
+ extends="<any>"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="PreCacheAsyncTask"
+ type="com.lixar.lwayve.sdk.mediaplayer.PreCacheAsyncTask"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="Uri">
+</parameter>
+<parameter name="restClient" type="RestClient">
+</parameter>
+</constructor>
 </class>
 </package>
 <package name="com.lixar.lwayve.sdk.view"

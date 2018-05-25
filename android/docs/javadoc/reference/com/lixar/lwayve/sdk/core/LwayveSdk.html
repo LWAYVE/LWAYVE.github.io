@@ -1363,6 +1363,24 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#setProxSeeMetadata(java.lang.String, java.lang.Object, com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.UpdateMetadataCallBack)">setProxSeeMetadata</a></span>(String key, Object value, <a href="../../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.UpdateMetadataCallBack.html">ProxSeeSdkAdapter.UpdateMetadataCallBack</a> callback)
+        
+        <div class="jd-descrdiv">Set ProxSee SDK Metadata</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../com/lixar/lwayve/sdk/core/LwayveSdk.html#setTimeOffset(Duration)">setTimeOffset</a></span>(Duration timeOffset)
         
         <div class="jd-descrdiv">Set Time Offset</div>
@@ -1371,7 +1389,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1389,7 +1407,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1407,7 +1425,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1425,7 +1443,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1443,7 +1461,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1461,7 +1479,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1479,7 +1497,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -3768,6 +3786,58 @@ From class
           <th>like</th>
           <td>a String representing the like tag to filter by when building a playlist from the current experience.
              Pass null to this method to remove any exclusive like tag that has been previously set.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="setProxSeeMetadata(java.lang.String, java.lang.Object, com.lixar.lwayve.proxsee.ProxSeeSdkAdapter.UpdateMetadataCallBack)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setProxSeeMetadata</span>
+      <span class="normal">(String key, Object value, <a href="../../../../../com/lixar/lwayve/proxsee/ProxSeeSdkAdapter.UpdateMetadataCallBack.html">ProxSeeSdkAdapter.UpdateMetadataCallBack</a> callback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set ProxSee SDK Metadata<p>
+
+ <P>Allows for additional metadata parameters to be passed to the ProxSee SDK</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>key</th>
+          <td>a String representing the key to use for the metadata</td>
+        </tr>
+        <tr>
+          <th>value</th>
+          <td>an Object representing the data to be passed to the server. Object must support
+              serialization through Gson.</td>
+        </tr>
+        <tr>
+          <th>callback</th>
+          <td>a callback to report the success or failure of the update operation.
 </td>
         </tr>
       </table>
