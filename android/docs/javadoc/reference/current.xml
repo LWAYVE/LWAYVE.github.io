@@ -1163,7 +1163,7 @@
 >
 </method>
 <method name="getNotificationLargeIconRes"
- return="java.lang.Integer"
+ return="int"
  abstract="false"
  native="false"
  synchronized="false"
@@ -1855,6 +1855,17 @@
  visibility="public"
 >
 </method>
+<method name="getDeviceDefaultLanguageOrFallback"
+ return="com.lixar.lwayve.sdk.experience.ExperienceLanguage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="getLanguageCode"
  return="java.lang.String"
  abstract="false"
@@ -1914,6 +1925,16 @@
  visibility="public"
 >
 </method>
+<field name="FALLBACK_LANGUAGE"
+ type="com.lixar.lwayve.sdk.experience.ExperienceLanguage"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
 </class>
 <class name="FirebaseRoutedMessageService"
  extends="IntentService"
