@@ -59,6 +59,9 @@
                 <a class="nav-group-task-link" href="Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AudioRecordingScreenAppearance/Background.html">– Background</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ClipAction.html">ClipAction</a>
               </li>
               <li class="nav-group-task">
@@ -90,6 +93,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Tag.html">Tag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TemporaryAutoremovingFile.html">TemporaryAutoremovingFile</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/UserContext.html">UserContext</a>
@@ -309,6 +315,11 @@
 <li><a href="#perform-a-clip-action">Perform a clip action</a></li>
 <li><a href="#audio-record-upload-action">Audio record upload action</a></li>
 </ul></li>
+<li><a href="#section-5--apple-music">Section 5: Apple Music</a>
+
+<ul>
+<li><a href="#apple-music-requirements">Requirements</a></li>
+</ul></li>
 </ul>
 <h2 id='section-1-introducing-lwayve-and-contextual-audio-experiences' class='heading'>Section 1: Introducing LWAYVE and Contextual Audio Experiences</h2>
 <h3 id='background' class='heading'>Background</h3>
@@ -437,26 +448,18 @@
 
 <ol>
 <li>Add LwayveSDK.framework to the Embedded Binaries section of your application. The latest version of the framework is available at <a href="#https://github.com/LWAYVE/ios-sdk/releases">https://github.com/LWAYVE/ios-sdk/releases</a>.</li>
-<li>Integrate other third-party dependencies using Carthage (recommended) or manually:</li>
-</ol>
-<pre class="highlight plaintext"><code>- Using Carthage (recommended):
-    1. Install Carthage. Full details are available at [https://github.com/Carthage/Carthage](#https://github.com/Carthage/Carthage)
-    2. Place files ```Cartfile``` and ```Cartfile.resolved``` in a directory on your Mac.
-    3. Perform the following commands in Terminal:
+<li><p>Integrate other third-party dependencies manually:</p>
 
-        ```
-        $ cd &lt;your_directory&gt;
-        $ carthage bootstrap --platform iOS
-        ```
-    4. Add the frameworks from &lt;your_directory&gt;/Carthage/Build/iOS to the Embedded Binaries section of your application.
-- Manually:
-    - YapDatabase - [https://github.com/yapstudios/YapDatabase](#https://github.com/yapstudios/YapDatabase). Version 3.0 (or compatible) must be used.
-    - Alamofire - [https://github.com/Alamofire/Alamofire](#https://github.com/Alamofire/Alamofire). Version 4.5.0 (or compatible) must be used.
-    - SwiftyJSON - [https://github.com/SwiftyJSON/SwiftyJSON](#https://github.com/SwiftyJSON/SwiftyJSON). Version 3.1.4 (or compatible) must be used.
-    - keychain-swift - [https://github.com/evgenyneu/keychain-swift](#https://github.com/evgenyneu/keychain-swift). Version 8.0.2 (or compatible) must be used.
-    - CocoaLumberjack - [https://github.com/CocoaLumberjack/CocoaLumberjack](#https://github.com/CocoaLumberjack/CocoaLumberjack). Version 3.2.0 (or compatible) must be used.
-    - GoogleToolboxForMac/NSData+zlib - [https://github.com/google/google-toolbox-for-mac](#https://github.com/google/google-toolbox-for-mac). Version 2.1.1 (or compatible) must be used.
-</code></pre>
+<ul>
+<li>YapDatabase - <a href="#https://github.com/yapstudios/YapDatabase">https://github.com/yapstudios/YapDatabase</a>. Version 3.0 (or compatible) must be used.</li>
+<li>Alamofire - <a href="#https://github.com/Alamofire/Alamofire">https://github.com/Alamofire/Alamofire</a>. Version 4.5.0 (or compatible) must be used.</li>
+<li>SwiftyJSON - <a href="#https://github.com/SwiftyJSON/SwiftyJSON">https://github.com/SwiftyJSON/SwiftyJSON</a>. Version 3.1.4 (or compatible) must be used.</li>
+<li>CocoaLumberjack - <a href="#https://github.com/CocoaLumberjack/CocoaLumberjack">https://github.com/CocoaLumberjack/CocoaLumberjack</a>. Version 3.2.0 (or compatible) must be used.</li>
+<li>GoogleToolboxForMac/NSData+zlib - <a href="#https://github.com/google/google-toolbox-for-mac">https://github.com/google/google-toolbox-for-mac</a>. Version 2.1.1 (or compatible) must be used.</li>
+</ul>
+
+<p>Pre-built dependencies can be found by the link: <a href="#https://github.com/LWAYVE/ios-lwayve-prebuilt-dependencies">https://github.com/LWAYVE/ios-lwayve-prebuilt-dependencies</a></p></li>
+</ol>
 <h3 id='configure-application-background-modes' class='heading'>Configure Application Background Modes</h3>
 
 <p>The following application background modes for the LWAYVE SDK must be configured:</p>
@@ -511,53 +514,53 @@
 <h4 id='initialize-the-lwayve-sdk' class='heading'>Initialize the LWAYVE SDK</h4>
 
 <p>When initializing the LWAYVE SDK, you need to pass the Authentication token provided to you by Lixar.  </p>
-<pre class="highlight plaintext"><code>func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
 
-  // Create the configuration used for the LWAYVE SDK.
-  let configuration = LwayveSDKConfiguration(baseURL: URL(string: settings.value(forSetting: .BaseURL)),
-  authenticationToken: settings.value(forSetting: .AuthenticationKey))
+  <span class="c1">// Create the configuration used for the LWAYVE SDK.</span>
+  <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">LwayveSDKConfiguration</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">settings</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forSetting</span><span class="p">:</span> <span class="o">.</span><span class="kt">BaseURL</span><span class="p">)),</span>
+  <span class="nv">authenticationToken</span><span class="p">:</span> <span class="n">settings</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forSetting</span><span class="p">:</span> <span class="o">.</span><span class="kt">AuthenticationKey</span><span class="p">))</span>
 
-  // Set the delegate before calling LwayveSDK.sharedSDK.initialize to be able to receive lwayveSDK(didInit:) callback
-  LwayveSDK.sharedSDK.add(delegate: self)
+  <span class="c1">// Set the delegate before calling LwayveSDK.sharedSDK.initialize to be able to receive lwayveSDK(didInit:) callback</span>
+  <span class="kt">LwayveSDK</span><span class="o">.</span><span class="n">sharedSDK</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
 
-  // Attempt to initialize the LWAYVE SDK using the configuration values.
-  // This may fail if the SDK is already initialized, the persistent storage cannot be created, or if an empty authenticationToken is provided.
-  do {
-    try LwayveSDK.sharedSDK.initialize(configuration: configuration)
-  } catch {
-    NSLog("LwayveSDK initialization error: \(error)")
-  }
+  <span class="c1">// Attempt to initialize the LWAYVE SDK using the configuration values.</span>
+  <span class="c1">// This may fail if the SDK is already initialized, the persistent storage cannot be created, or if an empty authenticationToken is provided.</span>
+  <span class="k">do</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="kt">LwayveSDK</span><span class="o">.</span><span class="n">sharedSDK</span><span class="o">.</span><span class="nf">initialize</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="kt">NSLog</span><span class="p">(</span><span class="s">"LwayveSDK initialization error: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+  <span class="p">}</span>
 
-  // Pass the launch options to the LWAYVE SDK.
-  // The launch options are used by the SDK to retrieve any relevant notification information.
-  LwayveSDK.sharedSDK.handleApplication(application, didFinishLaunchingWithOptions: launchOptions)
+  <span class="c1">// Pass the launch options to the LWAYVE SDK.</span>
+  <span class="c1">// The launch options are used by the SDK to retrieve any relevant notification information.</span>
+  <span class="kt">LwayveSDK</span><span class="o">.</span><span class="n">sharedSDK</span><span class="o">.</span><span class="nf">handleApplication</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="nv">didFinishLaunchingWithOptions</span><span class="p">:</span> <span class="n">launchOptions</span><span class="p">)</span>
 
-  return true
-}
+  <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
 
-...
+<span class="c1">// ...</span>
 
-func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -&gt; Void) {
-  // Pass the notification data to the LWAYVE SDK so that it can process any information relevant to it.
-  LwayveSDK.sharedSDK.handleApplication(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
-}
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="n">fetchCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Pass the notification data to the LWAYVE SDK so that it can process any information relevant to it.</span>
+  <span class="kt">LwayveSDK</span><span class="o">.</span><span class="n">sharedSDK</span><span class="o">.</span><span class="nf">handleApplication</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="nv">didReceiveRemoteNotification</span><span class="p">:</span> <span class="n">userInfo</span><span class="p">,</span> <span class="nv">fetchCompletionHandler</span><span class="p">:</span> <span class="n">completionHandler</span><span class="p">)</span>
+<span class="p">}</span>
 
-func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-  // Pass the device token to the Lwayve SDK
-  LwayveSDK.sharedSDK.handleApplication(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
-}
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didRegisterForRemoteNotificationsWithDeviceToken</span> <span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Pass the device token to the Lwayve SDK</span>
+  <span class="kt">LwayveSDK</span><span class="o">.</span><span class="n">sharedSDK</span><span class="o">.</span><span class="nf">handleApplication</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="nv">didRegisterForRemoteNotificationsWithDeviceToken</span><span class="p">:</span> <span class="n">deviceToken</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
 <p>(Optional) To initialize Lwayve with ProxSee, import Lwayve with ProxSee and replace the initialize method.</p>
-<pre class="highlight plaintext"><code>import LwayveSDK
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">LwayveSDK</span>
 
-...
+<span class="o">...</span>
 
-do {
-  try LwayveSDK.sharedSDK.initializeWithProxSee(configuration: configuration)
-} catch {
-  NSLog("LwayveSDK initialization error: \(error)")
-}
+<span class="k">do</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="kt">LwayveSDK</span><span class="o">.</span><span class="n">sharedSDK</span><span class="o">.</span><span class="nf">initializeWithProxSee</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+  <span class="kt">NSLog</span><span class="p">(</span><span class="s">"LwayveSDK initialization error: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 <h3 id='set-up-branded-playback-control' class='heading'>Set Up Branded Playback Control</h3>
 
@@ -584,11 +587,11 @@ do {
 <li>Assign an SDK instance to the <strong>LwayvePlaybackControlView.lwayveSDK</strong> property (e.g., playbackControl.lwayveSDK = LwayveSDK.sharedSDK).</li>
 <li>Add the view to your super view.</li>
 </ol>
-<h4 id='provide-localizable-strings-for-additional-languages-optiuonal' class='heading'>Provide localizable strings for additional languages (optiuonal)</h4>
+<h4 id='provide-localizable-strings-for-additional-languages-optional' class='heading'>Provide localizable strings for additional languages (optional)</h4>
 
 <p>The Branded Playback Control displays some UI controls and alerts with text which may require localization. Current version already contains  translations for French and Spanish. The fallback language is English.</p>
 
-<p>If you want the Lwayve SKD Branded Playback Control to support additional languages, you can provide your own translations. To do this you need to add keys to your app Localizable.strings or Localizable.stringsdic file. The full list of keys is available in the file <a href="https://github.com/LWAYVE/ios-sdk/blob/master/Localizable.strings">Localizable.strings</a>.</p>
+<p>If you want the Lwayve SDK Branded Playback Control to support additional languages, you can provide your own translations. To do this you need to add keys to your app Localizable.strings or Localizable.stringsdic file. The full list of keys is available in the file <a href="https://github.com/LWAYVE/ios-sdk/blob/master/Localizable.strings">Localizable.strings</a>.</p>
 
 <p>See also <a href="https://github.com/LWAYVE/ios-sdk/tree/master/Examples/PlaybackControlSampleApplication">PlaybackControlSampleApplication</a></p>
 <h2 id='section-3-testing-lwayve' class='heading'>Section 3: Testing LWAYVE</h2>
@@ -638,6 +641,15 @@ See also : <a href="https://lwayve.github.io/ios/docs/api_docs/Protocols/OuterBa
 <p><a href="https://lwayve.github.io/ios/docs/api_docs/Protocols/UserRecordedAudioUploadProtocol.html#/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(py)maximumUserRecordedAudioDuration">https://lwayve.github.io/ios/docs/api_docs/Protocols/UserRecordedAudioUploadProtocol.html#/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(py)maximumUserRecordedAudioDuration</a></p>
 
 <p>See also <a href="https://github.com/LWAYVE/ios-sdk/blob/master/Examples/SampleApplication/SampleApplication/ClipContextualActionsViewController.swift">Code Sample</a></p>
+<h2 id='section-5-apple-music' class='heading'>Section 5: Apple Music</h2>
+
+<p>Lwayve SDK now has the capability to play Apple Music with minimum configuration requirements.</p>
+<h3 id='requirements' class='heading'>Requirements</h3>
+
+<p>The only thing needed is to add to your app&rsquo;s info.plist file a  new key <code>NSAppleMusicUsageDescription</code> with a description for the user informing him/her why the permission is required.</p>
+<pre class="highlight plaintext"><code>&lt;key&gt;NSAppleMusicUsageDescription&lt;/key&gt;
+&lt;string&gt;We need permission to access your apple music in order for us to play apple music songs.&lt;/string&gt;
+</code></pre>
 
           </div>
         </section>
@@ -646,8 +658,8 @@ See also : <a href="https://lwayve.github.io/ios/docs/api_docs/Protocols/OuterBa
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-03-06)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

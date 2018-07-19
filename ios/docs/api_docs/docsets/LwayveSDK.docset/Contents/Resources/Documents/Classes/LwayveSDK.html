@@ -60,6 +60,9 @@
                 <a class="nav-group-task-link" href="../Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AudioRecordingScreenAppearance/Background.html">– Background</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ClipAction.html">ClipAction</a>
               </li>
               <li class="nav-group-task">
@@ -91,6 +94,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/Tag.html">Tag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TemporaryAutoremovingFile.html">TemporaryAutoremovingFile</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/UserContext.html">UserContext</a>
@@ -256,7 +262,8 @@
             <h1>LwayveSDK</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LwayveSDK</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">LwayveSDK</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -404,7 +411,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedSDK</span> <span class="o">=</span> <span class="kt">LwayveSDK</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedSDK</span><span class="p">:</span> <span class="kt">LwayveSDK</span></code></pre>
 
                         </div>
                       </div>
@@ -431,7 +438,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">playlistEventsListener</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PlayListEventsListener.html">PlayListEventsListener</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(addPlaylistEventsListener:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">playlistEventsListener</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PlayListEventsListener.html">PlayListEventsListener</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -458,7 +466,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">playlistEventsListener</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PlayListEventsListener.html">PlayListEventsListener</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(removePlaylistEventsListener:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">playlistEventsListener</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PlayListEventsListener.html">PlayListEventsListener</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -485,7 +494,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LwayveSDKDelegate.html">LwayveSDKDelegate</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(addDelegate:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LwayveSDKDelegate.html">LwayveSDKDelegate</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -531,7 +541,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LwayveSDKDelegate.html">LwayveSDKDelegate</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(removeDelegate:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LwayveSDKDelegate.html">LwayveSDKDelegate</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -637,7 +648,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">language</span><span class="p">:</span> <span class="kt"><a href="../Enums/LwayveLanguage.html">LwayveLanguage</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">language</span><span class="p">:</span> <span class="kt"><a href="../Enums/LwayveLanguage.html">LwayveLanguage</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -664,7 +675,8 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">audioControlDelegate</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioControlDelegate.html">AudioControlDelegate</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(addAudioControlDelegate:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">audioControlDelegate</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioControlDelegate.html">AudioControlDelegate</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -710,7 +722,8 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">audioControlDelegate</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioControlDelegate.html">AudioControlDelegate</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(removeAudioControlDelegate:)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">audioControlDelegate</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AudioControlDelegate.html">AudioControlDelegate</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -743,9 +756,9 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9LwayveSDK25AudioCacheControlProtocolP24audioBufferMaxTrackCountSiv"></a>
-                    <a name="//apple_ref/swift/Property/audioBufferMaxTrackCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LwayveSDK25AudioCacheControlProtocolP24audioBufferMaxTrackCountSiv">audioBufferMaxTrackCount</a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)initializeWithProxSeeWithConfiguration:error:"></a>
+                    <a name="//apple_ref/swift/Method/initializeWithProxSee(configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)initializeWithProxSeeWithConfiguration:error:">initializeWithProxSee(configuration:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -753,15 +766,46 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Intitializes Lwayve with ProxSee integration.
+This method must be called before the SDK can be used.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:">LwayveSDKDelegate.lwayveSDK(didInit:)</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a></code>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioBufferMaxTrackCount</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initializeWithProxSee</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/LwayveSDKConfiguration.html">LwayveSDKConfiguration</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Configuration object with required parameters</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -769,9 +813,9 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioBufferMaxSize"></a>
-                    <a name="//apple_ref/swift/Property/audioBufferMaxSize" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioBufferMaxSize">audioBufferMaxSize</a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addProxSeeMetadataWithMetadata:completion:"></a>
+                    <a name="//apple_ref/swift/Method/addProxSeeMetadata(metadata:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)addProxSeeMetadataWithMetadata:completion:">addProxSeeMetadata(metadata:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -786,7 +830,37 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioBufferMaxSize</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">addProxSeeMetadata</span><span class="p">(</span><span class="nv">metadata</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(didInit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:">lwayveSDK(didInit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didInit</span> <span class="nv">sdk</span><span class="p">:</span> <span class="kt">LwayveSDK</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -796,9 +870,39 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioCacheMaxSize"></a>
-                    <a name="//apple_ref/swift/Property/audioCacheMaxSize" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioCacheMaxSize">audioCacheMaxSize</a>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidDeinit:"></a>
+                    <a name="//apple_ref/swift/Method/lwayveSDK(didDeinit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidDeinit:">lwayveSDK(didDeinit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didDeinit</span> <span class="nv">sdk</span><span class="p">:</span> <span class="kt">LwayveSDK</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)didChangeTagsSet:"></a>
+                    <a name="//apple_ref/swift/Method/didChangeTagsSet(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)didChangeTagsSet:">didChangeTagsSet(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -813,147 +917,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioCacheMaxSize</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9LwayveSDK25AudioCacheControlProtocolP05clearcD0yyF"></a>
-                    <a name="//apple_ref/swift/Method/clearAudioCache()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LwayveSDK25AudioCacheControlProtocolP05clearcD0yyF">clearAudioCache()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearAudioCache</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9LwayveSDK28ProxSeeConfigurationProtocolP03getcdE3KeyyycySSSgcF"></a>
-                    <a name="//apple_ref/swift/Method/getProxSeeConfigurationKey(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LwayveSDK28ProxSeeConfigurationProtocolP03getcdE3KeyyycySSSgcF">getProxSeeConfigurationKey(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getProxSeeConfigurationKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AsyncTaskCancelBlock</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceTags"></a>
-                    <a name="//apple_ref/swift/Property/allExperienceTags" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceTags">allExperienceTags</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See <code><a href="../Protocols/ExperienceSupplementaryInfo.html#/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)allExperienceTags">ExperienceSupplementaryInfo.allExperienceTags</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allExperienceTags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceLocations"></a>
-                    <a name="//apple_ref/swift/Property/allExperienceLocations" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceLocations">allExperienceLocations</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See <code><a href="../Protocols/ExperienceSupplementaryInfo.html#/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)allExperienceLocations">ExperienceSupplementaryInfo.allExperienceLocations</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allExperienceLocations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)rawExperience"></a>
-                    <a name="//apple_ref/swift/Property/rawExperience" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)rawExperience">rawExperience</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rawExperience</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didChangeTagsSet</span><span class="p">(</span><span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt">LXTagsProxyProtocol</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -984,7 +948,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isReadyToPlay</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isReadyToPlay</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1011,7 +975,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canSkip</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canSkip</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1038,7 +1002,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canRewind</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canRewind</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1065,7 +1029,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isPlaying</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isPlaying</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1091,7 +1055,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isWaitingForCurrentTrackToBeLoaded</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isWaitingForCurrentTrackToBeLoaded</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1257,7 +1221,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playlist</span><span class="p">:</span> <span class="kt"><a href="../Classes/Playlist.html">Playlist</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playlist</span><span class="p">:</span> <span class="kt"><a href="../Classes/Playlist.html">Playlist</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1338,7 +1302,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">generatedPlaylist</span><span class="p">:</span> <span class="kt"><a href="../Classes/Playlist.html">Playlist</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">generatedPlaylist</span><span class="p">:</span> <span class="kt"><a href="../Classes/Playlist.html">Playlist</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1365,7 +1329,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioQueue</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioQueue</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1392,7 +1356,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">unplayedTracksQueue</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">unplayedTracksQueue</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1419,7 +1383,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playedTracksHistory</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playedTracksHistory</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/AudioTrack.html">AudioTrack</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1446,7 +1410,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playedTracksIds</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playedTracksIds</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1500,7 +1464,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">contentUpdateInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/ContentUpdateInfo.html">ContentUpdateInfo</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">contentUpdateInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/ContentUpdateInfo.html">ContentUpdateInfo</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1531,7 +1495,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">notificationsActive</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">notificationsActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1642,7 +1606,7 @@ If a language is not set on the current device, the default is LwayveLanguage.en
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">defaultAlbumArtworkImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">defaultAlbumArtworkImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1653,180 +1617,6 @@ If a language is not set on the current device, the default is LwayveLanguage.en
             </div>
             <div class="task-group">
               <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)initializeWithProxSeeWithConfiguration:error:"></a>
-                    <a name="//apple_ref/swift/Method/initializeWithProxSee(configuration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)initializeWithProxSeeWithConfiguration:error:">initializeWithProxSee(configuration:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Intitializes Lwayve with ProxSee integration.
-This method must be called before the SDK can be used.</p>
-<div class="aside aside-seealso">
-    <p class="aside-title">Seealso</p>
-    <code><a href="../Protocols/LwayveSDKDelegate.html#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:">LwayveSDKDelegate.lwayveSDK(didInit:)</a></code>
-
-</div>
-<div class="aside aside-seealso">
-    <p class="aside-title">Seealso</p>
-    <code><a href="../Enums/LwayveSDKInitializationError.html">LwayveSDKInitializationError</a></code>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initializeWithProxSee</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/LwayveSDKConfiguration.html">LwayveSDKConfiguration</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>configuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Configuration object with required parameters</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:"></a>
-                    <a name="//apple_ref/swift/Method/lwayveSDK(didInit:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidInit:">lwayveSDK(didInit:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didInit</span> <span class="nv">sdk</span><span class="p">:</span> <span class="kt">LwayveSDK</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidDeinit:"></a>
-                    <a name="//apple_ref/swift/Method/lwayveSDK(didDeinit:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveSDKDelegate(im)lwayveSDKDidDeinit:">lwayveSDK(didDeinit:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lwayveSDK</span><span class="p">(</span><span class="n">didDeinit</span> <span class="nv">sdk</span><span class="p">:</span> <span class="kt">LwayveSDK</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)didChangeTagsSet:"></a>
-                    <a name="//apple_ref/swift/Method/didChangeTagsSet(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)didChangeTagsSet:">didChangeTagsSet(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didChangeTagsSet</span><span class="p">(</span><span class="n">_</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt">LXTagsProxyProtocol</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveAnalyticsControlProtocol(py)analyticsEventTrackHandler"></a>
-                    <a name="//apple_ref/swift/Property/analyticsEventTrackHandler" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveAnalyticsControlProtocol(py)analyticsEventTrackHandler">analyticsEventTrackHandler</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">analyticsEventTrackHandler</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AnalyticsControlProtocol.html">AnalyticsControlProtocol</a></span><span class="o">.</span><span class="kt">AnalyticsEventTrackHandler</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -1886,9 +1676,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)overrideImage:forActionType:"></a>
-                    <a name="//apple_ref/swift/Method/overrideImage(_:forActionType:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)overrideImage:forActionType:">overrideImage(_:forActionType:)</a>
+                    <a name="/s:9LwayveSDK25AudioCacheControlProtocolP24audioBufferMaxTrackCountSiv"></a>
+                    <a name="//apple_ref/swift/Property/audioBufferMaxTrackCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LwayveSDK25AudioCacheControlProtocolP24audioBufferMaxTrackCountSiv">audioBufferMaxTrackCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1896,14 +1686,13 @@ This method must be called before the SDK can be used.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/OuterBandAppearanceProtocol.html#/c:@M@LwayveSDK@objc(pl)OuterBandAppearanceProtocol(im)overrideImage:forActionType:">OuterBandAppearanceProtocol.overrideImage(_:forActionType:)</a></code></p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">overrideImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="n">forActionType</span> <span class="nv">actionType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioBufferMaxTrackCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1913,9 +1702,9 @@ This method must be called before the SDK can be used.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)overrideTitle:forActionType:"></a>
-                    <a name="//apple_ref/swift/Method/overrideTitle(_:forActionType:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)overrideTitle:forActionType:">overrideTitle(_:forActionType:)</a>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioBufferMaxSize"></a>
+                    <a name="//apple_ref/swift/Property/audioBufferMaxSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioBufferMaxSize">audioBufferMaxSize</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1923,14 +1712,67 @@ This method must be called before the SDK can be used.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>See <code><a href="../Protocols/OuterBandAppearanceProtocol.html#/c:@M@LwayveSDK@objc(pl)OuterBandAppearanceProtocol(im)overrideTitle:forActionType:">OuterBandAppearanceProtocol.overrideTitle(_:forActionType:)</a></code></p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">overrideTitle</span><span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">forActionType</span> <span class="nv">actionType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioBufferMaxSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioCacheMaxSize"></a>
+                    <a name="//apple_ref/swift/Property/audioCacheMaxSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)audioCacheMaxSize">audioCacheMaxSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioCacheMaxSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LwayveSDK25AudioCacheControlProtocolP05clearcD0yyF"></a>
+                    <a name="//apple_ref/swift/Method/clearAudioCache()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LwayveSDK25AudioCacheControlProtocolP05clearcD0yyF">clearAudioCache()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearAudioCache</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1989,64 +1831,6 @@ This method must be called before the SDK can be used.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">performClipAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">actionInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/ClipAction.html">ClipAction</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)uploadUserRecordedAudioWithFileURL:completion:"></a>
-                    <a name="//apple_ref/swift/Method/uploadUserRecordedAudio(fileURL:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)uploadUserRecordedAudioWithFileURL:completion:">uploadUserRecordedAudio(fileURL:completion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See <code><a href="../Protocols/UserRecordedAudioUploadProtocol.html#/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(im)uploadUserRecordedAudioWithFileURL:completion:">UserRecordedAudioUploadProtocol.uploadUserRecordedAudio(fileURL:completion:)</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadUserRecordedAudio</span><span class="p">(</span><span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)maximumUserRecordedAudioDuration"></a>
-                    <a name="//apple_ref/swift/Property/maximumUserRecordedAudioDuration" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)maximumUserRecordedAudioDuration">maximumUserRecordedAudioDuration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>See <code><a href="../Protocols/UserRecordedAudioUploadProtocol.html#/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(py)maximumUserRecordedAudioDuration">UserRecordedAudioUploadProtocol.maximumUserRecordedAudioDuration</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">maximumUserRecordedAudioDuration</span><span class="p">:</span> <span class="kt"><a href="../Enums/UserRecordedAudioDuration.html">UserRecordedAudioDuration</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2131,7 +1915,7 @@ This method must be called before the SDK can be used.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">currentUserContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/UserContext.html">UserContext</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">currentUserContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/UserContext.html">UserContext</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -2265,7 +2049,7 @@ This method must be called before the SDK can be used.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timeOffset</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timeOffset</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -2291,7 +2075,237 @@ This method must be called before the SDK can be used.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">exclusiveTag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">exclusiveTag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceTags"></a>
+                    <a name="//apple_ref/swift/Property/allExperienceTags" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceTags">allExperienceTags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ExperienceSupplementaryInfo.html#/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)allExperienceTags">ExperienceSupplementaryInfo.allExperienceTags</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allExperienceTags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceLocations"></a>
+                    <a name="//apple_ref/swift/Property/allExperienceLocations" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)allExperienceLocations">allExperienceLocations</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/ExperienceSupplementaryInfo.html#/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)allExperienceLocations">ExperienceSupplementaryInfo.allExperienceLocations</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">allExperienceLocations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)rawExperience"></a>
+                    <a name="//apple_ref/swift/Property/rawExperience" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@objc(pl)LwayveExperienceSupplementaryInfo(py)rawExperience">rawExperience</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rawExperience</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)overrideImage:forActionType:"></a>
+                    <a name="//apple_ref/swift/Method/overrideImage(_:forActionType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)overrideImage:forActionType:">overrideImage(_:forActionType:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/OuterBandAppearanceProtocol.html#/c:@M@LwayveSDK@objc(pl)OuterBandAppearanceProtocol(im)overrideImage:forActionType:">OuterBandAppearanceProtocol.overrideImage(_:forActionType:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">overrideImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="n">forActionType</span> <span class="nv">actionType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)overrideTitle:forActionType:"></a>
+                    <a name="//apple_ref/swift/Method/overrideTitle(_:forActionType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)overrideTitle:forActionType:">overrideTitle(_:forActionType:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/OuterBandAppearanceProtocol.html#/c:@M@LwayveSDK@objc(pl)OuterBandAppearanceProtocol(im)overrideTitle:forActionType:">OuterBandAppearanceProtocol.overrideTitle(_:forActionType:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">overrideTitle</span><span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">forActionType</span> <span class="nv">actionType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LwayveSDK28ProxSeeConfigurationProtocolP03getcdE3KeyyycySSSgcF"></a>
+                    <a name="//apple_ref/swift/Method/getProxSeeConfigurationKey(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LwayveSDK28ProxSeeConfigurationProtocolP03getcdE3KeyyycySSSgcF">getProxSeeConfigurationKey(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getProxSeeConfigurationKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AsyncTaskCancelBlock</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)uploadUserRecordedAudioWithFileURL:completion:"></a>
+                    <a name="//apple_ref/swift/Method/uploadUserRecordedAudio(fileURL:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(im)uploadUserRecordedAudioWithFileURL:completion:">uploadUserRecordedAudio(fileURL:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/UserRecordedAudioUploadProtocol.html#/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(im)uploadUserRecordedAudioWithFileURL:completion:">UserRecordedAudioUploadProtocol.uploadUserRecordedAudio(fileURL:completion:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadUserRecordedAudio</span><span class="p">(</span><span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)maximumUserRecordedAudioDuration"></a>
+                    <a name="//apple_ref/swift/Property/maximumUserRecordedAudioDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@LwayveSDK@objc(cs)LwayveSDK(py)maximumUserRecordedAudioDuration">maximumUserRecordedAudioDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code><a href="../Protocols/UserRecordedAudioUploadProtocol.html#/c:@M@LwayveSDK@objc(pl)UserRecordedAudioUploadProtocol(py)maximumUserRecordedAudioDuration">UserRecordedAudioUploadProtocol.maximumUserRecordedAudioDuration</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">maximumUserRecordedAudioDuration</span><span class="p">:</span> <span class="kt"><a href="../Enums/UserRecordedAudioDuration.html">UserRecordedAudioDuration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -2306,8 +2320,8 @@ This method must be called before the SDK can be used.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-03-06)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
