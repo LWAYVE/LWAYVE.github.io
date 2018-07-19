@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Enumerations" class="dashAnchor"></a>
 
     <a title="Enumerations  Reference"></a>
 
@@ -59,6 +60,9 @@
                 <a class="nav-group-task-link" href="Classes/AudioRecordingScreenAppearance.html">AudioRecordingScreenAppearance</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AudioRecordingScreenAppearance/Background.html">– Background</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ClipAction.html">ClipAction</a>
               </li>
               <li class="nav-group-task">
@@ -90,6 +94,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Tag.html">Tag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TemporaryAutoremovingFile.html">TemporaryAutoremovingFile</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/UserContext.html">UserContext</a>
@@ -265,9 +272,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@E@LwayveContentUpdateType"></a>
-                    <a name="//apple_ref/swift/Enum/ContentUpdateType" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveContentUpdateType">ContentUpdateType</a>
+                    <a name="/c:@M@LwayveSDK@E@LwayveUserRecordedAudioDuration"></a>
+                    <a name="//apple_ref/swift/Enum/UserRecordedAudioDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveUserRecordedAudioDuration">UserRecordedAudioDuration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -277,13 +284,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="Enums/ContentUpdateType.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/UserRecordedAudioDuration.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ContentUpdateType</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(LwayveUserRecordedAudioDuration)</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UserRecordedAudioDuration</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -297,9 +305,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@E@LwayveSDKInitializationError"></a>
-                    <a name="//apple_ref/swift/Enum/LwayveSDKInitializationError" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveSDKInitializationError">LwayveSDKInitializationError</a>
+                    <a name="/c:@M@LwayveSDK@E@LwayveUserRecordedAudioUploaderError"></a>
+                    <a name="//apple_ref/swift/Enum/UserRecordedAudioUploaderError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveUserRecordedAudioUploaderError">UserRecordedAudioUploaderError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -307,15 +315,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The error can be thrown by the <code><a href="Classes/LwayveSDK.html#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)initializeWithConfiguration:error:">LwayveSDK.initialize(configuration:)</a></code> method.</p>
+                        <p>Undocumented</p>
 
-                        <a href="Enums/LwayveSDKInitializationError.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/UserRecordedAudioUploaderError.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LwayveSDKInitializationError</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc(LwayveUserRecordedAudioUploaderError)</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UserRecordedAudioUploaderError</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@E@LwayveUserRecordedAudioValidator"></a>
+                    <a name="//apple_ref/swift/Enum/UserRecordedAudioValidatorError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveUserRecordedAudioValidator">UserRecordedAudioValidatorError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Enums/UserRecordedAudioValidatorError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(LwayveUserRecordedAudioValidator)</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UserRecordedAudioValidatorError</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
 
                         </div>
                       </div>
@@ -361,134 +403,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@LwayveSDK@E@LwayveSDKConfigurationType"></a>
-                    <a name="//apple_ref/swift/Enum/LwayveSDKConfigurationType" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveSDKConfigurationType">LwayveSDKConfigurationType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Enums/LwayveSDKConfigurationType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LwayveSDKConfigurationType</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@LwayveSDK@E@LwayveUserRecordedAudioUploaderError"></a>
-                    <a name="//apple_ref/swift/Enum/UserRecordedAudioUploaderError" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveUserRecordedAudioUploaderError">UserRecordedAudioUploaderError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Enums/UserRecordedAudioUploaderError.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UserRecordedAudioUploaderError</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@LwayveSDK@E@LwayveUserRecordedAudioDuration"></a>
-                    <a name="//apple_ref/swift/Enum/UserRecordedAudioDuration" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveUserRecordedAudioDuration">UserRecordedAudioDuration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Enums/UserRecordedAudioDuration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UserRecordedAudioDuration</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@LwayveSDK@E@LwayveUserRecordedAudioValidator"></a>
-                    <a name="//apple_ref/swift/Enum/UserRecordedAudioValidatorError" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveUserRecordedAudioValidator">UserRecordedAudioValidatorError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Enums/UserRecordedAudioValidatorError.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UserRecordedAudioValidatorError</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:@M@LwayveSDK@E@LwayveLanguage"></a>
                     <a name="//apple_ref/swift/Enum/LwayveLanguage" class="dashAnchor"></a>
                     <a class="token" href="#/c:@M@LwayveSDK@E@LwayveLanguage">LwayveLanguage</a>
@@ -507,7 +421,107 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LwayveLanguage</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LwayveLanguage</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@E@LwayveSDKInitializationError"></a>
+                    <a name="//apple_ref/swift/Enum/LwayveSDKInitializationError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveSDKInitializationError">LwayveSDKInitializationError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The error can be thrown by the <code><a href="Classes/LwayveSDK.html#/c:@M@LwayveSDK@objc(cs)LwayveSDK(im)initializeWithConfiguration:error:">LwayveSDK.initialize(configuration:)</a></code> method.</p>
+
+                        <a href="Enums/LwayveSDKInitializationError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LwayveSDKInitializationError</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@E@LwayveSDKConfigurationType"></a>
+                    <a name="//apple_ref/swift/Enum/LwayveSDKConfigurationType" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveSDKConfigurationType">LwayveSDKConfigurationType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Enums/LwayveSDKConfigurationType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LwayveSDKConfigurationType</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LwayveSDK@E@LwayveContentUpdateType"></a>
+                    <a name="//apple_ref/swift/Enum/ContentUpdateType" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LwayveSDK@E@LwayveContentUpdateType">ContentUpdateType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Enums/ContentUpdateType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(LwayveContentUpdateType)</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ContentUpdateType</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -522,8 +536,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-03-06)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
